@@ -1,0 +1,193 @@
+﻿@model DBModel.ET.User
+@{
+    ViewBag.Title = "Manager Users";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section ClienCSS{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/admin/plugins/iCheck/all.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
+}
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+            Chi tiết người dùng
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="~/Admin/Users/Index"><i class="fa fa-dashboard"></i> Quay lại</a></li>
+        </ol>
+    </section>
+}
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UserName)
+                </dd>
+
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.FullName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.FullName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </dt>
+
+                <dd>
+                    @(Convert.ToDateTime(  Convert.ToString(Html.DisplayFor(model => model.CreatedDate))).ToString("dd/MM/yyyy"))
+                    
+                </dd>
+
+                <dt>
+
+                    @Html.DisplayNameFor(model => model.LockedUser)
+                </dt>
+
+                <dd>
+                    @(Convert.ToString(Html.DisplayFor(model => model.LockedUser)) == "False" ? "Khóa" : "Kích hoạt")
+                   
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LockedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LockedDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LockedReason)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LockedReason)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastLogIn)
+                </dt>
+
+                <dd>
+                    
+                    @(Convert.ToDateTime(Convert.ToString(Html.DisplayFor(model => model.LastLogIn))).ToString("dd/MM/yyyy"))
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LastChangedPassword)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LastChangedPassword)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DeadlineOfUsing)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DeadlineOfUsing)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.BirthDay)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.BirthDay)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Gender)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Gender)
+                </dd>
+
+                <dt>
+                     @Html.DisplayNameFor(model => model.Image)
+                </dt>
+
+                <dd>
+                    
+                    <img width="30" src="@(Convert.ToString(Html.DisplayFor(model => model.Image)))" class="img-circle" alt="User Image">
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+
+            </dl>
+            <div >
+                @Html.ActionLink("Sửa", "Edit", new { id = Model.LoginID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Quay lại", "Index", "User", null,new { @class = "btn btn-primary" })
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>
+
+
+@section FooterClienScript{
+    <script src="~/Content/js/controller/admin/userController.js"></script>
+    <!-- Select2 -->
+    <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="~/Content/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="~/Content/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="~/Content/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="~/Content/admin/plugins/iCheck/icheck.min.js"></script>
+    <!-- DataTables -->
+    <script src="~/Content/admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/admin/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+
+        })
+        $('.select2').select2()
+    </script>
+}
+

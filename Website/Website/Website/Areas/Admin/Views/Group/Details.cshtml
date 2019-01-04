@@ -1,0 +1,94 @@
+﻿@model DBModel.ET.Group
+
+@{
+    ViewBag.Title = "Manager Group";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section ClienCSS{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/admin/plugins/iCheck/all.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
+}
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+            Chi tiết nhóm người dùng
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="~/Admin/Group/Index"><i class="fa fa-dashboard"></i> Quay lại</a></li>
+        </ol>
+    </section>
+}
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.GroupName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.GroupName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Note)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Note)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.IsAdmin)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.IsAdmin)
+                </dd>
+
+            </dl>
+            <div>
+                @Html.ActionLink("Sửa", "Edit", new { id = Model.GroupID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink("Quay lại", "Index",null, "Group", new { @class = "btn btn-primary" })
+            </div>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>
+
+
+@section FooterClienScript{
+    <script src="~/Content/js/controller/admin/userController.js"></script>
+    <!-- Select2 -->
+    <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="~/Content/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="~/Content/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="~/Content/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="~/Content/admin/plugins/iCheck/icheck.min.js"></script>
+    <!-- DataTables -->
+    <script src="~/Content/admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/admin/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+
+        })
+        $('.select2').select2()
+    </script>
+}
+

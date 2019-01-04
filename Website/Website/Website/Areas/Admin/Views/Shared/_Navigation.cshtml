@@ -1,0 +1,115 @@
+﻿@using Models;
+@using Common;
+@using DBModel.ET;
+@using Website.Areas.Models;
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        @{
+            UserLogin us = (UserLogin)Session[SystemConsts.USER_SESSION];
+
+        }
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="@us.Image" class="img-circle" alt="@us.FullName">
+            </div>
+            <div class="pull-left info">
+                <p>@us.FullName</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+            </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Search.">
+                <span class="input-group-btn">
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li>
+                <a href="/Admin/Home/index">
+                    <i class="fa fa-dashboard"></i> <span>Trang chủ</span>
+                </a>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-circle"></i> <span>Tin tức</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/Category/Index"><i class="fa fa-circle-o"></i>Danh mục loại tin tức</a></li>
+                    <li><a href="/Admin/News/Index"><i class="fa fa-circle-o"></i>Danh mục tin tức</a></li>
+                    <li><a href="/Admin/Advertise/Index"><i class="fa fa-circle-o"></i>Liên kết website</a></li>
+                    <li><a href="/Admin/StatsInfo/Index"><i class="fa fa-circle-o"></i>Số thống kê</a></li>
+                    <li><a href="/Admin/Side/Index"><i class="fa fa-circle-o"></i>Side</a></li>
+                </ul>
+            </li>
+
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Lịch tuần</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/GroupCalender/Index"><i class="fa fa-circle-o"></i>Danh mục nhóm lịch</a></li>
+                    <li><a href="/Admin/Calender/Index"><i class="fa fa-circle-o"></i>Danh mục lịch tuần</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Qản lý nhân sự</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/Subject/Index"><i class="fa fa-circle-o"></i>Danh mục tổ bộ môn</a></li>
+                    <li><a href="/Admin/Course/Index"><i class="fa fa-circle-o"></i>Danh mục liên khóa</a></li>
+                    <li><a href="/Admin/Teacher/Index"><i class="fa fa-circle-o"></i>Danh mục giáo viên</a></li>
+                    <li><a href="/Admin/Former/Index"><i class="fa fa-circle-o"></i>Danh mục cựu học sinh</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Hệ thống</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/Group/Index"><i class="fa fa-circle-o"></i>Nhóm người dùng</a></li>
+                    <li><a href="/Admin/User/Index"><i class="fa fa-circle-o"></i>Danh mục người dùng</a></li>
+                    <li><a href="/Admin/Business/Index"><i class="fa fa-circle-o"></i>Danh mục nghiệp vụ</a></li>
+                </ul>
+            </li>
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>Quản lý chung</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/Admin/About/Index"><i class="fa fa-circle-o"></i>Thông tin giới thiệu</a></li>
+                    <li><a href="/Admin/MenuType/Index"><i class="fa fa-circle-o"></i>Danh mục nhóm Menu</a></li>
+                    <li><a href="/Admin/Menu/Index"><i class="fa fa-circle-o"></i>Menu</a></li>
+                    <li><a href="/Admin/Footer/Index"><i class="fa fa-circle-o"></i>Quản lý Footer</a></li>
+                    <li><a href="/Admin/SystemConfig/Index"><i class="fa fa-circle-o"></i>Cấu hình hệ thống</a></li>
+                </ul>
+            </li>
+
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

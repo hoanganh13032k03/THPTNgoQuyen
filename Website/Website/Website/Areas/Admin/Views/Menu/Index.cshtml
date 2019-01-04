@@ -1,0 +1,154 @@
+﻿@model IEnumerable<DBModel.ET.Menu>
+
+@{
+    ViewBag.Title = "Manager Menu";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section ClienCSS{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/admin/plugins/iCheck/all.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
+    <script src="~/Content/js/plugins/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript">
+        function BrowseServer(field) {
+            editedField = field;
+            var finder = new CKFinder();
+            //finder.basePath = '../';
+            finder.lang = 'vi'
+            finder.selectActionFunction = SetFileField;
+            finder.popup();
+        }
+        function SetFileField(fileUrl) {
+            document.getElementById(editedField).value = fileUrl;
+        }
+    </script>
+}
+
+@section FooterClienScript{
+    <script src="~/Content/js/controller/admin/userController.js"></script>
+    <!-- Select2 -->
+    <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="~/Content/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="~/Content/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="~/Content/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="~/Content/admin/plugins/iCheck/icheck.min.js"></script>
+    <!-- DataTables -->
+    <script src="~/Content/admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/admin/bower_components/fastclick/lib/fastclick.js"></script>
+
+
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+
+        })
+        $('.select2').select2()
+    </script>
+}
+
+
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+            Danh mục  Menu
+                </h1>
+        <ol class="breadcrumb">
+            <li><a href="~/Admin/Menu/Create"><i class="fa fa-dashboard"></i> Tạo mới</a></li>
+        </ol>
+    </section>
+}
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                       
+                        <th>
+                            @Html.DisplayNameFor(model => model.Text)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DisplayOrder)
+                        </th>
+                        
+                        <th>
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                       
+                        <th>
+                            @Html.DisplayNameFor(model => model.UpdatedDate)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.UpdatedBy)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IsActived)
+                        </th>
+                       
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.MenuID">
+                            
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                          
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Text)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.DisplayOrder)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UpdatedDate)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.UpdatedBy)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.IsActived)
+                            </td>
+                         
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.MenuID }) |
+                                @Ajax.ActionLink("Xoá", "Delete", new { id = item.MenuID }, new AjaxOptions
+                            {
+                                Confirm = "Bạn có muốn xoá bản ghi này?",
+                                OnComplete = "$('#row_" + @item.MenuID + "').remove()",
+                                HttpMethod = "Delete"
+                            })
+                            </td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>

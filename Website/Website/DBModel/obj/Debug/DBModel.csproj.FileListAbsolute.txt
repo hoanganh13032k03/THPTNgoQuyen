@@ -1,0 +1,14 @@
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\DBModel.dll.config
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\DBModel.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\DBModel.pdb
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\EntityFramework.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\EntityFramework.SqlServer.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\EntityFramework.xml
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\EntityFramework.SqlServer.xml
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\obj\Debug\DBModel.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\obj\Debug\DBModel.pdb
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\obj\Debug\DBModel.csprojResolveAssemblyReference.cache
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Common.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Resources.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Common.pdb
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Resources.pdb

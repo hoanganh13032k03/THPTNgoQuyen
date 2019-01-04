@@ -1,0 +1,5 @@
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\Common.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\Common.pdb
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.pdb
