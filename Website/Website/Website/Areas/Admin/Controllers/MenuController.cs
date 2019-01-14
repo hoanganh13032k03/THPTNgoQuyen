@@ -64,12 +64,12 @@ namespace Website.Areas.Admin.Controllers
                         //collection.ModifiedBy = us.UserName;
                         if (bdDao.Insert(collection))
                         {
-                            SetAlert("Thêm thành công", "success");
+                            SetAlert(@Resources.ResourceAdmin.AdminCreateRecordSuccess, "success");
                             return RedirectToAction("Index");
                         }
                         else
                         {
-                            SetAlert("Không thêm được", "danger");
+                            SetAlert(@Resources.ResourceAdmin.AdminCreateRecordFailed, "danger");
                         }
                   
                    

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DBModel.ET;
+using Common;
 namespace DBModel.DAO
 {
     public class CategoryDao
@@ -23,7 +24,16 @@ namespace DBModel.DAO
         {
             try
             {
-               
+                if (string.IsNullOrEmpty(mode.MetaTite))
+                {
+                    
+                    mode.MetaTite = HepperString.ToUnsignString(mode.Name);
+                }
+                if (string.IsNullOrEmpty(mode.SeoTite))
+                {
+
+                    mode.SeoTite =mode.Name;
+                }
                 db.Categories.Add(mode);
                 db.SaveChanges();
                 return true;
@@ -82,7 +92,7 @@ namespace DBModel.DAO
                 bd.Description = mode.Description;
                 bd.DisplayOrder = mode.DisplayOrder;
                 bd.Image = mode.Image;
-                bd.IsIntroduced = mode.IsIntroduced;
+               
                 bd.LanguageID = mode.LanguageID;
                 bd.MetaDescription = mode.MetaDescription;
                 bd.MetakeyWords = mode.MetakeyWords;

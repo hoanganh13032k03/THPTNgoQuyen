@@ -82,13 +82,7 @@
                             @Html.DisplayNameFor(model => model.Name)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.MetaTite)
-                        </th>
-                        <th>
                             @Html.DisplayNameFor(model => model.ParentID)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Image)
                         </th>
                         <th>
                             @Html.DisplayNameFor(model => model.Description)
@@ -96,30 +90,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.DisplayOrder)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.SeoTite)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.CreateDate)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.CreateBy)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ModifiedBy)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ModifiedDate)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.MetakeyWords)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.MetaDescription)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.IsIntroduced)
-                        </th>
+                       
                         <th>
                             @Html.DisplayNameFor(model => model.Status)
                         </th>
@@ -129,9 +100,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Position)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.LanguageID)
-                        </th>
+                       
                         <th></th>
                     </tr>
                 </thead>
@@ -139,18 +108,12 @@
 
                     @foreach (var item in Model)
                     {
-                        <tr>
+                        <tr id="row_@item.CategoryID">
                             <td>
                                 @Html.DisplayFor(modelItem => item.Name)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.MetaTite)
-                            </td>
-                            <td>
                                 @Html.DisplayFor(modelItem => item.ParentID)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Image)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Description)
@@ -158,30 +121,7 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.DisplayOrder)
                             </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.SeoTite)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CreateDate)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.CreateBy)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ModifiedBy)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ModifiedDate)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.MetakeyWords)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.MetaDescription)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.IsIntroduced)
-                            </td>
+                           
                             <td>
                                 @Html.DisplayFor(modelItem => item.Status)
                             </td>
@@ -190,9 +130,6 @@
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Position)
-                            </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.LanguageID)
                             </td>
                             <td>
                                 @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }) |

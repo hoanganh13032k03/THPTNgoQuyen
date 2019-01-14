@@ -129,12 +129,6 @@
   <data name="AboutImages" xml:space="preserve">
     <value>Ảnh bìa</value>
   </data>
-  <data name="AboutMetaTitle" xml:space="preserve">
-    <value>Tiêu đề SEO</value>
-  </data>
-  <data name="AboutTitle" xml:space="preserve">
-    <value>Tiêu đề</value>
-  </data>
   <data name="Address" xml:space="preserve">
     <value>Địa chỉ</value>
   </data>
@@ -414,29 +408,14 @@
   <data name="AdminUserListTitlePage" xml:space="preserve">
     <value>Danh sách tài khoản</value>
   </data>
-  <data name="AlbumCreatedBy" xml:space="preserve">
-    <value>Người tạo</value>
-  </data>
-  <data name="AlbumCreatedDate" xml:space="preserve">
-    <value>Ngày tạo</value>
-  </data>
-  <data name="AlbumDescription" xml:space="preserve">
-    <value>Mô tả</value>
-  </data>
   <data name="AlbumID" xml:space="preserve">
     <value>Mã album</value>
   </data>
   <data name="AlbumImages" xml:space="preserve">
     <value>Ảnh bìa</value>
   </data>
-  <data name="AlbumLanguageCode" xml:space="preserve">
-    <value>Ngôn ngữ</value>
-  </data>
   <data name="AlbumMetaDescription" xml:space="preserve">
     <value>Meta description</value>
-  </data>
-  <data name="AlbumMetaKeywords" xml:space="preserve">
-    <value>Meta keywords</value>
   </data>
   <data name="AlbumName" xml:space="preserve">
     <value>Tiêu đề</value>
@@ -444,71 +423,23 @@
   <data name="AlbumNameRequired" xml:space="preserve">
     <value>Yêu cầu nhập tiêu đề</value>
   </data>
-  <data name="AlbumOrder" xml:space="preserve">
-    <value>Số thứ tư</value>
-  </data>
-  <data name="AlbumStatus" xml:space="preserve">
-    <value>Trạng thái</value>
-  </data>
-  <data name="CategoryCreatedBy" xml:space="preserve">
-    <value>Người tạo</value>
-  </data>
-  <data name="CategoryCreatedDate" xml:space="preserve">
-    <value>Ngày tạo</value>
-  </data>
-  <data name="CategoryDescription" xml:space="preserve">
-    <value>Mô tả</value>
-  </data>
   <data name="CategoryID" xml:space="preserve">
     <value>ID</value>
   </data>
-  <data name="CategoryImages" xml:space="preserve">
-    <value>Hình ảnh</value>
-  </data>
-  <data name="CategoryIsIntroduced" xml:space="preserve">
-    <value>Danh muc giới thiêu</value>
-  </data>
-  <data name="CategoryLanguageCode" xml:space="preserve">
-    <value>Ngôn ngữ</value>
-  </data>
-  <data name="CategoryMetaDescription" xml:space="preserve">
-    <value>Meta Description</value>
-  </data>
-  <data name="CategoryMetaKeywords" xml:space="preserve">
-    <value>Meta Keywords</value>
-  </data>
-  <data name="CategoryMetaTitle" xml:space="preserve">
-    <value>Meta title</value>
-  </data>
   <data name="CategoryName" xml:space="preserve">
-    <value>Tiêu đề</value>
+    <value>Tên danh mục</value>
   </data>
   <data name="CategoryNameLong" xml:space="preserve">
     <value>Số ký tư không đươc vươt quá 250</value>
   </data>
-  <data name="CategoryNameRequired" xml:space="preserve">
-    <value>Yêu cầu nhâp tên</value>
-  </data>
-  <data name="CategoryOrder" xml:space="preserve">
-    <value>Sắp xếp</value>
-  </data>
   <data name="CategoryParentID" xml:space="preserve">
     <value>Danh mục cha</value>
-  </data>
-  <data name="CategoryStatus" xml:space="preserve">
-    <value>Trạng thái</value>
-  </data>
-  <data name="ConfigItemDescription" xml:space="preserve">
-    <value>Mô tả</value>
   </data>
   <data name="ConfigItemName" xml:space="preserve">
     <value>Tên cấu hình</value>
   </data>
   <data name="ConfigItemNameLong" xml:space="preserve">
     <value>Độ dài nhãn là 50</value>
-  </data>
-  <data name="ConfigItemNameRequired" xml:space="preserve">
-    <value>Yêu cầu nhập tên</value>
   </data>
   <data name="ConfigItemUniqueKey" xml:space="preserve">
     <value>Key duy nhất</value>
@@ -531,23 +462,23 @@
   <data name="ConfigUniqueKeyLong" xml:space="preserve">
     <value>Key chỉ được dài 50 ký tự</value>
   </data>
-  <data name="ContactContent" xml:space="preserve">
-    <value>Nội dung</value>
-  </data>
   <data name="ContactID" xml:space="preserve">
     <value>Mã thông tin</value>
   </data>
   <data name="ContactLanguageCode" xml:space="preserve">
     <value>Ngôn ngữ</value>
   </data>
-  <data name="ContactStatus" xml:space="preserve">
-    <value>Tình trạng</value>
+  <data name="Content" xml:space="preserve">
+    <value>Nội dung</value>
   </data>
-  <data name="ContactTitle" xml:space="preserve">
-    <value>Tiêu đề</value>
+  <data name="CreatedBy" xml:space="preserve">
+    <value>Người tạo</value>
   </data>
-  <data name="ContactTitleRequired" xml:space="preserve">
-    <value>Yêu cầu nhâp tiêu đề</value>
+  <data name="CreatedDate" xml:space="preserve">
+    <value>Ngày tạo</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Mô tả</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>Email</value>
@@ -672,6 +603,12 @@
   <data name="GoBackToListText" xml:space="preserve">
     <value>Trở về trang danh sách</value>
   </data>
+  <data name="Images" xml:space="preserve">
+    <value>Hình ảnh</value>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
   <data name="LanguageDescription" xml:space="preserve">
     <value>Mô tả</value>
   </data>
@@ -771,32 +708,29 @@
   <data name="MenuUrlRequired" xml:space="preserve">
     <value>Đường dẫn bắt buôc</value>
   </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>Meta Description</value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>Meta keywords</value>
+  </data>
+  <data name="MetaTitle" xml:space="preserve">
+    <value>MetaTitle</value>
+  </data>
   <data name="Mobile" xml:space="preserve">
     <value>Số điện thoại</value>
   </data>
   <data name="MobileRequired" xml:space="preserve">
     <value>Phải nhập số điện thoại</value>
   </data>
+  <data name="NameRequired" xml:space="preserve">
+    <value>Yêu cầu nhập tên</value>
+  </data>
   <data name="NewsCategoryID" xml:space="preserve">
     <value>Danh mục</value>
   </data>
   <data name="NewsContent" xml:space="preserve">
     <value>Nội dung</value>
-  </data>
-  <data name="NewsDescription" xml:space="preserve">
-    <value>Mô tả</value>
-  </data>
-  <data name="NewsID" xml:space="preserve">
-    <value>ID</value>
-  </data>
-  <data name="NewsImages" xml:space="preserve">
-    <value>Hình ảnh</value>
-  </data>
-  <data name="NewsLanguageCode" xml:space="preserve">
-    <value>Ngôn ngữ</value>
-  </data>
-  <data name="NewsMetaTitle" xml:space="preserve">
-    <value>Meta title</value>
   </data>
   <data name="NewsPublishedDate" xml:space="preserve">
     <value>Ngày phát hành</value>
@@ -806,15 +740,6 @@
   </data>
   <data name="NewsSource" xml:space="preserve">
     <value>Nguồn</value>
-  </data>
-  <data name="NewsTitle" xml:space="preserve">
-    <value>Tiêu đề</value>
-  </data>
-  <data name="NewsTitleLong" xml:space="preserve">
-    <value>Độ dài tối đa cho phép là 250 ký tự</value>
-  </data>
-  <data name="NewsTitleRequired" xml:space="preserve">
-    <value>Yêu cầu nhập tiêu đề</value>
   </data>
   <data name="NewsUpTopHot" xml:space="preserve">
     <value>Tin hot</value>
@@ -827,6 +752,9 @@
   </data>
   <data name="NotPermissionMessage" xml:space="preserve">
     <value>Bạn không có sự cho phép cần thiết để thực hiện hành động này</value>
+  </data>
+  <data name="Order" xml:space="preserve">
+    <value>Số thứ tự</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Mật khẩu</value>
@@ -846,15 +774,6 @@
   <data name="PhotoAlbumID" xml:space="preserve">
     <value>Mã album</value>
   </data>
-  <data name="PhotoCreatedBy" xml:space="preserve">
-    <value>Người tạo</value>
-  </data>
-  <data name="PhotoCreatedDate" xml:space="preserve">
-    <value>Ngày tạo</value>
-  </data>
-  <data name="PhotoDescription" xml:space="preserve">
-    <value>Mô tả</value>
-  </data>
   <data name="PhotoID" xml:space="preserve">
     <value>ID</value>
   </data>
@@ -867,20 +786,14 @@
   <data name="PhotoStatus" xml:space="preserve">
     <value>Trạng thái</value>
   </data>
+  <data name="Position" xml:space="preserve">
+    <value>Vị trí</value>
+  </data>
   <data name="ProductCategoryID" xml:space="preserve">
     <value>Danh mục sản phẩm</value>
   </data>
   <data name="ProductCode" xml:space="preserve">
     <value>Mã sản phẩm</value>
-  </data>
-  <data name="ProductCreatedBy" xml:space="preserve">
-    <value>Người tạo</value>
-  </data>
-  <data name="ProductCreatedDate" xml:space="preserve">
-    <value>Ngày tạo</value>
-  </data>
-  <data name="ProductDescription" xml:space="preserve">
-    <value>Mô tả</value>
   </data>
   <data name="ProductDetail" xml:space="preserve">
     <value>Chi tiết sản phẩm</value>
@@ -894,26 +807,8 @@
   <data name="ProductLanguageCode" xml:space="preserve">
     <value>Ngôn ngữ</value>
   </data>
-  <data name="ProductMetaDescription" xml:space="preserve">
-    <value>Meta descriptions</value>
-  </data>
-  <data name="ProductMetaKeywords" xml:space="preserve">
-    <value>Meta keywords</value>
-  </data>
   <data name="ProductPrice" xml:space="preserve">
     <value>Giá</value>
-  </data>
-  <data name="ProductStatus" xml:space="preserve">
-    <value>Trạng thái</value>
-  </data>
-  <data name="ProductTitle" xml:space="preserve">
-    <value>Tên sản phẩm</value>
-  </data>
-  <data name="ProductTitleLong" xml:space="preserve">
-    <value>Tiêu đề quá dài hơn 250 ký tư</value>
-  </data>
-  <data name="ProductTitleRequired" xml:space="preserve">
-    <value>Yêu cầu điền tiêu đề</value>
   </data>
   <data name="ProductUpTopHot" xml:space="preserve">
     <value>Sản phẩm hot</value>
@@ -924,14 +819,8 @@
   <data name="ProductViewCount" xml:space="preserve">
     <value>Số lượt xem</value>
   </data>
-  <data name="RoleCreateBy" xml:space="preserve">
-    <value>Người tạo</value>
-  </data>
-  <data name="RoleCreateDate" xml:space="preserve">
-    <value>Ngày tạo</value>
-  </data>
-  <data name="RoleDescription" xml:space="preserve">
-    <value>Mô tả</value>
+  <data name="Required" xml:space="preserve">
+    <value>Yêu cầu nhâp tiêu đề</value>
   </data>
   <data name="RoleName" xml:space="preserve">
     <value>Tên quyền</value>
@@ -945,14 +834,32 @@
   <data name="RoleStatus" xml:space="preserve">
     <value>Trạng thái</value>
   </data>
-  <data name="RoleUpdatedBy" xml:space="preserve">
-    <value>Người sửa</value>
-  </data>
-  <data name="RoleUpdatedDate" xml:space="preserve">
-    <value>Ngày sửa</value>
-  </data>
   <data name="Sex" xml:space="preserve">
     <value>Giới tính</value>
+  </data>
+  <data name="ShowOnHome" xml:space="preserve">
+    <value>Hiện trang chủ</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Trạng thái</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Tiêu đề</value>
+  </data>
+  <data name="TitleLong" xml:space="preserve">
+    <value>Độ dài tối đa cho phép là 250 ký tự</value>
+  </data>
+  <data name="TitleRequired" xml:space="preserve">
+    <value>Yêu cầu nhập tiêu đề</value>
+  </data>
+  <data name="TitleSeo" xml:space="preserve">
+    <value>Tiêu đề Seo</value>
+  </data>
+  <data name="UpdatedBy" xml:space="preserve">
+    <value>Người sửa</value>
+  </data>
+  <data name="UpdatedDate" xml:space="preserve">
+    <value>Ngày sửa</value>
   </data>
   <data name="UserBirthDay" xml:space="preserve">
     <value>Ngày sinh</value>

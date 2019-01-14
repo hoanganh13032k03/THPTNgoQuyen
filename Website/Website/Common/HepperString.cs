@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Web;
+using System.Text.RegularExpressions;
 using System.Security.Cryptography;
 
 
@@ -64,7 +65,10 @@ namespace Common
             }
             return strResult.TrimEnd();
         }
-        //Lay danh sach theo key
+        /// <summary>
+        ///Lay danh sach theo key
+        /// </summary>
+        /// <returns>Ví dụ nguyễn, tam, cuong thannh [nguyễn;tam;cường]</returns>
         public static List<string> GetListByKey(string text, string key)
         {
             List<string> listString = new List<string>();
@@ -88,10 +92,41 @@ namespace Common
 
         }
 
+        /// <summary>
+        ///Chuyển thành tiếng việt không dấu
+        ///Value= Nguyễn Tam Cường
+        /// </summary>
+        /// <returns>Nguyen Tam Cuong</returns>
+        public static string ToUnsignString(string input)
+        {
+            input = input.Trim();
+            for (int i = 0x20; i < 0x30; i++)
+            {
+                input = input.Replace(((char)i).ToString(), " ");
+            }
+            input = input.Replace(".", "-");
+            input = input.Replace(" ", "-");
+            input = input.Replace(",", "-");
+            input = input.Replace(";", "-");
+            input = input.Replace(":", "-");
+            input = input.Replace("  ", "-");
+            Regex regex = new Regex(@"\p{IsCombiningDiacriticalMarks}+");
+            string str = input.Normalize(NormalizationForm.FormD);
+            string str2 = regex.Replace(str, string.Empty).Replace('đ', 'd').Replace('Đ', 'D');
+            while (str2.IndexOf("?") >= 0)
+            {
+                str2 = str2.Remove(str2.IndexOf("?"), 1);
+            }
+            while (str2.Contains("--"))
+            {
+                str2 = str2.Replace("--", "-").ToLower();
+            }
+            return str2;
+        }
         #endregion
-     
 
-      
+
+
 
     }
 }

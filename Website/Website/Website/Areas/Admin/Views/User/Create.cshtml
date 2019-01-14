@@ -62,6 +62,10 @@
     <!-- FastClick -->
     <script src="~/Content/admin/bower_components/fastclick/lib/fastclick.js"></script>
 <script>
+    function textChange() {
+        var url = this.value;
+        $('#srIMG').src = url;
+    }
         $(function () {
 
 

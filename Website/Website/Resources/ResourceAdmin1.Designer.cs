@@ -97,24 +97,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiêu đề SEO.
-        /// </summary>
-        public static string AboutMetaTitle {
-            get {
-                return ResourceManager.GetString("AboutMetaTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tiêu đề.
-        /// </summary>
-        public static string AboutTitle {
-            get {
-                return ResourceManager.GetString("AboutTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Địa chỉ.
         /// </summary>
         public static string Address {
@@ -952,33 +934,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Người tạo.
-        /// </summary>
-        public static string AlbumCreatedBy {
-            get {
-                return ResourceManager.GetString("AlbumCreatedBy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ngày tạo.
-        /// </summary>
-        public static string AlbumCreatedDate {
-            get {
-                return ResourceManager.GetString("AlbumCreatedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mô tả.
-        /// </summary>
-        public static string AlbumDescription {
-            get {
-                return ResourceManager.GetString("AlbumDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Mã album.
         /// </summary>
         public static string AlbumID {
@@ -997,29 +952,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Ngôn ngữ.
-        /// </summary>
-        public static string AlbumLanguageCode {
-            get {
-                return ResourceManager.GetString("AlbumLanguageCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Meta description.
         /// </summary>
         public static string AlbumMetaDescription {
             get {
                 return ResourceManager.GetString("AlbumMetaDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meta keywords.
-        /// </summary>
-        public static string AlbumMetaKeywords {
-            get {
-                return ResourceManager.GetString("AlbumMetaKeywords", resourceCulture);
             }
         }
         
@@ -1042,51 +979,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Số thứ tư.
-        /// </summary>
-        public static string AlbumOrder {
-            get {
-                return ResourceManager.GetString("AlbumOrder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Trạng thái.
-        /// </summary>
-        public static string AlbumStatus {
-            get {
-                return ResourceManager.GetString("AlbumStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Người tạo.
-        /// </summary>
-        public static string CategoryCreatedBy {
-            get {
-                return ResourceManager.GetString("CategoryCreatedBy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ngày tạo.
-        /// </summary>
-        public static string CategoryCreatedDate {
-            get {
-                return ResourceManager.GetString("CategoryCreatedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mô tả.
-        /// </summary>
-        public static string CategoryDescription {
-            get {
-                return ResourceManager.GetString("CategoryDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ID.
         /// </summary>
         public static string CategoryID {
@@ -1096,61 +988,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hình ảnh.
-        /// </summary>
-        public static string CategoryImages {
-            get {
-                return ResourceManager.GetString("CategoryImages", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Danh muc giới thiêu.
-        /// </summary>
-        public static string CategoryIsIntroduced {
-            get {
-                return ResourceManager.GetString("CategoryIsIntroduced", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ngôn ngữ.
-        /// </summary>
-        public static string CategoryLanguageCode {
-            get {
-                return ResourceManager.GetString("CategoryLanguageCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meta Description.
-        /// </summary>
-        public static string CategoryMetaDescription {
-            get {
-                return ResourceManager.GetString("CategoryMetaDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meta Keywords.
-        /// </summary>
-        public static string CategoryMetaKeywords {
-            get {
-                return ResourceManager.GetString("CategoryMetaKeywords", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meta title.
-        /// </summary>
-        public static string CategoryMetaTitle {
-            get {
-                return ResourceManager.GetString("CategoryMetaTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tiêu đề.
+        ///   Looks up a localized string similar to Tên danh mục.
         /// </summary>
         public static string CategoryName {
             get {
@@ -1168,47 +1006,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yêu cầu nhâp tên.
-        /// </summary>
-        public static string CategoryNameRequired {
-            get {
-                return ResourceManager.GetString("CategoryNameRequired", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Sắp xếp.
-        /// </summary>
-        public static string CategoryOrder {
-            get {
-                return ResourceManager.GetString("CategoryOrder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Danh mục cha.
         /// </summary>
         public static string CategoryParentID {
             get {
                 return ResourceManager.GetString("CategoryParentID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Trạng thái.
-        /// </summary>
-        public static string CategoryStatus {
-            get {
-                return ResourceManager.GetString("CategoryStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mô tả.
-        /// </summary>
-        public static string ConfigItemDescription {
-            get {
-                return ResourceManager.GetString("ConfigItemDescription", resourceCulture);
             }
         }
         
@@ -1227,15 +1029,6 @@ namespace Resources {
         public static string ConfigItemNameLong {
             get {
                 return ResourceManager.GetString("ConfigItemNameLong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Yêu cầu nhập tên.
-        /// </summary>
-        public static string ConfigItemNameRequired {
-            get {
-                return ResourceManager.GetString("ConfigItemNameRequired", resourceCulture);
             }
         }
         
@@ -1303,15 +1096,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Nội dung.
-        /// </summary>
-        public static string ContactContent {
-            get {
-                return ResourceManager.GetString("ContactContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Mã thông tin.
         /// </summary>
         public static string ContactID {
@@ -1330,29 +1114,38 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tình trạng.
+        ///   Looks up a localized string similar to Nội dung.
         /// </summary>
-        public static string ContactStatus {
+        public static string Content {
             get {
-                return ResourceManager.GetString("ContactStatus", resourceCulture);
+                return ResourceManager.GetString("Content", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tiêu đề.
+        ///   Looks up a localized string similar to Người tạo.
         /// </summary>
-        public static string ContactTitle {
+        public static string CreatedBy {
             get {
-                return ResourceManager.GetString("ContactTitle", resourceCulture);
+                return ResourceManager.GetString("CreatedBy", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Yêu cầu nhâp tiêu đề.
+        ///   Looks up a localized string similar to Ngày tạo.
         /// </summary>
-        public static string ContactTitleRequired {
+        public static string CreatedDate {
             get {
-                return ResourceManager.GetString("ContactTitleRequired", resourceCulture);
+                return ResourceManager.GetString("CreatedDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mô tả.
+        /// </summary>
+        public static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
             }
         }
         
@@ -1726,6 +1519,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Hình ảnh.
+        /// </summary>
+        public static string Images {
+            get {
+                return ResourceManager.GetString("Images", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ngôn ngữ.
+        /// </summary>
+        public static string LanguageCode {
+            get {
+                return ResourceManager.GetString("LanguageCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mô tả.
         /// </summary>
         public static string LanguageDescription {
@@ -2023,6 +1834,33 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Meta Description.
+        /// </summary>
+        public static string MetaDescription {
+            get {
+                return ResourceManager.GetString("MetaDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Meta keywords.
+        /// </summary>
+        public static string MetaKeywords {
+            get {
+                return ResourceManager.GetString("MetaKeywords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MetaTitle.
+        /// </summary>
+        public static string MetaTitle {
+            get {
+                return ResourceManager.GetString("MetaTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Số điện thoại.
         /// </summary>
         public static string Mobile {
@@ -2041,6 +1879,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Yêu cầu nhập tên.
+        /// </summary>
+        public static string NameRequired {
+            get {
+                return ResourceManager.GetString("NameRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Danh mục.
         /// </summary>
         public static string NewsCategoryID {
@@ -2055,51 +1902,6 @@ namespace Resources {
         public static string NewsContent {
             get {
                 return ResourceManager.GetString("NewsContent", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mô tả.
-        /// </summary>
-        public static string NewsDescription {
-            get {
-                return ResourceManager.GetString("NewsDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to ID.
-        /// </summary>
-        public static string NewsID {
-            get {
-                return ResourceManager.GetString("NewsID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Hình ảnh.
-        /// </summary>
-        public static string NewsImages {
-            get {
-                return ResourceManager.GetString("NewsImages", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ngôn ngữ.
-        /// </summary>
-        public static string NewsLanguageCode {
-            get {
-                return ResourceManager.GetString("NewsLanguageCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meta title.
-        /// </summary>
-        public static string NewsMetaTitle {
-            get {
-                return ResourceManager.GetString("NewsMetaTitle", resourceCulture);
             }
         }
         
@@ -2127,33 +1929,6 @@ namespace Resources {
         public static string NewsSource {
             get {
                 return ResourceManager.GetString("NewsSource", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tiêu đề.
-        /// </summary>
-        public static string NewsTitle {
-            get {
-                return ResourceManager.GetString("NewsTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Độ dài tối đa cho phép là 250 ký tự.
-        /// </summary>
-        public static string NewsTitleLong {
-            get {
-                return ResourceManager.GetString("NewsTitleLong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Yêu cầu nhập tiêu đề.
-        /// </summary>
-        public static string NewsTitleRequired {
-            get {
-                return ResourceManager.GetString("NewsTitleRequired", resourceCulture);
             }
         }
         
@@ -2190,6 +1965,15 @@ namespace Resources {
         public static string NotPermissionMessage {
             get {
                 return ResourceManager.GetString("NotPermissionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Số thứ tự.
+        /// </summary>
+        public static string Order {
+            get {
+                return ResourceManager.GetString("Order", resourceCulture);
             }
         }
         
@@ -2248,33 +2032,6 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Người tạo.
-        /// </summary>
-        public static string PhotoCreatedBy {
-            get {
-                return ResourceManager.GetString("PhotoCreatedBy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ngày tạo.
-        /// </summary>
-        public static string PhotoCreatedDate {
-            get {
-                return ResourceManager.GetString("PhotoCreatedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mô tả.
-        /// </summary>
-        public static string PhotoDescription {
-            get {
-                return ResourceManager.GetString("PhotoDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to ID.
         /// </summary>
         public static string PhotoID {
@@ -2311,6 +2068,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Vị trí.
+        /// </summary>
+        public static string Position {
+            get {
+                return ResourceManager.GetString("Position", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Danh mục sản phẩm.
         /// </summary>
         public static string ProductCategoryID {
@@ -2325,33 +2091,6 @@ namespace Resources {
         public static string ProductCode {
             get {
                 return ResourceManager.GetString("ProductCode", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Người tạo.
-        /// </summary>
-        public static string ProductCreatedBy {
-            get {
-                return ResourceManager.GetString("ProductCreatedBy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ngày tạo.
-        /// </summary>
-        public static string ProductCreatedDate {
-            get {
-                return ResourceManager.GetString("ProductCreatedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mô tả.
-        /// </summary>
-        public static string ProductDescription {
-            get {
-                return ResourceManager.GetString("ProductDescription", resourceCulture);
             }
         }
         
@@ -2392,65 +2131,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Meta descriptions.
-        /// </summary>
-        public static string ProductMetaDescription {
-            get {
-                return ResourceManager.GetString("ProductMetaDescription", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Meta keywords.
-        /// </summary>
-        public static string ProductMetaKeywords {
-            get {
-                return ResourceManager.GetString("ProductMetaKeywords", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Giá.
         /// </summary>
         public static string ProductPrice {
             get {
                 return ResourceManager.GetString("ProductPrice", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Trạng thái.
-        /// </summary>
-        public static string ProductStatus {
-            get {
-                return ResourceManager.GetString("ProductStatus", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tên sản phẩm.
-        /// </summary>
-        public static string ProductTitle {
-            get {
-                return ResourceManager.GetString("ProductTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Tiêu đề quá dài hơn 250 ký tư.
-        /// </summary>
-        public static string ProductTitleLong {
-            get {
-                return ResourceManager.GetString("ProductTitleLong", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Yêu cầu điền tiêu đề.
-        /// </summary>
-        public static string ProductTitleRequired {
-            get {
-                return ResourceManager.GetString("ProductTitleRequired", resourceCulture);
             }
         }
         
@@ -2482,29 +2167,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Người tạo.
+        ///   Looks up a localized string similar to Yêu cầu nhâp tiêu đề.
         /// </summary>
-        public static string RoleCreateBy {
+        public static string Required {
             get {
-                return ResourceManager.GetString("RoleCreateBy", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Ngày tạo.
-        /// </summary>
-        public static string RoleCreateDate {
-            get {
-                return ResourceManager.GetString("RoleCreateDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Mô tả.
-        /// </summary>
-        public static string RoleDescription {
-            get {
-                return ResourceManager.GetString("RoleDescription", resourceCulture);
+                return ResourceManager.GetString("Required", resourceCulture);
             }
         }
         
@@ -2545,29 +2212,83 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Giới tính.
+        /// </summary>
+        public static string Sex {
+            get {
+                return ResourceManager.GetString("Sex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hiện trang chủ.
+        /// </summary>
+        public static string ShowOnHome {
+            get {
+                return ResourceManager.GetString("ShowOnHome", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Trạng thái.
+        /// </summary>
+        public static string Status {
+            get {
+                return ResourceManager.GetString("Status", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tiêu đề.
+        /// </summary>
+        public static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Độ dài tối đa cho phép là 250 ký tự.
+        /// </summary>
+        public static string TitleLong {
+            get {
+                return ResourceManager.GetString("TitleLong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yêu cầu nhập tiêu đề.
+        /// </summary>
+        public static string TitleRequired {
+            get {
+                return ResourceManager.GetString("TitleRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tiêu đề Seo.
+        /// </summary>
+        public static string TitleSeo {
+            get {
+                return ResourceManager.GetString("TitleSeo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Người sửa.
         /// </summary>
-        public static string RoleUpdatedBy {
+        public static string UpdatedBy {
             get {
-                return ResourceManager.GetString("RoleUpdatedBy", resourceCulture);
+                return ResourceManager.GetString("UpdatedBy", resourceCulture);
             }
         }
         
         /// <summary>
         ///   Looks up a localized string similar to Ngày sửa.
         /// </summary>
-        public static string RoleUpdatedDate {
+        public static string UpdatedDate {
             get {
-                return ResourceManager.GetString("RoleUpdatedDate", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Giới tính.
-        /// </summary>
-        public static string Sex {
-            get {
-                return ResourceManager.GetString("Sex", resourceCulture);
+                return ResourceManager.GetString("UpdatedDate", resourceCulture);
             }
         }
         
