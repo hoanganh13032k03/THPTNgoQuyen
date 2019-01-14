@@ -86,6 +86,4 @@ E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Website\bin\Microsoft.Owin.Securi
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Website\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Website\obj\Debug\Website.dll
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Website\obj\Debug\Website.pdb
-E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Website\bin\CKEditor.NET.dll
-E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Website\bin\CKFinder.dll
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Website\bin\CKFinder.pdb

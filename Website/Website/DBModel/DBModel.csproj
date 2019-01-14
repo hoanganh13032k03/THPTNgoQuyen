@@ -54,6 +54,7 @@
     <Compile Include="DAO\FooterDao.cs" />
     <Compile Include="DAO\GroupDao.cs" />
     <Compile Include="DAO\GroupUserDao.cs" />
+    <Compile Include="DAO\CategoryDao.cs" />
     <Compile Include="DAO\MenuDao.cs" />
     <Compile Include="DAO\MenuTypeDao.cs" />
     <Compile Include="DAO\PermissionDao.cs" />

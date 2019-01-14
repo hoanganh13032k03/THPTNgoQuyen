@@ -5,18 +5,24 @@ namespace DBModel.ET
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using Resources;
 
     [Table("Category")]
     public partial class Category
     {
+        [Display(Name = "CategoryID", ResourceType = typeof(Resources.ResourceAdmin))]
         public long CategoryID { get; set; }
 
-        [StringLength(250)]
-        public string Title { get; set; }
+        [Required(ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "CategoryRequired")]
+        [Display(Name = "CategoryName", ResourceType = typeof(Resources.ResourceAdmin))]
+        [StringLength(250, ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "CategoryNameLong")]
+        public string Name { get; set; }
 
-        [StringLength(250)]
+        [Display(Name = "CategoryMetaTitle", ResourceType = typeof(Resources.ResourceAdmin))]
+        [StringLength(250, ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "CategoryNameLong")]
         public string MetaTite { get; set; }
 
+        [Display(Name = "CategoryParentID", ResourceType = typeof(Resources.ResourceAdmin))]
         public long ParentID { get; set; }
 
         [StringLength(250)]

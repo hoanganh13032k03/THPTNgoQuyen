@@ -1,5 +1,4 @@
 ﻿@model DBModel.ET.User
-
 @{
     ViewBag.Title = "User/Profile";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
@@ -14,7 +13,7 @@
     <link rel="stylesheet" href="~/Content/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
     <!-- Select2 -->
     <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
-    <script src="~/Content/js/plugins/ckfinder/ckfinder.js"></script>
+    <script src="~/Content/admin/js/plugins/ckfinder/ckfinder.js"></script>
     <script type="text/javascript">
         function BrowseServer(field, srcIMG) {
             editedField = field;
@@ -50,91 +49,123 @@
         <div class="box-body">
             @using (Html.BeginForm("Profile", "User", FormMethod.Post, new { @class = "form-horizontal" }))
             {
-                @Html.AntiForgeryToken()
+            @Html.AntiForgeryToken()
+
+            @Html.HiddenFor(model => model.LoginID)
+            <div class="form-horizontal">
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                @Html.HiddenFor(model => model.LoginID)
-                <div class="form-horizontal">
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Tài khoản", @readonly = "readonly" })
-                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
-                        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Tài khoản", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Mật khẩu", Type = "Password" })
-                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
-                        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Password, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Mật khẩu", Type = "Password" })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Họ tên" })
-                            @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
-                        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FullName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.FullName, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Họ tên" })
+                        @Html.ValidationMessageFor(model => model.FullName, "", new { @class = "text-danger" })
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Địa chỉ" })
-                            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
-                        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Address, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Địa chỉ" })
+                        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Email", Type = "Email" })
-                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Email", Type = "Email" })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.BirthDay, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.BirthDay, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "mm/dd/yyyy" })
-                            @Html.ValidationMessageFor(model => model.BirthDay, "", new { @class = "text-danger" })
-                        </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.BirthDay, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.BirthDay, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "mm/dd/yyyy" })
+                        @Html.ValidationMessageFor(model => model.BirthDay, "", new { @class = "text-danger" })
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.DropDownListFor(model => model.Gender, new List<SelectListItem> { new SelectListItem { Text = "Nam", Value = "Nam" }, new SelectListItem { Text = "Nữ", Value = "Nữ" }, new SelectListItem { Text = "Khác", Value = "Khác" } }, new { @class = "form-control" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Gender, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.DropDownListFor(model => model.Gender, new List<SelectListItem>
+                            { new SelectListItem { Text = "Nam", Value = "Nam" }, new SelectListItem { Text = "Nữ", Value = "Nữ" }, new SelectListItem { Text = "Khác", Value = "Khác" } }, new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
-                        </div>
                     </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Điện thoại" })
-                            @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
-                        </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Điện thoại" })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
                     </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Image, new { @class = "form-control" })
-                            <a href="#" class="btn btn-primary" onclick="BrowseServer('Image');">Chọn ảnh..</a>
-                            <img width="30" src="@(Convert.ToString(Html.DisplayFor(model => model.Image)))" id="imgIcon" class="img-circle" alt="User Image">
-                            @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
-                        </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Image, new { @class = "form-control" })
+                        <a href="#" class="btn btn-primary" onclick="BrowseServer('Image');">Chọn ảnh..</a>
+                        <img width="30" src="@(Convert.ToString(Html.DisplayFor(model => model.Image)))" id="imgIcon" class="img-circle" alt="User Image">
+                        @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
                     </div>
+                </div>
 
-                   
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" value="Ghi lại" class="btn btn-primary" />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.DeadlineOfUsing, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.DeadlineOfUsing, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "mm/dd/yyyy", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.DeadlineOfUsing, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LockedUser, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.DropDownListFor(model => model.LockedUser, new List<SelectListItem>
+                                { new SelectListItem { Text = "Kính hoạt", Value = "false" }, new SelectListItem { Text = "Khóa", Value = "True" } }, new { @class = "form-control", @disabled = "true" })
+                                @Html.ValidationMessageFor(model => model.LockedUser, "", new { @class = "text-danger" })
                         </div>
                     </div>
                 </div>
-            }
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LockedReason, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.LockedReason, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Lý do khóa", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.LockedReason, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.LockedDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.LockedDate, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "mm/dd/yyyy", @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.LockedDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
 
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Ghi lại" class="btn btn-primary" />
+                    </div>
+                </div>
+            </div>
+            }
 
 
         </div>
@@ -145,7 +176,7 @@
 
 
 @section FooterClienScript{
-    <script src="~/Content/js/controller/admin/userController.js"></script>
+    <script src="~/Content/admin/js/controller/admin/userController.js"></script>
     <!-- Select2 -->
     <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
