@@ -115,6 +115,64 @@
         <!-- //middle header -->
     </header>
     <!-- //header -->
+     <!-- banner -->
+<div class="banner-agile">
+    <ul class="slider">
+        <li class="active">
+            <div class="banner-w3ls-1">
+            </div>
+        </li>
+        <li>
+            <div class="banner-w3ls-2">
+            </div>
+        </li>
+        <li>
+            <div class="banner-w3ls-3">
+            </div>
+        </li>
+        <li>
+            <div class="banner-w3ls-4">
+            </div>
+        </li>
+        <li class="prev">
+            <div class="banner-w3ls-5">
+            </div>
+        </li>
+    </ul>
+    <ul class="pager">
+        <li data-index="0" class="active"></li>
+        <li data-index="1"></li>
+        <li data-index="2"></li>
+        <li data-index="3"></li>
+        <li data-index="4"></li>
+    </ul>
+    <div class="banner-text-posi-w3ls">
+        <div class="banner-text-whtree">
+            <h3 class="text-capitalize text-white p-4">
+                Bonnal
+                <b>100 tuổi</b>
+            </h3>
+            <p class="px-4 py-3 text-dark">Trở thành chuyên gia hàng đầu sau khi tốt nghiệp</p>
+            <a href="about.html" class="button-agiles text-capitalize text-white mt-sm-5 mt-4">Xem tiếp</a>
+        </div>
+    </div>
+
+    <!-- navigation -->
+    <div class="navigation-w3ls">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-nav">
+            <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                @{ Html.RenderAction("MenuPartial", "Home");}
+            </div>
+        </nav>
+    </div>
+    <!-- //navigation -->
+</div>
+<!-- //banner -->
+
     @RenderBody()
    
     <!-- footer -->

@@ -1,10 +1,8 @@
-﻿@model IEnumerable<DBModel.ET.Category>
-@using DBModel.DAO;
-@using DBModel.ET;
+﻿@model IEnumerable<DBModel.ET.About>
+
 @{
-    ViewBag.Title = "Danh mục nhóm tinh tức";
+    ViewBag.Title = "Danh mục giới thiệu";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-    List<Category> lst = (List<Category>)ViewBag.lstCate;
 }
 
 
@@ -66,7 +64,7 @@
 @section ContenHeader{
     <section class="content-header">
         <h1>
-            Danh mục  nhóm tin tức
+            Danh mục giới thiệu
         </h1>
         <ol class="breadcrumb">
             <li>@Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionCreateButtonText, "Create", null, new { @class = "btn btn-primary" })</li>
@@ -83,112 +81,56 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Name)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ParentID)
-                        </th>
+                       
                         <th>
                             @Html.DisplayNameFor(model => model.Description)
+                        <th>
+                            @Html.DisplayNameFor(model => model.CreateDate)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(model => model.DisplayOrder)
+                            @Html.DisplayNameFor(model => model.ModifiedBy)
                         </th>
-                       
+                        
                         <th>
                             @Html.DisplayNameFor(model => model.Status)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.ShowOnHome)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.Position)
-                        </th>
-                       
                         <th></th>
                     </tr>
-                </thead>
+                    </thead>
                 <tbody>
-
+                    
                     @foreach (var item in Model)
                     {
-                        <tr id="row_@item.CategoryID">
+
+                        <tr id="row_@item.AboutID">
                             <td>
                                 @Html.DisplayFor(modelItem => item.Name)
-                            </td>
-                            <td>
-                                @{ 
-                                    var sName = "";
-                                    if (item.ParentID != null)
-                                    {
-                                        sName = lst.Find(x => x.CategoryID == item.ParentID).Name;
-                                    }
-                                }
-                                @sName
-
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.Description)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.DisplayOrder)
+                                @Html.DisplayFor(modelItem => item.ModifiedBy)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ModifiedDate)
                             </td>
                            
                             <td>
-                            
-                                @{
-                                    var sStatus = "";
-                                    int iStus = Convert.ToInt32(item.Status);
-                                    switch (iStus)
-                                    {
-                                        
-                                        case 0: sStatus = "Khóa"; break;
-                                        case 1: sStatus = "Kích hoạt"; break;
-                                        default: break;
-                                    }
-                                }
-                                @sStatus
+                                @Html.DisplayFor(modelItem => item.Status)
                             </td>
                             <td>
-                                @{
-                                    var sShowHome = "";
-                                    int iShowHome = Convert.ToInt32(item.ShowOnHome);
-                                    switch (iShowHome)
-                                    {
-
-                                        case 0: sShowHome = "Không hiện"; break;
-                                        case 1: sShowHome = "Hiện"; break;
-                                        default: break;
-                                    }
-                                }
-                                @sShowHome
-                            </td>
-                            <td>
-                                @{
-                                    var sPosition = "";
-                                    int iPosition = Convert.ToInt32(item.Position);
-                                    switch (iPosition)
-                                    {
-
-                                        case 1: sPosition = "Top menu"; break;
-                                        case 2: sPosition = "Center"; break;
-                                        default: break;
-                                    }
-                                }
-                                @sPosition
-                            </td>
-                            <td>
-                                @Html.ActionLink("Edit", "Edit", new { id = item.CategoryID }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.CategoryID }) |
-                                @Ajax.ActionLink("Xoá", "Delete", new { id = item.CategoryID }, new AjaxOptions
-                           {
-                               Confirm = "Bạn có muốn xoá bản ghi này?",
-                               OnComplete = "$('#row_" + @item.CategoryID + "').remove()",
-                               HttpMethod = "Delete"
-                           })
+                                @Html.ActionLink("Edit", "Edit", new { id = item.AboutID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.AboutID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.AboutID })
                             </td>
                         </tr>
                     }
 
+
                 </tbody>
+
+
 
             </table>
         </div>

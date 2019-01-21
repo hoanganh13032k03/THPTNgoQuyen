@@ -1,0 +1,173 @@
+﻿@model DBModel.ET.Category
+
+@{
+    ViewBag.Title = "Chi tiết danh mục";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+           Chi tiết danh mục
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+               @Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionBackButtonText, "Index", null, new { @class = "btn btn-primary" })
+            </li>
+        </ol>
+    </section>
+}
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetaTite)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaTite)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ParentID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ParentID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Image)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Image)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.DisplayOrder)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.DisplayOrder)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SeoTite)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SeoTite)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreateDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreateDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreateBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreateBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetakeyWords)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetakeyWords)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetaDescription)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaDescription)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ShowOnHome)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ShowOnHome)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Position)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Position)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LanguageID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LanguageID)
+                </dd>
+
+            </dl>
+            <p>
+                @Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionEditButtonText, "Edit", new { id = Model.CategoryID }, new { @class = "btn btn-primary" })
+                @Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionBackButtonText, "Index",null, new { @class = "btn btn-primary" })
+            </p>
+
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>
+

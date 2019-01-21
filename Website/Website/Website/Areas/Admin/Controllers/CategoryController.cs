@@ -17,26 +17,39 @@ namespace Website.Areas.Admin.Controllers
     public class CategoryController : BaseController
     {
         // GET: Admin/Category
-        [OutputCache(Duration = 60)]
+      
         public ActionResult Index()
         {
             CategoryDao bdDao = new CategoryDao();
-            return View(bdDao.ToList());
+            ViewBag.lstCate =bdDao.ToList();
+            //TempData["AlertMessage"] = null;
+            return View(ViewBag.lstCate);
         }
 
         // GET: Admin/Category/Details/5
-        public ActionResult Details(int id)
+        public ActionResult Details(long id)
         {
-            return View();
+            CategoryDao dbDAO = new CategoryDao();
+            Category cat = null;
+            try
+            {
+                cat = dbDAO.FindByID(id);
+            }
+            catch
+            {
+
+                ModelState.AddModelError("", Resources.ResourceAdmin.ErrorGetRecordMessage);
+            }
+            return View(cat);
         }
 
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult Create()
         {
-            var items = GetClientMenuViewModel();
+            var items = GetClientCategoryViewModel();
             var dbContext = new DBContext();
             ViewBag.ParentID = new SelectList(items, "ID", "Text");
-           // ViewBag.GroupID = new SelectList(dbContext..ToList(), "ID", "Name");
+            // ViewBag.GroupID = new SelectList(dbContext..ToList(), "ID", "Name");
             return View();
         }
 
@@ -73,33 +86,70 @@ namespace Website.Areas.Admin.Controllers
             {
                 SetAlert(@Resources.ResourceAdmin.AdminCreateRecordFailed, "danger");
                 return View();
-               
+
             }
         }
 
         // GET: Admin/Category/Edit/5
-        public ActionResult Edit(int id)
+        [AcceptVerbs(HttpVerbs.Get)]
+        public ActionResult Edit(long id)
         {
-            return View();
+            CategoryDao dbDAO = new CategoryDao();
+            Category cat = null;
+            try
+            {
+                cat = dbDAO.FindByID(id);
+                var items = GetClientCategoryViewModel();
+
+                var objite =items.Find(x => x.ID == cat.CategoryID);
+                items.Remove(objite);
+                var dbContext = new DBContext();
+                ViewBag.ParentID = new SelectList(items, "ID", "Text");
+                // ViewBag.GroupID = new SelectList(dbContext..ToList(), "ID", "Name");
+            }
+            catch
+            {
+
+                ModelState.AddModelError("", Resources.ResourceAdmin.ErrorGetRecordMessage);
+            }
+            return View(cat);
         }
 
         // POST: Admin/Category/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Category collection)
         {
+            CategoryDao bdDao = new CategoryDao();
+
             try
             {
-                // TODO: Add update logic here
+                UserLogin us = (UserLogin)Session[SystemConsts.USER_SESSION];
+
+                collection.ModifiedBy = us.UserName;
+                collection.ModifiedDate = Hepper.GetDateServer();
+
+
+                if (bdDao.Update(collection))
+                {
+                    SetAlert(@Resources.ResourceAdmin.AdminEditRecordSucess, "success");
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    SetAlert(@Resources.ResourceAdmin.AdminEditRecordFailed, "danger");
+                }
 
                 return RedirectToAction("Index");
             }
             catch
             {
+                SetAlert(@Resources.ResourceAdmin.AdminEditRecordFailed, "danger");
                 return View();
+
             }
         }
 
-       
+
 
         // POST: Admin/Category/Delete/5
         [HttpDelete]
@@ -109,10 +159,21 @@ namespace Website.Areas.Admin.Controllers
             {
                 // TODO: Add delete logic here
 
+                CategoryDao bdDao = new CategoryDao();
+
+                if (bdDao.FindChildCategory(id).Count > 0)
+                {
+
+                    SetAlert("Đang sử dụng không được phép xóa", SystemConsts.ALERT_DANGER);
+                    return RedirectToAction("Index");
+                }
+                bdDao.Delete(id);
+                // SetAlert("Xóa thành công", "success");
                 return RedirectToAction("Index");
             }
             catch
             {
+                // SetAlert("Không xóa được", "danger");
                 return View();
             }
         }
@@ -120,14 +181,14 @@ namespace Website.Areas.Admin.Controllers
         #region Private Method
         private void PopulateParentIDDropDownList(object selectedParent = null)
         {
-            var items = GetClientMenuViewModel();
+            var items = GetClientCategoryViewModel();
             ViewBag.Parents = new SelectList(items, "ID", "Text", selectedParent);
         }
-       
-        private List<ClientMenuViewModel> GetClientMenuViewModel()
+
+        private List<ClientCategoryViewModel> GetClientCategoryViewModel()
         {
             var dbContext = new DBContext();
-            List<ClientMenuViewModel> items = new List<ClientMenuViewModel>();
+            List<ClientCategoryViewModel> items = new List<ClientCategoryViewModel>();
 
             //get all of them from DB
             IEnumerable<Category> allMenus = dbContext.Categories.ToList();
@@ -137,9 +198,10 @@ namespace Website.Areas.Admin.Controllers
             foreach (var cat in parentMenus)
             {
                 //add the parent category to the item list
-                items.Add(new ClientMenuViewModel
+                items.Add(new ClientCategoryViewModel
                 {
                     ID = cat.CategoryID,
+                    Decription = cat.Description,
                     Text = cat.Name,
                     Order = cat.DisplayOrder,
                     IsLocked = cat.Status,
@@ -150,15 +212,16 @@ namespace Website.Areas.Admin.Controllers
             }
             return items;
         }
-        private void GetSubTree(IList<Category> allCats, Category parent, IList<ClientMenuViewModel> items)
+        private void GetSubTree(IList<Category> allCats, Category parent, IList<ClientCategoryViewModel> items)
         {
             var subCats = allCats.Where(c => c.ParentID == parent.CategoryID).OrderBy(x => x.DisplayOrder);
             foreach (var cat in subCats)
             {
                 //add this category
-                items.Add(new ClientMenuViewModel
+                items.Add(new ClientCategoryViewModel
                 {
                     ID = cat.CategoryID,
+                    Decription = cat.Description,
                     Text = parent.Name + " >> " + cat.Name,
                     Order = cat.DisplayOrder,
                     IsLocked = cat.Status,

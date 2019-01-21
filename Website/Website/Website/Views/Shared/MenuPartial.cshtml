@@ -1,0 +1,45 @@
+﻿@model List<Models.CategoryViewModel>
+<ul class="navbar-nav justify-content-center">
+    <li class="nav-item active">
+        <a class="nav-link text-white"  href="~/home/index">
+            Trang chủ
+            <span class="sr-only">(current)</span>
+        </a>
+    </li>
+@foreach (var item in Model)
+            {
+                var url = "Tin-tuc/" + item.MetaTite + "-" + item.CategoryID;
+                if (item.Children.Count() > 0)
+                {
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                @item.Name
+            </a>
+            <div class="dropdown-menu">
+                @foreach (var chil in item.Children)
+                {
+                    url = "Tin-tuc/" + chil.MetaTite + "-" + chil.CategoryID;
+                    <a class="dropdown-item" href="@url"> @chil.Name </a>
+                }
+                
+               
+            </div>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-white" href="@url">@item.Name</a>
+        </li>
+    }
+}
+    <li class="nav-item">
+        <a class="nav-link text-white" href="blog.html">Thời khóa biểu</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="gallery.html">Media</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="contact.html">Lịch công tác</a>
+    </li>
+</ul>

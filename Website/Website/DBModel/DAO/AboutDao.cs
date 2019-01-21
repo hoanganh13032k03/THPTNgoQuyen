@@ -7,28 +7,29 @@ using DBModel.ET;
 using Common;
 namespace DBModel.DAO
 {
-    public class CategoryDao
+    public class AboutDao
     {
         DBContext db = null;
 
-        public CategoryDao()
+        public AboutDao()
         {
 
             db = new DBContext();
         }
-        public List<Category> ToList()
+        public List<About> ToList()
         {
-            return db.Categories.OrderBy(x=>x.DisplayOrder).ToList<Category>();
+            return db.Abouts.OrderBy(x=>x.ModifiedDate).ToList<About>();
         }
-        public List<Category> ToListActive()
+        public List<About> ToListActive()
         {
-            return db.Categories.Where(x=>x.Status==true).OrderBy(x => x.DisplayOrder).ToList<Category>();
+            return db.Abouts.Where(x=>x.Status==true).OrderBy(x => x.ModifiedDate).ToList<About>();
         }
-        public List<Category> ToListActiveHome()
+
+        public About ToActive()
         {
-            return db.Categories.Where(x => x.Status == true&&x.ShowOnHome==true).OrderBy(x => x.DisplayOrder).ToList<Category>();
+            return db.Abouts.Where(x => x.Status == true).OrderBy(x => x.ModifiedDate).SingleOrDefault();
         }
-        public bool Insert(Category mode)
+        public bool Insert(About mode)
         {
             try
             {
@@ -37,12 +38,8 @@ namespace DBModel.DAO
                     
                     mode.MetaTite = HepperString.ToUnsignString(mode.Name);
                 }
-                if (string.IsNullOrEmpty(mode.SeoTite))
-                {
-
-                    mode.SeoTite =mode.Name;
-                }
-                db.Categories.Add(mode);
+               
+                db.Abouts.Add(mode);
                 db.SaveChanges();
                 return true;
 
@@ -59,8 +56,8 @@ namespace DBModel.DAO
         {
             try
             {
-                var bd = db.Categories.SingleOrDefault(a => a.CategoryID == ID);
-                db.Categories.Remove(bd);
+                var bd = db.Abouts.SingleOrDefault(a => a.AboutID == ID);
+                db.Abouts.Remove(bd);
                 db.SaveChanges();
                 return true;
 
@@ -73,26 +70,17 @@ namespace DBModel.DAO
            
           
         }
-        public Category FindByID(long ID)
+        public About FindByID(long ID)
         {
 
-            return db.Categories.Where(a => a.CategoryID == ID).SingleOrDefault();
+            return db.Abouts.Where(a => a.AboutID == ID).SingleOrDefault();
         }
-        public List<Category> FindByCategoryType(byte  Position)
-        {
-
-            return db.Categories.Where(a => a.Position == Position).ToList<Category>();
-        }
-        public List<Category> FindChildCategory(long CategoryID)
-        {
-
-            return db.Categories.Where(a => a.ParentID == CategoryID).ToList<Category>();
-        }
-        public bool Update(Category mode)
+       
+        public bool Update(About mode)
         {
             try
             {
-                var bd = db.Categories.Find(mode.CategoryID);
+                var bd = db.Abouts.Find(mode.AboutID);
                 if (string.IsNullOrEmpty(mode.MetaTite))
                 {
 
@@ -102,20 +90,20 @@ namespace DBModel.DAO
                 {
                     bd.MetaTite = mode.MetaTite;
                 }
-                if (string.IsNullOrEmpty(mode.SeoTite))
-                {
-
-                    bd.SeoTite = mode.Name;
-                }
-                else
-                {
-                    bd.SeoTite = mode.SeoTite;
-                }
-                // bd.CategoryID = mode.CategoryID;
+             
+                // bd.AboutID = mode.AboutID;
                 //bd.CreateBy = mode.CreateBy;
                 //bd.CreateDate = mode.CreateDate;
                 bd.Description = mode.Description;
-                bd.DisplayOrder = mode.DisplayOrder;
+                bd.Phone = mode.Phone;
+                bd.Twitter = mode.Twitter;
+                bd.Video = mode.Video;
+                bd.Address = mode.Address;
+                bd.Detail = mode.Detail;
+                bd.Email = mode.Email;
+                bd.Facebook = mode.Facebook;
+                bd.Googleplus = mode.Googleplus;
+               
                 bd.Image = mode.Image;
                
                 bd.LanguageID = mode.LanguageID;
@@ -124,10 +112,7 @@ namespace DBModel.DAO
             
                 bd.ModifiedBy = mode.ModifiedBy;
                 bd.ModifiedDate = mode.ModifiedDate;
-                bd.ParentID = mode.ParentID;
-                bd.Position = mode.Position;
-             
-                bd.ShowOnHome = mode.ShowOnHome;
+               
                 bd.Status = mode.Status;
                 bd.Name = mode.Name;
 

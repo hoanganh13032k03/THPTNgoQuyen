@@ -358,6 +358,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quay lại.
+        /// </summary>
+        public static string AdminFunctionBackButtonText {
+            get {
+                return ResourceManager.GetString("AdminFunctionBackButtonText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tạo mới.
         /// </summary>
         public static string AdminFunctionCreateButtonText {

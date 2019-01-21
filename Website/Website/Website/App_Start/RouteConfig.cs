@@ -14,7 +14,12 @@ namespace Website
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
+            routes.MapRoute(
+             name: "News Category",
+             url: "Tin-tuc/{metatitle}-{cateId}",
+             defaults: new { controller = "News", action = "Category", id = UrlParameter.Optional },
+             namespaces: new[] { "Website.Controllerss" }
+         );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

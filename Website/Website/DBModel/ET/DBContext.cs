@@ -51,7 +51,7 @@ namespace DBModel.ET
         {
             modelBuilder.Entity<About>()
                 .Property(e => e.MetaTite)
-                .IsUnicode(false);
+                .IsUnicode(true);
 
             modelBuilder.Entity<About>()
                 .Property(e => e.CreateBy)
@@ -95,7 +95,7 @@ namespace DBModel.ET
 
             modelBuilder.Entity<Category>()
                 .Property(e => e.MetaTite)
-                .IsUnicode(false);
+                .IsUnicode(true);
 
             modelBuilder.Entity<Category>()
                 .Property(e => e.CreateBy)
