@@ -3,3 +3,7 @@ E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\Common.pdb
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.dll
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.pdb
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.Mvc.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.xml
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.Mvc.xml

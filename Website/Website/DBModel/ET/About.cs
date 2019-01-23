@@ -47,7 +47,7 @@ namespace DBModel.ET
         public string Googleplus { get; set; }
 
         [StringLength(250, ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "TitleLong")]
-        [Display(Name = "AboutImages", ResourceType = typeof(Resources.ResourceAdmin))]
+        [Display(Name = "Images", ResourceType = typeof(Resources.ResourceAdmin))]
         public string Image { get; set; }
 
         [Column(TypeName = "ntext")]

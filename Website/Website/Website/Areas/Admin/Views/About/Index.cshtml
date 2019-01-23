@@ -32,7 +32,7 @@
 }
 
 @section FooterClienScript{
-    <script src="~/Content/admin/js/controller/admin/userController.js"></script>
+ 
     <!-- Select2 -->
     <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -117,12 +117,28 @@
                             </td>
                            
                             <td>
-                                @Html.DisplayFor(modelItem => item.Status)
+                                @{
+                                    var sStatus = "";
+                                    int iStus = Convert.ToInt32(item.Status);
+                                    switch (iStus)
+                                    {
+
+                                        case 0: sStatus = "Khóa"; break;
+                                        case 1: sStatus = "Kích hoạt"; break;
+                                        default: break;
+                                    }
+                                }
+                                @sStatus
                             </td>
                             <td>
                                 @Html.ActionLink("Edit", "Edit", new { id = item.AboutID }) |
                                 @Html.ActionLink("Details", "Details", new { id = item.AboutID }) |
-                                @Html.ActionLink("Delete", "Delete", new { id = item.AboutID })
+                                @Ajax.ActionLink("Xoá", "Delete", new { id = item.AboutID }, new AjaxOptions
+                           {
+                               Confirm = "Bạn có muốn xoá bản ghi này?",
+                               OnComplete = "$('#row_" + @item.AboutID + "').remove()",
+                               HttpMethod = "Delete"
+                           })
                             </td>
                         </tr>
                     }

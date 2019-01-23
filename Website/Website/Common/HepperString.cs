@@ -13,11 +13,7 @@ namespace Common
   
     public static class HepperString
     {
-      //public static VnailmarketDBContext db = new VnailmarketDBContext();
-      //  public static DateTime GetDateServer()
-      //  {
-      //      return  db.Database.SqlQuery<DateTime> ("spGetSystemDate").SingleOrDefault();
-      //  }
+     
        public static  int thisIsMagic(int year, int month, int day)
         {
             if (month < 3)

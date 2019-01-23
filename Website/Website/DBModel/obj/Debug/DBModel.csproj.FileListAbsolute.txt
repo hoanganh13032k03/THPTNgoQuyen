@@ -12,3 +12,7 @@ E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Common.dll
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Resources.dll
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Common.pdb
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\Resources.pdb
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\PagedList.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\PagedList.Mvc.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\PagedList.xml
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\DBModel\bin\Debug\PagedList.Mvc.xml

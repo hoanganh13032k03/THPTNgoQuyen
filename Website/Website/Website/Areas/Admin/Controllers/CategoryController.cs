@@ -160,8 +160,15 @@ namespace Website.Areas.Admin.Controllers
                 // TODO: Add delete logic here
 
                 CategoryDao bdDao = new CategoryDao();
+                NewsDao dbNewDao = new NewsDao();
 
                 if (bdDao.FindChildCategory(id).Count > 0)
+                {
+
+                    SetAlert("Đang sử dụng không được phép xóa", SystemConsts.ALERT_DANGER);
+                    return RedirectToAction("Index");
+                }
+                if (dbNewDao.ToActiveByCateID(id).Count > 0)
                 {
 
                     SetAlert("Đang sử dụng không được phép xóa", SystemConsts.ALERT_DANGER);

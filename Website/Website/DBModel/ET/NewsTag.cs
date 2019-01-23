@@ -12,7 +12,7 @@ namespace DBModel.ET
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public long ContentID { get; set; }
+        public long NewsID { get; set; }
 
         [Key]
         [Column(Order = 1)]
