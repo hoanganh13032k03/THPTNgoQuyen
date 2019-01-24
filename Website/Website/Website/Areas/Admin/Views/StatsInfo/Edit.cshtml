@@ -1,7 +1,7 @@
-﻿@model DBModel.ET.Side
+﻿@model DBModel.ET.StatsInfo
 
 @{
-    ViewBag.Title = "Tạo Side";
+    ViewBag.Title = "Tạo số thống kê";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -38,7 +38,7 @@
 @section ContenHeader{
     <section class="content-header">
         <h1>
-            Tạo mới danh mục tin
+            Sửa danh mục số chạy
         </h1>
         <ol class="breadcrumb">
             <li>
@@ -97,18 +97,25 @@
     <!-- Default box -->
     <div class="box">
         <div class="box-body">
-            @using (Html.BeginForm("Create", "Side", FormMethod.Post, new { @class = "form-horizontal", id = "frmAbout" }))
+            @using (Html.BeginForm("Edit", "StatsInfo", FormMethod.Post, new { @class = "form-horizontal", id = "frmAbout" }))
             {
                 @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.StasInfoID)
                 <div class="form-horizontal">
-
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                 
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
                             @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Number, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Number, "1", new { @class = "form-control", @autoforcus = "autoforcus", @required = "required", @Type = "number" })
+                            @Html.ValidationMessageFor(model => model.Number, "", new { @class = "text-danger" })
                         </div>
                     </div>
 
@@ -119,38 +126,18 @@
                             @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
                     <div class="form-group">
-                        @Html.LabelFor(model => model.Link, htmlAttributes: new { @class = "control-label col-md-2" })
+                        @Html.LabelFor(model => model.Speed, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Link, new { @class = "form-control" } )
-                            @Html.ValidationMessageFor(model => model.Link, "", new { @class = "text-danger" })
+                            @Html.TextBoxFor(model => model.Speed, "1", new { @class = "form-control", @autoforcus = "autoforcus", @required = "required", @Type = "number" })
+                            @Html.ValidationMessageFor(model => model.Speed, "", new { @class = "text-danger" })
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Target, htmlAttributes: new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.DropDownListFor(model => model.Target, new List<SelectListItem> { new SelectListItem { Text = "Mở ở trang hiện tại", Value = "_self", Selected = true }, new SelectListItem { Text = "Mở ở tab mới", Value = "_blank" },  new SelectListItem { Text = "Mở tơi tab mở tab hiện tại", Value = "_parent" } }, new { @class = "form-control" })
-                            @Html.ValidationMessageFor(model => model.Target, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                    
                     <div class="form-group">
                         @Html.LabelFor(model => model.DisplayOrder, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.DisplayOrder, "1", new { @class = "form-control", @autoforcus = "autoforcus", @required = "required", @Type = "number" })
+                            @Html.TextBoxFor(model => model.DisplayOrder, new { @class = "form-control", @autoforcus = "autoforcus", @required = "required", @Type = "number" })
                             @Html.ValidationMessageFor(model => model.DisplayOrder, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.Image, new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(model => model.Image, new { @class = "form-control" })
-                            <a href="#" class="btn btn-primary" onclick="BrowseServer('Image');">Chọn ảnh..</a>
-                            @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
-                            <img width="30" src="@(Convert.ToString(Html.DisplayFor(model => model.Image)))" id="imgIcon" class="img-circle" alt="User Image">
-                            @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="form-group">
@@ -162,6 +149,8 @@
                             </div>
                         </div>
                     </div>
+
+
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">
                             <input type="submit" value="@Resources.ResourceAdmin.AdminSaveButtonText" class="btn btn-primary" />
@@ -169,7 +158,6 @@
                     </div>
                 </div>
             }
-
         </div>
         <!-- /.box-body -->
     </div>

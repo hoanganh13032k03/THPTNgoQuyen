@@ -1528,6 +1528,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Chiều cao.
+        /// </summary>
+        public static string Heigt {
+            get {
+                return ResourceManager.GetString("Heigt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hình ảnh.
         /// </summary>
         public static string Images {
@@ -2239,6 +2248,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Số chạy.
+        /// </summary>
+        public static string StatsInfoNumber {
+            get {
+                return ResourceManager.GetString("StatsInfoNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tốc độ.
+        /// </summary>
+        public static string StatsInfoSeed {
+            get {
+                return ResourceManager.GetString("StatsInfoSeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Trạng thái.
         /// </summary>
         public static string Status {
@@ -2451,6 +2478,15 @@ namespace Resources {
         public static string UserPasswordLevel2 {
             get {
                 return ResourceManager.GetString("UserPasswordLevel2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Độ rộng.
+        /// </summary>
+        public static string Wide {
+            get {
+                return ResourceManager.GetString("Wide", resourceCulture);
             }
         }
     }

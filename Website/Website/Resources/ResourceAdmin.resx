@@ -606,6 +606,9 @@
   <data name="GoBackToListText" xml:space="preserve">
     <value>Trở về trang danh sách</value>
   </data>
+  <data name="Heigt" xml:space="preserve">
+    <value>Chiều cao</value>
+  </data>
   <data name="Images" xml:space="preserve">
     <value>Hình ảnh</value>
   </data>
@@ -843,6 +846,12 @@
   <data name="ShowOnHome" xml:space="preserve">
     <value>Hiện trang chủ</value>
   </data>
+  <data name="StatsInfoNumber" xml:space="preserve">
+    <value>Số chạy</value>
+  </data>
+  <data name="StatsInfoSeed" xml:space="preserve">
+    <value>Tốc độ</value>
+  </data>
   <data name="Status" xml:space="preserve">
     <value>Trạng thái</value>
   </data>
@@ -914,5 +923,8 @@
   </data>
   <data name="UserPasswordLevel2" xml:space="preserve">
     <value>Mật khẩu cấp 2</value>
+  </data>
+  <data name="Wide" xml:space="preserve">
+    <value>Độ rộng</value>
   </data>
 </root>

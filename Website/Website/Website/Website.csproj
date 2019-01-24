@@ -220,6 +220,8 @@
     <Compile Include="Areas\Admin\Controllers\MenuController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenuTypeController.cs" />
     <Compile Include="Areas\Admin\Controllers\PermissionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdvertiseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StatsInfoController.cs" />
     <Compile Include="Areas\Admin\Controllers\SideController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\Admin\Models\AuthorizeBusiness.cs" />
@@ -271,6 +273,14 @@
     <Content Include="Areas\Admin\Views\Side\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Side\Create.cshtml" />
     <Content Include="Areas\Admin\Views\Side\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\StatsInfo\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StatsInfo\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\StatsInfo\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\StatsInfo\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertise\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertise\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertise\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Advertise\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
