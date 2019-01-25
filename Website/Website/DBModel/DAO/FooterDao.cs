@@ -67,10 +67,9 @@ namespace DBModel.DAO
             {
                 var bd = db.Footers.Find(mode.ID);
                // bd.ID = buider.GroupID;
-                bd.Title = mode.Title;
                 bd.LanguageID = mode.LanguageID;
                 bd.Status = mode.Status;
-                bd.ContentHtml = mode.ContentHtml;
+                bd.Detail = mode.Detail;
                
                 db.SaveChanges();
                 return true;

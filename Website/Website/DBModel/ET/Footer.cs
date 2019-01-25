@@ -12,11 +12,8 @@ namespace DBModel.ET
         [StringLength(50)]
         public string ID { get; set; }
 
-        [StringLength(100)]
-        public string Title { get; set; }
-
         [Column(TypeName = "ntext")]
-        public string ContentHtml { get; set; }
+        public string Detail { get; set; }
 
         [StringLength(5)]
         public string LanguageID { get; set; }

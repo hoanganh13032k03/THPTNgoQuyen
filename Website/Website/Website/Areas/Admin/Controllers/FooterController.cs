@@ -37,7 +37,7 @@ namespace Website.Areas.Admin.Controllers
 
         // POST: Admin/Footer/Create
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Create(Footer collection)
         {
             try
@@ -85,7 +85,7 @@ namespace Website.Areas.Admin.Controllers
 
         // POST: Admin/Footer/Edit/5
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
         public ActionResult Edit(Footer collection)
         {
             try
