@@ -12,6 +12,7 @@ namespace DBModel.ET
         [StringLength(50)]
         public string ID { get; set; }
 
+       
         [Column(TypeName = "ntext")]
         public string Detail { get; set; }
 

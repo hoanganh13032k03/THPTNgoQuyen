@@ -50,69 +50,9 @@
 <body>
     <!-- header -->
     <header>
-        <!-- top header -->
-        <div class="top-head-w3ls py-2 bg-dark">
-            <div class="container">
-                <div class="row">
-                    <h1 class="text-capitalize text-white col-7">
-                        <i class="fas fa-book text-dark bg-white p-2 rounded-circle mr-3"></i>Cổng thông tin điện tử trường THPT Ngô Quyền - Hải Phòng
-                    </h1>
-                    <!-- social icons -->
-                    <div class="social-icons text-right col-5">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#" class="fab fa-facebook-f icon-border facebook rounded-circle"> </a>
-                            </li>
-                            <li class="mx-2">
-                                <a href="#" class="fab fa-twitter icon-border twitter rounded-circle"> </a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-google-plus-g icon-border googleplus rounded-circle"> </a>
-                            </li>
-                            <li class="ml-2">
-                                <a href="#" class="fas fa-rss icon-border rss rounded-circle"> </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- //social icons -->
-                </div>
-            </div>
-        </div>
-        <!-- //top header -->
-        <!-- middle header -->
-        <div class="middle-w3ls-nav py-2">
-            <div class="container">
-                <div class="row">
-                    <a class="logo font-italic font-weight-bold col-lg-3 text-lg-left text-center" href="index.html"><img src="~/Content/Client/images/logo.jpg" alt="" /></a>
-                    <div class="col-lg-9 right-info-agiles mt-lg-0 mt-sm-3 mt-1">
-                        <div class="row">
-                            <div class="col-sm-4 nav-middle">
-                                <i class="far fa-envelope-open text-center mr-md-4 mr-sm-2 mr-4"></i>
-                                <div class="agile-addresmk">
-                                    <p>
-                                        <span class="font-weight-bold text-dark">Email</span>
-                                        <a href="mailto:mail@example.com">bonnalngoquyen@gmail.com</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-6 nav-middle mt-sm-0 mt-2">
-                                <i class="fas fa-phone-volume text-center mr-md-4 mr-sm-2 mr-4"></i>
-                                <div class="agile-addresmk">
-                                    <p>
-                                        <span class="font-weight-bold text-dark">Điện thoại</span>
-                                        +84974010256
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-sm-4 col-6 top-login-butt text-right mt-sm-2">
-                                <a href="login.html" class="button-head-mow3 text-white">Đăng nhập</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- //middle header -->
+       
+        @{ Html.RenderAction("HeaderPartial", "Home");}
+      
     </header>
     <!-- //header -->
      <!-- banner -->
@@ -176,76 +116,7 @@
     @RenderBody()
    
     <!-- footer -->
-    <footer>
-        <div class="container py-4">
-            <div class="row py-xl-5 py-sm-3">
-                <div class="col-lg-6 map">
-                    <h2 class="contact-title text-capitalize text-white font-weight-light mb-sm-4 mb-3">
-                        Địa chỉ của chúng tôi
-                    </h2>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d932.1062909186849!2d106.67969927772828!3d20.85490665640472!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb493367dac56ac29!2zVHLGsOG7nW5nIFRIUFQgTmfDtCBRdXnhu4Fu!5e0!3m2!1svi!2s!4v1545581965479" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    <div class="conta-posi-w3ls p-4 rounded">
-                        <h5 class="text-white font-weight-bold mb-3">Địa chỉ</h5>
-                        <p>
-                            Số 02 Mê Linh
-                            <span>Lê Chân</span> Hải Phòng
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 contact-agileits-w3layouts mt-lg-0 mt-4">
-                    <h4 class="contact-title text-capitalize text-white font-weight-light mb-sm-4 mb-3">
-                        <span class="font-weight-bold">Liên hệ</span>
-                    </h4>
-                    <p class="conta-para-style border-left pl-4">Nếu bạn có bất kỳ câu hỏi nào về các dịch vụ chúng tôi cung cấp chỉ cần sử dụng mẫu dưới đây. Chúng tôi cố gắng và trả lời tất cả các truy vấn và nhận xét trong vòng 24 giờ..</p>
-                    <div class="subscribe-w3ls my-xl-5 my-4">
-                        <h6 class="text-white text-capitalize mb-4">Đăng ký nhận thông tin</h6>
-                        <form action="#" method="post" class="subscribe_form">
-                            <input class="form-control" type="email" name="email" placeholder="Enter your email..." required="">
-                            <button type="submit" class="btn btn-primary submit">Chuyển</button>
-                        </form>
-                    </div>
-                    <p class="para-agileits-w3layouts text-white">
-                        <i class="fas fa-map-marker pr-3"></i>Số 02Mee Linh, Lê Chân, Hải Phòng
-                    </p>
-                    <p class="para-agileits-w3layouts text-white my-sm-3 my-2">
-                        <i class="fas fa-phone pr-3"></i>0225 225 225
-                    </p>
-                    <p class="para-agileits-w3layouts">
-                        <i class="far fa-envelope-open pr-2"></i>
-                        <a href="mailto:mail@example.com" class=" text-white">info@ngoquyen.edu.vn</a>
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="copyright-agiles py-3">
-            <div class="container">
-                <div class="row">
-                    <p class="col-lg-8 copy-right-grids text-white text-lg-left text-center mt-lg-1">
-                        © 2018 Được phát triển bởi
-                        <a href="https://hpz.vn/" target="_blank">HPZ Việt Nam</a>
-                    </p>
-                    <!-- social icons -->
-                    <div class="social-icons text-lg-right text-center col-lg-4 mt-lg-0 mt-3">
-                        <ul class="list-unstyled">
-                            <li>
-                                <a href="#" class="fab fa-facebook-f icon-border facebook rounded-circle"> </a>
-                            </li>
-                            <li class="mx-2">
-                                <a href="#" class="fab fa-twitter icon-border twitter rounded-circle"> </a>
-                            </li>
-                            <li>
-                                <a href="#" class="fab fa-google-plus-g icon-border googleplus rounded-circle"> </a>
-                            </li>
-                            <li class="ml-2">
-                                <a href="#" class="fas fa-rss icon-border rss rounded-circle"> </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- //social icons -->
-                </div>
-            </div>
-        </div>
-    </footer>
+    @{ Html.RenderAction("FooterPartial", "Home");}
     <!-- //footer -->
     <!-- Js files -->
     <!-- JavaScript -->

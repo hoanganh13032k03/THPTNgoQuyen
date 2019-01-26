@@ -1,9 +1,11 @@
-﻿
+﻿@using DBModel.DAO;
+@using DBModel.ET;
 @{
     ViewBag.Title = "Index";
     ViewBag.MetaKeywords = "Index";
     Layout = "~/Views/Shared/_WebLayout.cshtml";
-}
+    List<StatsInfo> lstSIF = (List<StatsInfo>)ViewBag.StatsInfo;
+   }
 
 
 <!-- about -->
@@ -42,7 +44,7 @@
                 </div>
             </div>
             <div class="col-lg-6 left-img-agikes mt-lg-0 mt-sm-4 mt-3 text-right">
-                <img src="~/Content/Client/images/ab.jpg" alt="" class="img-fluid" />
+                <img src="/data/images/ab.jpg" alt="" class="img-fluid" />
 
                 <div class="about-bottom text-center p-sm-5 p-4">
                     <ul>
@@ -70,19 +72,14 @@
     <div class="container py-xl-5 py-lg-3">
         <div class="stats-info">
             <div class="row">
-                <div class="col-md-4 col-6 stats-grid-w3-agile text-center px-xl-5 px-3">
-                    <div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='1500' data-delay='.5' data-increment="1">1500</div>
-                    <p class="text-uppercase text-white border-top pt-4 mt-3">Học sinh năm học 2018 - 2019</p>
-                </div>
-                <div class="col-md-4 col-6 stats-grid-w3-agile text-center  px-xl-5 px-3">
-                    <div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='150' data-delay='.15' data-increment="1">150</div>
-                    <p class="text-uppercase text-white border-top pt-4 mt-3">Học sinh giỏi cấp thành phố năm 2018 - 2019 </p>
-                </div>
-                <div class="col-md-4 col-6 stats-grid-w3-agile text-center mt-md-0 mt-5  px-xl-5 px-3">
-                    <div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='95' data-delay='.15' data-increment="1">95</div>
-                    <p class="text-uppercase text-white border-top pt-4 mt-3">Giáo viên năm học 2018 - 2019</p>
-                </div>
-
+                @foreach (var st in lstSIF)
+                {
+                    <div class="col-md-4 col-6 stats-grid-w3-agile text-center px-xl-5 px-3">
+                        <div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='@st.Number' data-delay='.@st.Speed' data-increment="1">1500</div>
+                        <p class="text-uppercase text-white border-top pt-4 mt-3">@st.Name</p>
+                    </div>
+                }
+                
             </div>
         </div>
     </div>
@@ -364,7 +361,7 @@
                 <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
                     <span class="font-weight-bold">video</span>
                 </h3>
-                <iframe src="https://player.vimeo.com/video/306313488"></iframe>
+                <iframe src="@ViewBag.About.Video"></iframe>
             </div>
             <div class="col-lg-5 events">
                 <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">

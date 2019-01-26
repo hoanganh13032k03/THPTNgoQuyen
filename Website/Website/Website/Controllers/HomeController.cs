@@ -21,6 +21,11 @@ namespace Website.Controllers
        
         public ActionResult Index()
         {
+            AboutDao dbCat = new AboutDao();
+            ViewBag.About = dbCat.ToActive();
+
+            StatsInfoDao stiDB = new StatsInfoDao();
+            ViewBag.StatsInfo = stiDB.ToListActive();
             return View();
         }
         [ChildActionOnly]
@@ -31,6 +36,22 @@ namespace Website.Controllers
             List<Category> menusource = dbCat.ToListActiveHome(); // get your menus here
             ViewBag.Menus = CreateVM(null, menusource);  // transform it into the ViewModel
             return PartialView(ViewBag.Menus);
+        }
+        [ChildActionOnly]
+        public PartialViewResult HeaderPartial()
+
+        {
+           AboutDao dbCat = new AboutDao();
+            return PartialView(dbCat.ToActive());
+        }
+        [ChildActionOnly]
+        public PartialViewResult FooterPartial()
+
+        {
+            FooterDao dbCat = new FooterDao();
+            AboutDao abDao = new AboutDao();
+            ViewBag.About = abDao.ToActive();
+            return PartialView(dbCat.ToActive());
         }
         public List<CategoryViewModel> CreateVM(long? CategoryID, List<Category> source) {
 

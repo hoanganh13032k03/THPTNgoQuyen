@@ -7,11 +7,11 @@
 CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
     config.language = 'en';
-    config.filebrowserBrowseUrl = "/Content/js/plugins/ckfinder/ckfinder.html"
-    config.filebrowserImageBrowseUrl = "/Content/js/plugins/ckfinder/ckfinder.html?type=Images"
-    config.filebrowserFlashBrowseUrl = "/Content/js/plugins/ckfinder/ckfinder.html?type=Flash"
-    config.filebrowserUploadUrl = "/Content/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files"
-    config.filebrowserImageUploadUrl = "/Content/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images"
-    config.filebrowserFlashUploadUrl = "/Content/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Flash"
+    config.filebrowserBrowseUrl = "/Content/admin/js/plugins/ckfinder/ckfinder.html"
+    config.filebrowserImageBrowseUrl = "/Content/admin/js/plugins/ckfinder/ckfinder.html?type=Images"
+    config.filebrowserFlashBrowseUrl = "/Content/admin/js/plugins/ckfinder/ckfinder.html?type=Flash"
+    config.filebrowserUploadUrl = "/Content/admin/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files"
+    config.filebrowserImageUploadUrl = "/Content/admin/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images"
+    config.filebrowserFlashUploadUrl = "/Content/admin/js/plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Flash"
 	// config.uiColor = '#AADC6E';
 };

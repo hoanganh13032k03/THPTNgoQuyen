@@ -16,7 +16,7 @@
     <!-- Select2 -->
     <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
     <script src="~/Content/admin/js/plugins/ckfinder/ckfinder.js"></script>
-   <script src="~/Content/admin/js/plugins/ckeditor/ckeditor.js"></script>
+    <script src="~/Content/admin/js/plugins/ckeditor/ckeditor.js"></script>
 
     <script type="text/javascript">
         function BrowseServer(field) {
@@ -31,7 +31,7 @@
             document.getElementById(editedField).value = fileUrl;
             document.getElementById('imgIcon').src = fileUrl;
         }
-       
+
 
     </script>
 }
@@ -48,7 +48,7 @@
     </section>
 }
 @section FooterClienScript{
- 
+
     <!-- Select2 -->
     <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -118,7 +118,7 @@
                             @Html.ValidationMessageFor(model => model.MetaTite, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.MetakeyWords, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
@@ -140,7 +140,7 @@
                             @Html.ValidationMessageFor(model => model.Video, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                 
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.Address, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
@@ -212,7 +212,7 @@
                             @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
                         </div>
                     </div>
-                     <div class="form-group">
+                    <div class="form-group">
                         @Html.LabelFor(model => model.Status, htmlAttributes: new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
                             <div class="checkbox">

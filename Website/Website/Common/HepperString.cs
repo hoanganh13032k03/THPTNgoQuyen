@@ -61,6 +61,18 @@ namespace Common
             }
             return strResult.TrimEnd();
         }
+        public static long[] TolistLong(string[] ls)
+        {
+            List<long> icateID = new List<long>();
+            foreach (var ct in ls)
+            {
+                long sd = Convert.ToInt64(ct);
+                icateID.Add(sd);
+
+
+            }
+            return icateID.ToArray();
+        }
         /// <summary>
         ///Lay danh sach theo key
         /// </summary>

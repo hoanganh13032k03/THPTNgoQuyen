@@ -55,6 +55,12 @@ namespace DBModel.DAO
            
           
         }
+        public Footer ToActive()
+        {
+
+            return db.Footers.Where(a => a.Status == true).SingleOrDefault();
+        }
+        
         public Footer FindByID(string ID)
         {
 

@@ -89,6 +89,7 @@ namespace DBModel.DAO
                     mode.Title = mode.Name;
                 }
                 mode.ViewCount = 0;
+                mode.PublishedDate = DateTime.Now;
                 db.News.Add(mode);
                 db.SaveChanges();
                 //Xử lý tag
@@ -183,57 +184,72 @@ namespace DBModel.DAO
 
             return db.News.Where(a => a.NewsID == ID).SingleOrDefault();
         }
-       
+        public long Publicer(News mode)
+        {
+            var bd = db.News.Find(mode.NewsID);
+            bd.PublishedDate = mode.PublishedDate;
+            bd.Status = mode.Status;
+            return bd.NewsID;
+        }
+
         public long Update(News mode)
         {
            
                 var bd = db.News.Find(mode.NewsID);
-                if (string.IsNullOrEmpty(mode.MetaTite))
-                {
+            if (string.IsNullOrEmpty(mode.MetaTite))
+            {
 
-                    bd.MetaTite = HepperString.ToUnsignString(mode.Name);
-                }
-                else
-                {
-                    bd.MetaTite = mode.MetaTite;
-                }
-                if (string.IsNullOrEmpty(mode.Title))
-                {
+                bd.MetaTite = HepperString.ToUnsignString(mode.Name);
+            }
+            else
+            {
+                bd.MetaTite = mode.MetaTite;
+            }
+            if (string.IsNullOrEmpty(mode.Title))
+            {
 
-                    bd.MetaTite = mode.Name;
-                }
-                else
-                {
-                    bd.MetaTite = mode.MetaTite;
-                }
+                bd.MetaTite = mode.Name;
+            }
+            else
+            {
+                bd.MetaTite = mode.MetaTite;
+            }
 
-                // bd.NewsID = mode.NewsID;
-                //bd.CreateBy = mode.CreateBy;
-                //bd.CreateDate = mode.CreateDate;
+            bd.NewsID = mode.NewsID;
+            //bd.CreateBy = mode.CreateBy;
+            //bd.CreateDate = mode.CreateDate;
 
-                bd.CategoryID = mode.CategoryID;
-                bd.ContentHtml = mode.ContentHtml;
-                bd.Description = mode.Description;
-                bd.Name = mode.Name;
-                bd.PublishedDate = mode.PublishedDate;
+            bd.CategoryID = mode.CategoryID;
+            bd.ContentHtml = mode.ContentHtml;
+            bd.Description = mode.Description;
+            bd.Name = mode.Name;
+             bd.PublishedDate = mode.PublishedDate;
+            if (string.IsNullOrEmpty(mode.RelatedNewses))
+            {
+
+                bd.RelatedNewses = "";
+            }
+            else
+            {
                 bd.RelatedNewses = mode.RelatedNewses;
-                bd.ShowConment = mode.ShowConment;
-                bd.ShowShare = mode.ShowShare;
-                bd.UpTopHot = mode.UpTopHot;
-                bd.UpTopNew = mode.UpTopNew;
-                bd.ViewCount = mode.ViewCount;
-                bd.Image = mode.Image;
-               
-                bd.LanguageID = mode.LanguageID;
-                bd.MetaDescription = mode.MetaDescription;
-                bd.MetakeyWords = mode.MetakeyWords;
-            
-                bd.ModifiedBy = mode.ModifiedBy;
-                bd.ModifiedDate = mode.ModifiedDate;
-               
-                bd.Status = mode.Status;
-                bd.Name = mode.Name;
-                bd.Source = mode.Source;
+            }
+
+            bd.ShowConment = mode.ShowConment;
+            bd.ShowShare = mode.ShowShare;
+            bd.UpTopHot = mode.UpTopHot;
+            bd.UpTopNew = mode.UpTopNew;
+            bd.ViewCount = mode.ViewCount;
+            bd.Image = mode.Image;
+            bd.LanguageID = mode.LanguageID;
+            bd.MetaDescription = mode.MetaDescription;
+            bd.MetakeyWords = mode.MetakeyWords;
+
+            bd.ModifiedBy = mode.ModifiedBy;
+            bd.ModifiedDate = mode.ModifiedDate;
+
+            bd.Status = mode.Status;
+           
+            bd.Source = mode.Source;
 
 
             db.SaveChanges();

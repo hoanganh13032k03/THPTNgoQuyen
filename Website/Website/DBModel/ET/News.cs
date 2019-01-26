@@ -49,8 +49,8 @@ namespace DBModel.ET
         public string ModifiedBy { get; set; }
 
         [Display(Name = "UpdatedDate", ResourceType = typeof(Resources.ResourceAdmin))]
-        public DateTime? ModifiedDate { get; set; }
-
+        public DateTime ModifiedDate { get; set; }
+        
         [Display(Name = "MetaKeywords", ResourceType = typeof(Resources.ResourceAdmin))]
         [StringLength(250, ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "CategoryNameLong")]
         public string MetakeyWords { get; set; }
