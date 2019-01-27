@@ -54,7 +54,7 @@ namespace DBModel.DAO
         /// <param name="page"></param>
         /// <param name="pageSize"></param>
         /// <returns></returns>
-        public List<News> ListtiveByCateIDPaging(int page, int pageSize, long catID)
+        public List<News> ListtiveByCateIDPaging(long catID,int page=1, int pageSize=1)
         {
             List<News> model = ToActiveByCateID(catID).ToPagedList(page, pageSize).ToList();
             return model;
@@ -65,7 +65,7 @@ namespace DBModel.DAO
         {
             string scatID = catID.ToString();
             List<News> lstActive = db.News.Where(x => x.Status == 1).OrderByDescending(x => x.PublishedDate).ToList<News>();
-            List<News> lstReust = null;
+            List<News> lstReust =  new List<News>();
             foreach(var n in lstActive)
             {
                 if (HepperString.GetListByKey(n.CategoryID, ";").Contains(scatID))
@@ -75,6 +75,68 @@ namespace DBModel.DAO
             }
             return lstReust;
         }
+        public int ListAllByTagCount(string tag)
+        {
+            var model = (from a in db.News
+                         join b in db.NewsTags
+                         on a.NewsID equals b.NewsID
+                         where b.TagID == tag
+                         select new
+                         {
+                             Name = a.Name,
+                             MetaTitle = a.MetaTite,
+                             Image = a.Image,
+                             Description = a.Description,
+                             PublishedDate = a.PublishedDate,
+                             MetaDescription = a.MetaDescription,
+                             MetakeyWords = a.MetakeyWords,
+                             Title = a.Title,
+                             ShowShare = a.ShowShare,
+                             ShowConment = a.ShowConment,
+                             ID = a.NewsID
+
+                         }).AsEnumerable().Count();
+            return model;
+        }
+        public List<News> ListAllByTag(string tag, int page, int pageSize)
+        {
+            var model = (from a in db.News
+                         join b in db.NewsTags
+                         on a.NewsID equals b.NewsID
+                         where b.TagID == tag
+                         select new
+                         {
+                             Name = a.Name,
+                             MetaTitle = a.MetaTite,
+                             Image = a.Image,
+                             Description = a.Description,
+                             PublishedDate = a.PublishedDate,
+                             MetaDescription = a.MetaDescription,
+                             MetakeyWords = a.MetakeyWords,
+                             Title = a.Title,
+                             ShowShare = a.ShowShare,
+                             ShowConment = a.ShowConment,
+                             Source = a.Source,
+                             ID = a.NewsID
+
+                         }).AsEnumerable().Select(x => new News()
+                         {
+                             Name = x.Name,
+                             MetaTite = x.MetaTitle,
+                             Image = x.Image,
+                             Description = x.Description,
+                             PublishedDate = x.PublishedDate,
+                             MetakeyWords = x.MetakeyWords,
+                             MetaDescription = x.MetaDescription,
+                             ShowShare = x.ShowShare,
+                             ShowConment = x.ShowConment,
+                             Source = x.Source,
+                             Title = x.Title,
+                             NewsID = x.ID
+                         });
+            return model.OrderByDescending(x => x.PublishedDate).ToPagedList(page, pageSize).ToList();
+        }
+
         public long Insert(News mode)
         {
             
@@ -153,6 +215,20 @@ namespace DBModel.DAO
                          select new
                          {
                              ID = b.TagID,
+                             Name = a.Name
+                         }).AsEnumerable().Select(x => new Tag()
+                         {
+                             TagID = x.ID,
+                             Name = x.Name
+                         });
+            return model.ToList();
+        }
+        public List<Tag> ListTag()
+        {
+            var model = (from a in db.Tags
+                         select new
+                         {
+                             ID = a.TagID,
                              Name = a.Name
                          }).AsEnumerable().Select(x => new Tag()
                          {

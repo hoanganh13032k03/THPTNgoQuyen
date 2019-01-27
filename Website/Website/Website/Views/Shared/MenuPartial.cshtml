@@ -8,7 +8,7 @@
     </li>
 @foreach (var item in Model)
             {
-                var url = "Tin-tuc/" + item.MetaTite + "-" + item.CategoryID;
+                var url = "/Tin-tuc/" + item.MetaTite + "-" + item.CategoryID;
                 if (item.Children.Count() > 0)
                 {
         <li class="nav-item dropdown">
@@ -18,7 +18,7 @@
             <div class="dropdown-menu">
                 @foreach (var chil in item.Children)
                 {
-                    url = "Tin-tuc/" + chil.MetaTite + "-" + chil.CategoryID;
+                    url = "/Tin-tuc/" + chil.MetaTite + "-" + chil.CategoryID;
                     <a class="dropdown-item" href="@url"> @chil.Name </a>
                 }
                 

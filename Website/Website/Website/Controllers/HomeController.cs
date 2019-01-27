@@ -53,6 +53,33 @@ namespace Website.Controllers
             ViewBag.About = abDao.ToActive();
             return PartialView(dbCat.ToActive());
         }
+        [ChildActionOnly]
+        public PartialViewResult TagsPartial()
+
+        {
+            NewsDao dbDao = new NewsDao();
+
+            return PartialView(dbDao.ListTag());
+        }
+        [ChildActionOnly]
+        public PartialViewResult EventsPartial()
+
+        {
+            NewsDao dbDao = new NewsDao();
+
+            return PartialView(dbDao.ListTag());
+        }
+        [ChildActionOnly]
+        public PartialViewResult CategoryPartial()
+
+        {
+            CategoryDao dbCat = new CategoryDao();
+            List<Category> menusource = dbCat.ToListActiveNotTopHome(); // get your menus here
+            ViewBag.Menus = CreateVM(null, menusource);  // transform it into the ViewModel
+            return PartialView(ViewBag.Menus);
+        }
+
+     
         public List<CategoryViewModel> CreateVM(long? CategoryID, List<Category> source) {
 
             return (from cat in source

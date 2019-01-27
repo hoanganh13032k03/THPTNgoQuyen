@@ -28,6 +28,10 @@ namespace DBModel.DAO
         {
             return db.Categories.Where(x => x.Status == true&&x.ShowOnHome==true && x.Position == 1).OrderBy(x => x.DisplayOrder).ToList<Category>();
         }
+        public List<Category> ToListActiveNotTopHome()
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position != 1).OrderBy(x => x.DisplayOrder).ToList<Category>();
+        }
         public bool Insert(Category mode)
         {
             try

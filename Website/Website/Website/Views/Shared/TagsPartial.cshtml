@@ -1,0 +1,15 @@
+﻿@model List<DBModel.ET.Tag>
+
+<div class="tags mt-4 p-4 border">
+    <h3 class="blog-title text-dark">Recent Tags</h3>
+    <ul class="mt-4">
+        @foreach (var t in Model)
+        {
+           var url = "/tag/"+ t.TagID;
+            <li>
+                <a href="@url" class="text-dark border">@t.Name</a>
+            </li>
+        }
+        
+    </ul>
+</div>

@@ -56,47 +56,7 @@
     </header>
     <!-- //header -->
      <!-- banner -->
-<div class="banner-agile">
-    <ul class="slider">
-        <li class="active">
-            <div class="banner-w3ls-1">
-            </div>
-        </li>
-        <li>
-            <div class="banner-w3ls-2">
-            </div>
-        </li>
-        <li>
-            <div class="banner-w3ls-3">
-            </div>
-        </li>
-        <li>
-            <div class="banner-w3ls-4">
-            </div>
-        </li>
-        <li class="prev">
-            <div class="banner-w3ls-5">
-            </div>
-        </li>
-    </ul>
-    <ul class="pager">
-        <li data-index="0" class="active"></li>
-        <li data-index="1"></li>
-        <li data-index="2"></li>
-        <li data-index="3"></li>
-        <li data-index="4"></li>
-    </ul>
-    <div class="banner-text-posi-w3ls">
-        <div class="banner-text-whtree">
-            <h3 class="text-capitalize text-white p-4">
-                Bonnal
-                <b>100 tuổi</b>
-            </h3>
-            <p class="px-4 py-3 text-dark">Trở thành chuyên gia hàng đầu sau khi tốt nghiệp</p>
-            <a href="about.html" class="button-agiles text-capitalize text-white mt-sm-5 mt-4">Xem tiếp</a>
-        </div>
-    </div>
-
+<div class="banner-agile-2">
     <!-- navigation -->
     <div class="navigation-w3ls">
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-nav">
@@ -119,7 +79,7 @@
         <div class="container py-xl-3">
             <ul class="list-unstyled">
                 <li>
-                    <i class="fab">s</i>
+                    <i class="fab fa-supple"></i>
                 </li>
                 <li>
                     <i class="fab fa-angrycreative"></i>
@@ -143,10 +103,19 @@
         </div>
     </div>
     <!-- //brands -->
-
     <!-- footer -->
     @{ Html.RenderAction("FooterPartial", "Home");}
     <!-- //footer -->
+    
+    <script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2&appId=230002147943453&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+    </script>
     <!-- Js files -->
     <!-- JavaScript -->
     <script src="~/Content/Client/js/jquery-2.2.3.min.js"></script>
