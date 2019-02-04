@@ -1,0 +1,94 @@
+﻿@model DBModel.ET.News
+@{
+
+    ViewBag.Title =Model.Title;
+    ViewBag.MetaKeywords = Model.MetakeyWords;
+    ViewBag.MetaDescription = Model.MetakeyWords;
+    Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
+    var url = "/Tin-tuc/" + ViewBag.Cate.MetaTite + "-" + ViewBag.Cate.CategoryID;
+}
+<!-- breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/Home/Index">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page"><a href="@url">@ViewBag.CatePare.Text</a></li>
+    </ol>
+</nav>
+<!-- breadcrumb -->
+<!-- //banner -->
+<!-- blog -->
+<div class="blog-w3l py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
+            <span class="font-weight-bold">@Model.Name</span>
+        </h3>
+        <div class="row blog-content pt-md-4">
+            <!-- left side -->
+            <div class="col-lg-8 blog_section">
+                <div class="single-left1">
+                    <img src="@Model.Image" alt="@Model.Title" class="img-fluid" />
+                    <h6 class="blog-first text-dark text-center my-4">
+                        <i class="far fa-user mr-2"></i>@Model.Source
+                    </h6>
+                    <ul class="blog_list my-3 text-center">
+                        <li>@Model.PublishedDate.ToString("MMM")  @Model.PublishedDate.Day, @Model.PublishedDate.Year</li>
+                        <li class="mx-3">
+                            <a href="#">
+                                <i class="far fa-heart mr-1"></i>
+                                @Model.ViewCount
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="far fa-comments mr-1"></i>
+                                16
+                            </a>
+                        </li>
+                    </ul>
+                    <h5 class="card-title">
+                        <a href="single.html" class="text-dark">@Model.Name</a>
+                    </h5>
+                    <p>
+                        @Html.Raw(Model.ContentHtml)
+                    </p>
+
+
+                    @if (Model.ShowShare == true)
+                    {
+                        <div class="comments my-3">
+                            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                            <div class="addthis_inline_share_toolbox_4epz"></div>
+                            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5c4dcee6c345fb24"></script>
+                        </div>
+                      }
+                    @if (Model.ShowConment == true)
+                        {                   
+                        <div class="comments my-3">
+                        <div class="fb-comment-embed" data-href="@HttpContext.Current.Request.Url.AbsoluteUri" data-width="560" data-include-parent="false"></div>
+                    </div>
+                    }
+                  </div>
+                <!-- //left side -->
+            </div>
+            <!-- right side -->
+            <div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
+                <div class="event-right1">
+                    <div class="search1">
+                        <form class="form-inline" action="#" method="post">
+                            <input class="form-control rounded-0 mr-sm-2" type="search" placeholder="Search Here" aria-label="Search" required>
+                            <button class="btn bg-dark text-white rounded-0 mt-3" type="submit">Tìm kiếm</button>
+                        </form>
+                    </div>
+                    @{ Html.RenderAction("CategoryPartial", "Home");}
+                    @{ Html.RenderAction("EventsPartial", "Home");}
+                    @{ Html.RenderAction("TagsPartial", "Home");}
+                </div>
+            </div>
+            <!-- //right side -->
+        </div>
+    </div>
+</div>
+<!-- //blog -->
+

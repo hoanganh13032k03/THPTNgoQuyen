@@ -17,6 +17,28 @@ namespace Website.Controllers
     public class NewsDTController : Controller
     {
         // GET: NewsDT
+        public ActionResult Search(string keyword, int page = 1, int pageSize = 10)
+        {
+            ViewBag.keyword = keyword;
+            int totalRecord = 0;
+            NewsDao nsDao = new NewsDao();
+            var model = nsDao.Search(keyword, ref totalRecord, page, pageSize);
+
+            ViewBag.Total = totalRecord;
+            ViewBag.Page = page;
+
+            int maxPage = 5;
+            int totalPage = 0;
+
+            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));
+            ViewBag.TotalPage = totalPage;
+            ViewBag.MaxPage = maxPage;
+            ViewBag.First = 1;
+            ViewBag.Last = totalPage;
+            ViewBag.Next = page + 1;
+            ViewBag.Prev = page - 1;
+            return View(model);
+        }
         public ActionResult Category(long cateId, int page = 1, int pageSize = 10)
         {
             CategoryDao ctDao = new CategoryDao();
@@ -70,12 +92,25 @@ namespace Website.Controllers
             ViewBag.Prev = page - 1;
             return View(model);
         }
-        public ActionResult Detail(long ID, long catID)
+        public ActionResult Detail(long ID)
         {
-            CategoryDao ctDao = new CategoryDao();
-            ViewBag.Cate = ctDao.FindByID(catID);
-            var items = GetClientCategoryViewModel();
-            ViewBag.CatePare = items.Find(x => x.ID == catID);
+            ViewBag.Tags = TempData["tag"];
+            ViewBag.Cate = null;
+            if (TempData["tag"] == null)
+            {
+                var catID = Convert.ToInt64(TempData["CategoryID"]);
+
+                CategoryDao ctDao = new CategoryDao();
+                ViewBag.Cate = ctDao.FindByID(catID);
+                var items = GetClientCategoryViewModel();
+                ViewBag.CatePare = items.Find(x => x.ID == catID);
+            }
+            else
+            {
+                ViewBag.Tags = TempData["tag"];
+            }
+
+
             NewsDao nDao = new NewsDao();
             News objNew = nDao.FindByID(ID);
             objNew.ViewCount = objNew.ViewCount + 1;

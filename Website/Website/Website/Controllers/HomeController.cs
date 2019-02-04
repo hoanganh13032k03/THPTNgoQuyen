@@ -38,6 +38,14 @@ namespace Website.Controllers
             return PartialView(ViewBag.Menus);
         }
         [ChildActionOnly]
+        public PartialViewResult SidesPartial()
+
+        {
+            SideDao sdDao = new SideDao();
+          
+            return PartialView(sdDao.ToListActive());
+        }
+        [ChildActionOnly]
         public PartialViewResult HeaderPartial()
 
         {
@@ -79,7 +87,7 @@ namespace Website.Controllers
             return PartialView(ViewBag.Menus);
         }
 
-     
+        
         public List<CategoryViewModel> CreateVM(long? CategoryID, List<Category> source) {
 
             return (from cat in source
@@ -102,6 +110,15 @@ namespace Website.Controllers
                        LanguageID = cat.LanguageID,
                        Children = CreateVM(cat.CategoryID, source)
                    }).ToList();
+        }
+        public JsonResult ListName(string q)
+        {
+            var data = new NewsDao().ListName(q);
+            return Json(new
+            {
+                data = data,
+                status = true
+            }, JsonRequestBehavior.AllowGet);
         }
     }
 }

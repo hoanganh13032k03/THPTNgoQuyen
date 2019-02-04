@@ -327,7 +327,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
 /* //header */
 
 /* banner */
-
+ .banner-w3ls,
 .banner-w3ls-1,
 .banner-w3ls-2,
 .banner-w3ls-3,
@@ -335,6 +335,15 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
 .banner-w3ls-5,
 .banner-agile {
     min-height: 700px;
+}
+ .banner-w3ls {
+    background: url(../images/banner1.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
 }
 
 .banner-w3ls-1 {
@@ -2137,6 +2146,7 @@ li.subitem1 p {
     .banner-agile-2 {
         min-height: 300px;
     }
+    .banner-w3ls,
     .banner-w3ls-1,
     .banner-w3ls-2,
     .banner-w3ls-3,
@@ -2385,6 +2395,7 @@ li.subitem1 p {
     .banner-text-whtree p {
         font-size: 14px;
     }
+    .banner-w3ls,
     .banner-w3ls-1,
     .banner-w3ls-2,
     .banner-w3ls-3,
@@ -2812,6 +2823,7 @@ li.subitem1 p {
     .banner-text-posi-w3ls {
         left: 4%;
     }
+     .banner-w3ls,
     .banner-w3ls-1,
     .banner-w3ls-2,
     .banner-w3ls-3,
@@ -2937,6 +2949,7 @@ li.subitem1 p {
     .banner-text-whtree h3 {
         font-size: 32px;
     }
+     .banner-w3ls,
     .banner-w3ls-1,
     .banner-w3ls-2,
     .banner-w3ls-3,
@@ -3255,6 +3268,7 @@ li.subitem1 p {
     .banner-text-whtree {
         max-width: 280px;
     }
+     .banner-w3ls,
     .banner-w3ls-1,
     .banner-w3ls-2,
     .banner-w3ls-3,

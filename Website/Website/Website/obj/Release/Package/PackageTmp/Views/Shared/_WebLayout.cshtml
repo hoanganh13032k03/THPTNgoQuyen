@@ -1,0 +1,201 @@
+﻿
+@using DBModel;
+@using Common;
+@using DBModel.ET;
+@using Models;
+@using Website.Areas.Models;
+
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <title>@ViewBag.Title</title>
+    <!-- Meta tag Keywords -->
+    <meta http-equiv="Content-Language" content="vi">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="description" content="@ViewBag.MetaDescription" />
+    <meta name="Author" content="HPZ Việt Nam"/>
+    <meta name="copyright" content="Copyright 2019" />
+    <meta name="Designer" content="HPZ Việt Name" />
+    <script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+    </script>
+    <!--// Meta tag Keywords -->
+    <!-- Custom-Files -->
+    <!-- Bootstrap-Core-Css -->
+    <link rel="stylesheet" href="~/Content/Client/css/bootstrap.css">
+    <!-- Testimonials-Css -->
+    <link href="~/Content/Client/css/mislider.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Client/css/mislider-custom.css" rel="stylesheet" type="text/css" />
+    <!-- Style-Css -->
+    <link rel="stylesheet" href="~/Content/Client/css/style.css" type="text/css" media="all" />
+    <!-- Font-Awesome-Icons-Css -->
+    <link rel="stylesheet" href="~/Content/Client/css/fontawesome-all.css">
+    <!-- //Custom-Files -->
+    <!-- Web-Fonts -->
+    <link href="~/Content/Client/css/font.css?family=Roboto+Condensed:300,300i,400,400i,700,700i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+          rel="stylesheet">
+    <link href="~/Content/Client/css/font.css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!-- //Web-Fonts -->
+    @RenderSection("HeaderScript", false)
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+       
+        @{ Html.RenderAction("HeaderPartial", "Home");}
+      
+    </header>
+    <!-- //header -->
+     <!-- banner -->
+<div class="banner-agile">
+    <ul class="slider">
+        <li class="active">
+            <div class="banner-w3ls-1">
+            </div>
+        </li>
+        <li>
+            <div class="banner-w3ls-2">
+            </div>
+        </li>
+        <li>
+            <div class="banner-w3ls-3">
+            </div>
+        </li>
+        <li>
+            <div class="banner-w3ls-4">
+            </div>
+        </li>
+        <li class="prev">
+            <div class="banner-w3ls-5">
+            </div>
+        </li>
+    </ul>
+    <ul class="pager">
+        <li data-index="0" class="active"></li>
+        <li data-index="1"></li>
+        <li data-index="2"></li>
+        <li data-index="3"></li>
+        <li data-index="4"></li>
+    </ul>
+    <div class="banner-text-posi-w3ls">
+        <div class="banner-text-whtree">
+            <h3 class="text-capitalize text-white p-4">
+                Bonnal
+                <b>100 tuổi</b>
+            </h3>
+            <p class="px-4 py-3 text-dark">Trở thành chuyên gia hàng đầu sau khi tốt nghiệp</p>
+            <a href="about.html" class="button-agiles text-capitalize text-white mt-sm-5 mt-4">Xem tiếp</a>
+        </div>
+    </div>
+
+    <!-- navigation -->
+    <div class="navigation-w3ls">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-nav">
+            <button class="navbar-toggler mx-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                @{ Html.RenderAction("MenuPartial", "Home");}
+            </div>
+        </nav>
+    </div>
+    <!-- //navigation -->
+</div>
+<!-- //banner -->
+
+    @RenderBody()
+    <!-- brands -->
+    <div class="brands-w3ls py-md-5 py-4">
+        <div class="container py-xl-3">
+            <ul class="list-unstyled">
+                <li>
+                    <i class="fab">s</i>
+                </li>
+                <li>
+                    <i class="fab fa-angrycreative"></i>
+                </li>
+                <li>
+                    <i class="fab fa-aviato"></i>
+                </li>
+                <li>
+                    <i class="fab fa-aws"></i>
+                </li>
+                <li>
+                    <i class="fab fa-cpanel"></i>
+                </li>
+                <li>
+                    <i class="fab fa-hooli"></i>
+                </li>
+                <li>
+                    <i class="fab fa-node"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- //brands -->
+
+    <!-- footer -->
+    @{ Html.RenderAction("FooterPartial", "Home");}
+    <!-- //footer -->
+    <!-- Js files -->
+    <!-- JavaScript -->
+    <script src="~/Content/Client/js/jquery-2.2.3.min.js"></script>
+    <!-- Default-JavaScript-File -->
+    <script src="~/Content/Client/js/bootstrap.js"></script>
+    <!-- Necessary-JavaScript-File-For-Bootstrap -->
+    <!-- banner slider -->
+    <script src="~/Content/Client/js/slider.js"></script>
+    <!-- //banner slider -->
+    <!-- testimonial-plugin -->
+    <script src="~/Content/Client/js/mislider.js"></script>
+    <script>
+		jQuery(function ($) {
+			var slider = $('.mis-stage').miSlider({
+				//  The height of the stage in px. Options: false or positive integer. false = height is calculated using maximum slide heights. Default: false
+				stageHeight: 320,
+				//  Number of slides visible at one time. Options: false or positive integer. false = Fit as many as possible.  Default: 1
+				slidesOnStage: false,
+				//  The location of the current slide on the stage. Options: 'left', 'right', 'center'. Defualt: 'left'
+				slidePosition: 'center',
+				//  The slide to start on. Options: 'beg', 'mid', 'end' or slide number starting at 1 - '1','2','3', etc. Defualt: 'beg'
+				slideStart: 'mid',
+				//  The relative percentage scaling factor of the current slide - other slides are scaled down. Options: positive number 100 or higher. 100 = No scaling. Defualt: 100
+				slideScaling: 150,
+				//  The vertical offset of the slide center as a percentage of slide height. Options:  positive or negative number. Neg value = up. Pos value = down. 0 = No offset. Default: 0
+				offsetV: -5,
+				//  Center slide contents vertically - Boolean. Default: false
+				centerV: true,
+				//  Opacity of the prev and next button navigation when not transitioning. Options: Number between 0 and 1. 0 (transparent) - 1 (opaque). Default: .5
+				navButtonsOpacity: 1,
+			});
+		});
+    </script>
+    <!-- //testimonial-plugin -->
+    <!-- numscroller-js-file -->
+    <script src="~/Content/Client/js/numscroller-1.0.js"></script>
+    <!-- //numscroller-js-file -->
+    <!-- smooth scrolling -->
+    <script src="~/Content/Client/js/SmoothScroll.min.js"></script>
+    <!-- //smooth scrolling -->
+    <!-- move-top -->
+    <script src="~/Content/Client/js/move-top.js"></script>
+    <!-- easing -->
+    <script src="~/Content/Client/js/easing.js"></script>
+    <!--  necessary snippets for few javascript files -->
+    <script src="~/Content/Client/js/edulearn.js"></script>
+
+    <!-- //Js files -->
+    @RenderSection("FooterScript", false)
+</body>
+
+</html>

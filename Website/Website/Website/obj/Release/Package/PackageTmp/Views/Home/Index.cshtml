@@ -1,0 +1,664 @@
+﻿@using DBModel.DAO;
+@using DBModel.ET;
+@{
+    ViewBag.Title = "Index";
+    ViewBag.MetaKeywords = "Index";
+    ViewBag.MetaDescription= "";
+    Layout = "~/Views/Shared/_WebLayout.cshtml";
+    List<StatsInfo> lstSIF = (List<StatsInfo>)ViewBag.StatsInfo;
+}
+
+
+<!-- about -->
+<div class="about py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
+            Nâng cao
+            <span class="font-weight-bold">chất lượng giáo dục</span>
+        </h3>
+        <div class="row pt-md-4">
+            <div class="col-lg-6 about_right">
+                <h3 class="text-capitalize text-right font-weight-light font-italic">
+                    Tự hào ngôi trường 100 tuổi
+                    <span class="font-weight-bold">Bonnal Ngô Quyền </span>
+                </h3>
+                <p class="text-right my-4 pr-4 border-right">Trường Trung học Phổ thông Ngô Quyền, Hải Phòng hay Trường Bonnal, trường Bình Chuẩn là một ngôi trường nằm trong hệ thống các trường Trung học Phổ thông (Trung học phổ thông) công lập của Việt Nam được thành lập năm 1920. Trường Ngô Quyền là ngôi trường trung học đầu tiên của Hải Phòng và cũng là một trong số những trường trung học đầu tiên của Việt Nam.[1] .</p>
+                <div class="about_left-list">
+                    <h6 class="mb-lg-3 mb-2 font-weight-bold text-dark">Các thành tích và danh hiệu mà nhà trường đã đạt được</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-check mr-3"></i>Huân chương Lao động hạng Ba năm 1980
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check mr-3"></i>Huân chương Lao động hạng Nhì năm 1985
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check mr-3"></i>Huân chương Lao động hạng Nhì năm 1990
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check mr-3"></i>Huân chương Lao động hạng Nhất năm 2000
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-check mr-3"></i>Huân chương Độc lập hạng Ba năm 2005
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 left-img-agikes mt-lg-0 mt-sm-4 mt-3 text-right">
+                <img src="/data/images/ab.jpg" alt="" class="img-fluid" />
+
+                <div class="about-bottom text-center p-sm-5 p-4">
+                    <ul>
+                        <li>
+                            <h5>60+</h5>
+                            <p class="text-dark font-weight-bold">Giáo viên</p>
+                        </li>
+                        <li>
+                            <h5>2000+</h5>
+                            <p class="text-dark font-weight-bold">Học sinh</p>
+                        </li>
+                        <li>
+                            <h5>80+</h5>
+                            <p class="text-dark font-weight-bold">Đề tài KH</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //about -->
+<!-- Stats-->
+<div class="stats-w3layouts py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="stats-info">
+            <div class="row">
+                @foreach (var st in lstSIF)
+                {
+                    <div class="col-md-4 col-6 stats-grid-w3-agile text-center px-xl-5 px-3">
+                        <div class='numscroller font-weight-bold my-2' data-slno='1' data-min='0' data-max='@st.Number' data-delay='.@st.Speed' data-increment="1">1500</div>
+                        <p class="text-uppercase text-white border-top pt-4 mt-3">@st.Name</p>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //Stats -->
+<!-- course-->
+<div class="classes py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-dark text-center mb-sm-5 mb-4">
+            Tiện ích
+            <span class="font-weight-bold">BONNAL</span>
+        </h3>
+        <div class="row pt-4">
+            <div class="col-lg-4 col-news-top text-center">
+                <!-- Left to right -->
+                <!-- normal -->
+                <div class="ih-item circle effect16 left_to_right mx-auto">
+                    <a href="language.html">
+                        <div class="img">
+                            <img src="~/Content/Client/images/c1.jpg" alt="img" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="info">
+                            <h3 class="text-capitalize text-white">Dành cho học sinh</h3>
+                            <p>Hãy kích vào đây</p>
+                        </div>
+                    </a>
+                </div>
+                <h6 class="small-heading text-capitalize text-center mt-4">
+                    <a href="language.html" class="text-dark">
+                        Dành cho học sinh
+                        <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                    </a>
+                </h6>
+                <!-- end normal -->
+                <!-- end Left to right -->
+            </div>
+            <div class="col-lg-4 col-news-top text-center my-lg-0 my-sm-5 my-4">
+                <!-- Left to right -->
+                <!-- normal -->
+                <div class="ih-item circle effect16 left_to_right mx-auto">
+                    <a href="communication.html">
+                        <div class="img">
+                            <img src="~/Content/Client/images/c2.jpg" alt="img" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="info">
+                            <h3 class="text-capitalize text-white">Dành cho giáo viên</h3>
+                            <p>Hãy kích vào đây</p>
+                        </div>
+                    </a>
+                </div>
+                <h6 class="small-heading text-capitalize text-center mt-4">
+                    <a href="communication.html" class="text-dark">
+                        Dành cho giáo viên
+                        <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                    </a>
+                </h6>
+                <!-- end normal -->
+                <!-- end Left to right -->
+            </div>
+            <div class="col-lg-4 col-news-top text-center">
+                <!-- Left to right -->
+                <!-- normal -->
+                <div class="ih-item circle effect16 left_to_right mx-auto">
+                    <a href="business.html">
+                        <div class="img">
+                            <img src="~/Content/Client/images/c3.jpg" alt="img" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="info">
+                            <h3 class="text-capitalize text-white">Dành cho cựu học sinh</h3>
+                            <p>Hãy kích vào đây</p>
+                        </div>
+                    </a>
+                </div>
+                <h6 class="small-heading text-capitalize text-center mt-4">
+                    <a href="business.html" class="text-dark">
+                        Dành cho cựu học sinh
+                        <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                    </a>
+                </h6>
+                <!-- end normal -->
+                <!-- end Left to right -->
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-4 col-news-top text-center">
+                <!-- Left to right -->
+                <!-- normal -->
+                <div class="ih-item circle effect16 left_to_right mx-auto">
+                    <a href="software.html">
+                        <div class="img">
+                            <img src="~/Content/Client/images/c4.jpg" alt="img" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="info">
+                            <h3 class="text-capitalize text-white">Dành  cho cựu giáo viên</h3>
+                            <p>Hãy kích vào đây</p>
+                        </div>
+                    </a>
+                </div>
+                <h6 class="small-heading text-capitalize text-center mt-4">
+                    <a href="software.html" class="text-dark">
+                        Dành  cho cựu giáo viên
+                        <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                    </a>
+                </h6>
+                <!-- end normal -->
+                <!-- end Left to right -->
+            </div>
+            <div class="col-lg-4 col-news-top text-center  my-lg-0 my-sm-5 my-4">
+                <!-- Left to right -->
+                <!-- normal -->
+                <div class="ih-item circle effect16 left_to_right mx-auto">
+                    <a href="social_media.html">
+                        <div class="img">
+                            <img src="~/Content/Client/images/c6.jpg" alt="img" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="info">
+                            <h3 class="text-capitalize text-white">Cựu học sinh</h3>
+                            <p>Hãy kích vào đây</p>
+                        </div>
+                    </a>
+                </div>
+                <h6 class="small-heading text-capitalize text-center mt-4">
+                    <a href="social_media.html" class="text-dark">
+                        Cựu học sinh
+                        <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                    </a>
+                </h6>
+                <!-- end normal -->
+                <!-- end Left to right -->
+            </div>
+            <div class="col-lg-4 col-news-top text-center">
+                <!-- Left to right -->
+                <!-- normal -->
+                <div class="ih-item circle effect16 left_to_right mx-auto">
+                    <a href="photography.html">
+                        <div class="img">
+                            <img src="~/Content/Client/images/c5.jpg" alt="img" class="img-fluid rounded-circle">
+                        </div>
+                        <div class="info">
+                            <h3 class="text-capitalize text-white">Các câu lạc bộ</h3>
+                            <p>Hãy kích vào đây</p>
+                        </div>
+                    </a>
+                </div>
+                <h6 class="small-heading text-capitalize text-center mt-4">
+                    <a href="photography.html" class="text-dark">
+                        Các câu lạc bộ
+                        <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                    </a>
+                </h6>
+                <!-- end normal -->
+                <!-- end Left to right -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //course -->
+<!-- what we do -->
+<div class="why-choose-agile py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-white text-center mb-5">
+            what we
+            <span class="font-weight-bold">do</span>
+        </h3>
+        <div class="row agileits-w3layouts-grid pt-md-4">
+            <div class="col-lg-4 services-agile-1">
+                <div class="row wthree_agile_us">
+                    <div class="col-lg-3 col-md-2 col-3  agile-why-text">
+                        <div class="wthree_features_grid text-center p-3 border rounded">
+                            <i class="fab fa-accusoft"></i>
+                        </div>
+                    </div>
+                    <div class="col-9 agile-why-text-2">
+                        <h4 class="text-capitalize text-white font-weight-bold mb-3">Tuyển sinh</h4>
+                        <p>Tổng hợp thông tin tuyển sinh liên quan đến quá trình đào tạo....</p>
+                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                            Xem tiếp
+                            <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 services-agile-1 my-lg-0 my-5">
+                <div class="row wthree_agile_us">
+                    <div class="col-lg-3 col-md-2 col-3  agile-why-text">
+                        <div class="wthree_features_grid text-center p-3 border rounded">
+                            <i class="fas fa-book"></i>
+                        </div>
+                    </div>
+                    <div class="col-9 agile-why-text-2">
+                        <h4 class="text-capitalize text-white font-weight-bold mb-3">Các khóa học</h4>
+                        <p>Nhà trường thường xuyên tổ chức các khóa học, các buổi hội thảo nhằm nâng cao.....</p>
+                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                            Xem tiếp
+                            <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 services-agile-1">
+                <div class="row wthree_agile_us">
+                    <div class="col-lg-3 col-md-2 col-3  agile-why-text">
+                        <div class="wthree_features_grid text-center p-3 border rounded">
+                            <i class="fas fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="col-9 agile-why-text-2">
+                        <h4 class="text-capitalize text-white font-weight-bold mb-3">Giáo viên</h4>
+                        <p>Nhà trường hiện nay có tổng số hơn 90 giáo viên cơ hữu, trong đó.....</p>
+                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                            Xem tiếp
+                            <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row agileits-w3layouts-grid mt-5">
+            <div class="col-lg-4 services-agile-1">
+                <div class="row wthree_agile_us">
+                    <div class="col-lg-3 col-md-2 col-3  agile-why-text">
+                        <div class="wthree_features_grid text-center p-3 border rounded">
+                            <i class="far fa-calendar-alt"></i>
+                        </div>
+                    </div>
+                    <div class="col-9 agile-why-text-2">
+                        <h4 class="text-capitalize text-white font-weight-bold mb-3">Sự kiện lớn</h4>
+                        <p>Hàng năm, nhà trường tổ chức các chương trình, các chuyên đề, sự kiện.....</p>
+                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                            Xem tiếp
+                            <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 services-agile-1  my-lg-0 my-5">
+                <div class="row wthree_agile_us">
+                    <div class="col-lg-3 col-md-2 col-3  agile-why-text">
+                        <div class="wthree_features_grid text-center p-3 border rounded">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="col-9 agile-why-text-2">
+                        <h4 class="text-capitalize text-white font-weight-bold mb-3">Lớp học</h4>
+                        <p>Năm học 2018-2019 nhà trường có tổng số 35 lớp học. Trong đó.....</p>
+                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                            Xem tiếp
+                            <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 services-agile-1">
+                <div class="row wthree_agile_us">
+                    <div class="col-lg-3 col-md-2 col-3  agile-why-text">
+                        <div class="wthree_features_grid text-center p-3 border rounded">
+                            <i class="far fa-clock"></i>
+                        </div>
+                    </div>
+                    <div class="col-9 agile-why-text-2">
+                        <h4 class="text-capitalize text-white font-weight-bold mb-3">Hỗ trợ 24/7</h4>
+                        <p>Nhà trường cập nhật liên tục các thắc mắc của các em học sinh, cựu học sinh về ......</p>
+                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                            Xem tiếp
+                            <i class="fas fa-long-arrow-alt-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //what we do -->
+<!-- video and events -->
+<div class="video-choose-agile py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="row">
+            <div class="col-lg-7 video">
+                <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
+                    <span class="font-weight-bold">video</span>
+                </h3>
+                <iframe src="@ViewBag.About.Video"></iframe>
+            </div>
+            <div class="col-lg-5 events">
+                <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
+                    Các
+                    <span class="font-weight-bold">sự kiện lớn</span>
+                </h3>
+                <div class="events-w3ls">
+                    <div class="d-flex">
+                        <div class="col-sm-2 col-3 events-up p-3 text-center">
+                            <h5 class="text-white font-weight-bold">
+                                05
+                                <span class="border-top font-weight-light pt-2 mt-2"> T 9</span>
+                            </h5>
+                        </div>
+                        <div class="col-sm-10 col-9 events-right">
+                            <h4 class="text-dark">Khai giảng </h4>
+                            <ul class="list-unstyled">
+                                <li class="my-2">
+                                    <i class="far fa-clock mr-2"></i>7.30 - 11h30 Am
+                                </li>
+                                <li>
+                                    <i class="fas fa-map-marker mr-2"></i>25 Sân trường.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex my-4">
+                    <div class="col-sm-2 col-3 events-up p-3 text-center">
+                        <h5 class="text-white font-weight-bold">
+                            20
+                            <span class="border-top font-weight-light pt-2 mt-2">T 10</span>
+                        </h5>
+                    </div>
+                    <div class="col-sm-10 col-9 events-right">
+                        <h4 class="text-dark">Mít tinh ngày Phụ nữ VN</h4>
+                        <ul class="list-unstyled">
+                            <li class="my-2">
+                                <i class="far fa-clock mr-2"></i>7.30 - 11h30
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker mr-2"></i>Phòng hội trường
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="d-flex">
+                    <div class="col-sm-2 col-3 events-up p-3 text-center">
+                        <h5 class="text-white font-weight-bold">
+                            20
+                            <span class="border-top font-weight-light pt-2 mt-2"> T 11</span>
+                        </h5>
+                    </div>
+                    <div class="col-sm-10 col-9 events-right">
+                        <h4 class="text-dark">Mít tinh ngày nhà giáo VN</h4>
+                        <ul class="list-unstyled">
+                            <li class="my-2">
+                                <i class="far fa-clock mr-2"></i>5.00 pm - 7.30 pm
+                            </li>
+                            <li>
+                                <i class="fas fa-map-marker mr-2"></i>Phòng hội trường
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //video and events -->
+<!-- testimonials -->
+<div class="testimonials py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-white text-center mb-5">
+            Cựu
+            <span class="font-weight-bold">học sinh</span>
+        </h3>
+        <div class="mis-stage">
+            <!-- The element to select and apply miSlider to - the class is optional -->
+            <ol class="mis-slider">
+                <!-- The slider element - the class is optional -->
+                <li class="mis-slide">
+                    <!-- A slide element - the class is optional -->
+                    <a href="#" class="mis-container">
+                        <!-- A slide container - this element is optional, if absent the plugin adds it automatically -->
+                        <figure>
+                            <!-- Slide content - whatever you want -->
+                            <img src="~/Content/Client/images/t1.jpg" alt=" " class="img-fluid" />
+                            <figcaption>
+                                Nguyễn Hoàng Anh
+                                <span>Học sinh niên khóa 2001-2002.</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="mis-slide">
+                    <a href="#" class="mis-container">
+                        <figure>
+                            <img src="~/Content/Client/images/t2.jpg" alt=" " class="img-fluid" />
+                            <figcaption>
+                                Dương Hoàng Lâm
+                                <span>Học sinh niên khóa 2001-2002.</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="mis-slide">
+                    <a href="link" class="mis-container">
+                        <figure>
+                            <img src="~/Content/Client/images/t3.jpg" alt=" " class="img-fluid" />
+                            <figcaption>
+                                Đỗ Thu Hiền
+                                <span>Học sinh niên khóa 2001-2002.</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="mis-slide">
+                    <a href="#" class="mis-container">
+                        <figure>
+                            <img src="~/Content/Client/images/t4.jpg" alt=" " class="img-fluid" />
+                            <figcaption>
+                                Tạ Xuân Hòa
+                                <span>Học sinh niên khóa 2001-2002.</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="mis-slide">
+                    <a href="#" class="mis-container">
+                        <figure>
+                            <img src="~/Content/Client/images/t5.jpg" alt=" " class="img-fluid" />
+                            <figcaption>
+                                Dương Văn Lâm
+                                <span>Học sinh niên khóa 2001-2002.</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="mis-slide">
+                    <a href="#" class="mis-container">
+                        <figure>
+                            <img src="~/Content/Client/images/t6.jpg" alt=" " class="img-fluid" />
+                            <figcaption>
+                                Nguyễn Huy Toàn
+                                <span>Học sinh niên khóa 2001-2002.</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+                <li class="mis-slide">
+                    <a href="#" class="mis-container">
+                        <figure>
+                            <img src="~/Content/Client/images/t4.jpg" alt=" " class="img-fluid" />
+                            <figcaption>
+                                Mai Đức Chinh
+                                <span>Học sinh niên khóa 2001-2002.</span>
+                            </figcaption>
+                        </figure>
+                    </a>
+                </li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!-- //testimonials -->
+<!-- news -->
+<div class="news-section py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
+            Học sinh ưu tú
+            <span class="font-weight-bold">năm 2018</span>
+        </h3>
+        <div class="row news-grids-w3l pt-md-4">
+            <div class="col-md-4 news-grid">
+                <a href="blog.html">
+                    <img src="~/Content/Client/images/n1.jpg" class="img-fluid" alt="" />
+                </a>
+                <div class="news-text">
+                    <div class="news-events-agile event-colo1 py-2 px-3">
+                        <h5 class="float-left">
+                            <a href="blog.html" class="text-white">Tháng 10</a>
+                        </h5>
+                        <div class="post-img float-right">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-comments text-white"></i>
+                                    </a>
+                                </li>
+                                <li class="mx-3">
+                                    <a href="#">
+                                        <i class="far fa-heart text-white"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-share text-white"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="detail-bottom">
+                        <h6 class="my-3">
+                            <a href="blog.html" class="text-dark">
+                                Học sinh Đặng Văn Lâm lớp 12A1
+                            </a>
+                        </h6>
+                        <p>Đạt thành tích cao trong cuộc thi KHKT năm 2018-2019</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 news-grid my-md-0 my-sm-5 my-4">
+                <a href="blog.html">
+                    <img src="~/Content/Client/images/n2.jpg" class="img-fluid" alt="" />
+                </a>
+                <div class="news-text">
+                    <div class="news-events-agile py-2 px-3">
+                        <h5 class="float-left">
+                            <a href="blog.html" class="text-white">Tháng 11</a>
+                        </h5>
+                        <div class="post-img float-right">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-comments text-white"></i>
+                                    </a>
+                                </li>
+                                <li class="mx-3">
+                                    <a href="#">
+                                        <i class="far fa-heart text-white"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-share text-white"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="detail-bottom">
+                        <h6 class="my-3">
+                            <a href="blog.html" class="text-dark">
+                                Học sinh Nguyễn Văn Minh lớp 11B11
+                            </a>
+                        </h6>
+                        <p>Hoạt động phong trào sôi nổi</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 news-grid">
+                <a href="blog.html">
+                    <img src="~/Content/Client/images/n3.jpg" class="img-fluid" alt="" />
+                </a>
+                <div class="news-text">
+                    <div class="news-events-agile event-colo3 py-2 px-3">
+                        <h5 class="float-left">
+                            <a href="blog.html" class="text-white">Tháng 12</a>
+                        </h5>
+                        <div class="post-img float-right">
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-comments text-white"></i>
+                                    </a>
+                                </li>
+                                <li class="mx-3">
+                                    <a href="#">
+                                        <i class="far fa-heart text-white"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-share text-white"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="detail-bottom">
+                        <h6 class="my-3">
+                            <a href="blog.html" class="text-dark">
+                                Học sinh Đặng Thị Hiền lớp 10C10
+                            </a>
+                        </h6>
+                        <p>Cá tính năng động, tham gia nhiệt tình các phong trào</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- //news -->
+

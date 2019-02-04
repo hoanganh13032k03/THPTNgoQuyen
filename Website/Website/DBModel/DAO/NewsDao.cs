@@ -48,6 +48,17 @@ namespace DBModel.DAO
             return db.News.Where(x=>x.Status==1).OrderByDescending(x => x.PublishedDate).ToList<News>();
         }
 
+        public List<string> ListName(string keyword)
+        {
+            return db.News.Where(x => x.Name.Contains(keyword)).Select(x => x.Name).ToList();
+        }
+        public List<News> Search(string keyword, ref int totalRecord, int page = 1, int pageSize = 2)
+        {
+            totalRecord = db.News.Where(x => x.Name.Contains(keyword)).Count();
+            var model = db.News.Where(x => x.Name.Contains(keyword)).ToList();
+            return model.OrderByDescending(x => x.PublishedDate).ToPagedList(page, pageSize).ToList();
+        }
+
         /// <summary>
         /// List all content for client
         /// </summary>
@@ -117,6 +128,7 @@ namespace DBModel.DAO
                              ShowShare = a.ShowShare,
                              ShowConment = a.ShowConment,
                              Source = a.Source,
+                             ViewCount= a.ViewCount,
                              ID = a.NewsID
 
                          }).AsEnumerable().Select(x => new News()
@@ -132,6 +144,7 @@ namespace DBModel.DAO
                              ShowConment = x.ShowConment,
                              Source = x.Source,
                              Title = x.Title,
+                             ViewCount = x.ViewCount,
                              NewsID = x.ID
                          });
             return model.OrderByDescending(x => x.PublishedDate).ToPagedList(page, pageSize).ToList();

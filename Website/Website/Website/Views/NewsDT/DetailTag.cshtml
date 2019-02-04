@@ -7,6 +7,14 @@
     Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
     var url = "/tag/";
 }
+<script>
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=230002147943453&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <!-- breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -43,7 +51,7 @@
                         <li>
                             <a href="#">
                                 <i class="far fa-comments mr-1"></i>
-                                16
+                                <label id="CommentNumber"></label>
                             </a>
                         </li>
                     </ul>
@@ -66,7 +74,7 @@
                     @if (Model.ShowConment == true)
                     {
                         <div class="comments my-3">
-                            <div class="fb-comment-embed" data-href="@HttpContext.Current.Request.Url.AbsoluteUri" data-width="560" data-include-parent="false"></div>
+                            <div class="fb-comments" data-href="@HttpContext.Current.Request.Url.AbsoluteUri" data-numposts="5"></div>
                         </div>
                     }
                 </div>
@@ -76,8 +84,8 @@
             <div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
                 <div class="event-right1">
                     <div class="search1">
-                        <form class="form-inline" action="#" method="post">
-                            <input class="form-control rounded-0 mr-sm-2" type="search" placeholder="Search Here" aria-label="Search" required>
+                        <form class="form-inline" action="/tim-kiem" method="post">
+                            <input class="form-control rounded-0 mr-sm-2" type="search" id="txtKeyword" name="keyword" placeholder="Gõ từ khoá" aria-label="Search" required>
                             <button class="btn bg-dark text-white rounded-0 mt-3" type="submit">Tìm kiếm</button>
                         </form>
                     </div>

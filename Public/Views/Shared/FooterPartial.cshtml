@@ -1,0 +1,60 @@
+﻿@model DBModel.ET.Footer
+<footer>
+    <div class="container py-4">
+        <div class="row py-xl-5 py-sm-3">
+            @Html.Raw(Model.Detail)
+            <div class="col-lg-6 contact-agileits-w3layouts mt-lg-0 mt-4">
+                <h4 class="contact-title text-capitalize text-white font-weight-light mb-sm-4 mb-3">
+                    <span class="font-weight-bold">Liên hệ</span>
+                </h4>
+                <p class="conta-para-style border-left pl-4">Nếu bạn có bất kỳ câu hỏi nào về các dịch vụ chúng tôi cung cấp chỉ cần sử dụng mẫu dưới đây. Chúng tôi cố gắng và trả lời tất cả các truy vấn và nhận xét trong vòng 24 giờ..</p>
+                <div class="subscribe-w3ls my-xl-5 my-4">
+                    <h6 class="text-white text-capitalize mb-4">Đăng ký nhận thông tin</h6>
+                    <form action="#" method="post" class="subscribe_form">
+                        <input class="form-control" type="email" name="email" placeholder="Enter your email..." required="">
+                        <button type="submit" class="btn btn-primary submit">Chuyển</button>
+                    </form>
+                </div>
+                <p class="para-agileits-w3layouts text-white">
+                    <i class="fas fa-map-marker pr-3"></i>@ViewBag.About.Address
+                </p>
+                <p class="para-agileits-w3layouts text-white my-sm-3 my-2">
+                    <i class="fas fa-phone pr-3"></i>@ViewBag.About.Phone
+                </p>
+                <p class="para-agileits-w3layouts">
+                    <i class="far fa-envelope-open pr-2"></i>
+                    <a href="mailto:@ViewBag.About.Email" class="text-white">@ViewBag.About.Email</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-agiles py-3">
+        <div class="container">
+            <div class="row">
+                <p class="col-lg-8 copy-right-grids text-white text-lg-left text-center mt-lg-1">
+                    © 2018 Được phát triển bởi
+                    <a href="https://hpz.vn/" target="_blank">HPZ Việt Nam</a>
+                </p>
+                <!-- social icons -->
+                <div class="social-icons text-lg-right text-center col-lg-4 mt-lg-0 mt-3">
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="@ViewBag.About.Facebook" target="_blank" class="fab fa-facebook-f icon-border facebook rounded-circle"> </a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="@ViewBag.About.Twitter" target="_blank"class="fab fa-twitter icon-border twitter rounded-circle"> </a>
+                        </li>
+                        <li>
+                            <a href="@ViewBag.About.Googleplus" target="_blank" class="fab fa-google-plus-g icon-border googleplus rounded-circle"> </a>
+                        </li>
+                        <li class="ml-2">
+                            <a href="@ViewBag.About.Facebook" target="_blank" class="fas fa-rss icon-border rss rounded-circle"> </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- //social icons -->
+            </div>
+        </div>
+    </div>
+    <div id="fb-root"></div>
+</footer>

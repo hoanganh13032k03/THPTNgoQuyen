@@ -21,15 +21,9 @@ namespace Website
              namespaces: new[] { "Website.Controllerss" }
          );
             routes.MapRoute(
-             name: "News DetailTag",
-             url: "chi-tiet-tag/{metatitle}-{id}",
-             defaults: new { controller = "NewsDT", action = "DetailTag", id = UrlParameter.Optional },
-             namespaces: new[] { "Website.Controllers" }
-         );
-            routes.MapRoute(
             name: "News Detail",
-            url: "chi-tiet/{metatitle}-{id}-{catID}",
-            defaults: new { controller = "NewsDT", action = "Detail", id = UrlParameter.Optional, catID = UrlParameter.Optional },
+            url: "chi-tiet/{metatitle}-{id}",
+            defaults: new { controller = "NewsDT", action = "Detail", id = UrlParameter.Optional},
             namespaces: new[] { "Website.Controllers" }
         );
             routes.MapRoute(
@@ -38,6 +32,12 @@ namespace Website
              defaults: new { controller = "NewsDT", action = "Tag", id = UrlParameter.Optional },
              namespaces: new[] { "Website.Controllers" }
          );
+            routes.MapRoute(
+            name: "Search",
+            url: "tim-kiem",
+            defaults: new { controller = "NewsDT", action = "Search", id = UrlParameter.Optional },
+            namespaces: new[] { "Website.Controllers" }
+        );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

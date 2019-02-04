@@ -28,6 +28,30 @@ namespace DBModel.DAO
         {
             return db.Categories.Where(x => x.Status == true&&x.ShowOnHome==true && x.Position == 1).OrderBy(x => x.DisplayOrder).ToList<Category>();
         }
+        public List<Category> ToListActiveCenter()
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == 2).OrderBy(x => x.DisplayOrder).ToList<Category>();
+        }
+        public Category ToActiveCenter()
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == 2).OrderBy(x => x.DisplayOrder).SingleOrDefault();
+        }
+        public List<Category> ToListActiveBoddy()
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == 3).OrderBy(x => x.DisplayOrder).ToList<Category>();
+        }
+        public Category ToActiveBoddy()
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == 3).OrderBy(x => x.DisplayOrder).SingleOrDefault();
+        }
+        public List<Category> ToListActiveBotton()
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == 4).OrderBy(x => x.DisplayOrder).ToList<Category>();
+        }
+        public Category ToActiveBotton()
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == 4).OrderBy(x => x.DisplayOrder).SingleOrDefault();
+        }
         public List<Category> ToListActiveNotTopHome()
         {
             return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position != 1).OrderBy(x => x.DisplayOrder).ToList<Category>();

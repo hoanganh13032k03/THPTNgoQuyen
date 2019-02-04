@@ -1,0 +1,129 @@
+﻿@model IEnumerable<DBModel.ET.News>
+@{
+    ViewBag.Title = "Tag";
+    Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
+    var col = 0;
+}
+<!-- breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/Home/Index">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewBag.Tags</li>
+    </ol>
+</nav>
+<!-- breadcrumb -->
+<!-- //banner -->
+<!-- blog -->
+<div class="blog-w3l py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
+            <span class="font-weight-bold">@ViewBag.Tags</span>
+        </h3>
+        <div class="row blog-content pt-md-4">
+            <!-- left side -->
+            <div class="col-lg-8 blog_section">
+                @foreach (var n in Model)
+                {
+                    var url = "/chi-tiet-tag/" + @n.MetaTite + "-" + @n.NewsID.ToString();
+
+                    <div class="card@(col==0?"":" my-4")">
+                        <img class="card-img-top" src="@n.Image" alt="">
+                        <div class="card-body text-center">
+                            <h6 class="blog-first text-dark">
+                                <i class="far fa-user mr-2"></i>@n.Source
+                            </h6>
+                            <ul class="blog_list my-3">
+                                <li>@n.PublishedDate.ToString("MMM")  @n.PublishedDate.Day, @n.PublishedDate.Year</li>
+                                <li class="mx-3">
+                                    <a href="#">
+                                        <i class="far fa-heart mr-1"></i>
+                                        @n.ViewCount
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-comments mr-1"></i>
+                                        18
+                                    </a>
+                                </li>
+                            </ul>
+                            <h5 class="card-title">
+                                <a href="@url" class="text-dark">@n.Name</a>
+                            </h5>
+                            <p class="card-text">
+                                @n.Description
+                            </p>
+                            <a href="@url" class="btn btn-primary blog-button mt-3">Chi tiết</a>
+                        </div>
+                    </div>
+                    col += 1;
+                }
+                @if (ViewBag.TotalPage > 1)
+                {
+                    var pageDisplay = (int)ViewBag.MaxPage;
+                    int totalPage = (int)ViewBag.TotalPage;
+                    int currentPage = ((int)ViewBag.Page);
+
+                    // Create numeric links
+                    var startPageIndex = Math.Max(1, currentPage - pageDisplay / 2);
+                    var endPageIndex = Math.Min(totalPage, currentPage + pageDisplay / 2);
+
+                    var link = "/tin-tuc/" + ViewBag.Cate.MetaTite + "-" + ViewBag.Cate.CategoryID;
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination mt-5">
+                            @if (currentPage > ViewBag.First)
+                            {
+                                <li class="page-item"><a href="@link?page=@ViewBag.First" title="Trang đầu" class="page-link"><i class="fa fa-angle-double-left"></i></a></li>
+                                    <li class="page-item">
+                                        <a class="page-link" href="@link?page=@ViewBag.Prev" title="Trang trước"><i class="fa fa-angle-left"></i></a>
+                                    </li>
+
+                            }
+                            @for (int i = startPageIndex; i <= endPageIndex; i++)
+                            {
+                                if (currentPage == i)
+                                {
+
+                                    <li class="page-item disabled"> <a class="page-link" href="@link?page=@i" title="Trang @i">@i</a></li>
+                                }
+                                else
+                                {
+                                    <li class="page-item"><a class="page-link" href="@link?page=@i" title="Trang @i">@i</a></li>
+                                }
+                            }
+                            @if (currentPage < totalPage)
+                            {
+                                <li class="page-item"><a class="page-link" href="@link?page=@ViewBag.Next" title="Trang sau"><i class="fa fa-angle-right"></i></a></li>
+                                    <li class="page-item"> <a class="page-link" href="@link?page=@ViewBag.Last" title="Trang cuối"><i class="fa fa-angle-double-right"></i></a></li>
+                            }
+
+                        </ul>
+                    </nav>
+
+                }
+                <!-- //left side -->
+            </div>
+            <!-- right side -->
+            <div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
+                <div class="event-right1">
+                    <div class="search1">
+                        <form class="form-inline" action="#" method="post">
+                            <input class="form-control rounded-0 mr-sm-2" type="search" placeholder="Search Here" aria-label="Search" required>
+                            <button class="btn bg-dark text-white rounded-0 mt-3" type="submit">Tìm kiếm</button>
+                        </form>
+                    </div>
+                    @{ Html.RenderAction("CategoryPartial", "Home");}
+                    @{ Html.RenderAction("EventsPartial", "Home");}
+                    @{ Html.RenderAction("TagsPartial", "Home");}
+                </div>
+            </div>
+            <!-- //right side -->
+        </div>
+    </div>
+</div>
+<!-- //blog -->
+
+
+

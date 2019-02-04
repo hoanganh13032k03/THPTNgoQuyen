@@ -248,6 +248,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Admin\dist\img\logo.png" />
+    <Content Include="Content\Client\css\jquery-ui.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Data\images\c1.jpg" />
     <Content Include="Data\images\c2.jpg" />
@@ -294,6 +295,7 @@
     <Content Include="Areas\Admin\Views\News\Create.cshtml" />
     <Content Include="Areas\Admin\Views\News\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\News\Publicer.cshtml" />
+    <None Include="Properties\PublishProfiles\TPHPNgoQuyen.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -306,7 +308,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -327,6 +331,8 @@
     <Content Include="Views\NewsDT\Detail.cshtml" />
     <Content Include="Views\NewsDT\Tag.cshtml" />
     <Content Include="Views\NewsDT\DetailTag.cshtml" />
+    <Content Include="Views\Shared\SidesPartial.cshtml" />
+    <Content Include="Views\NewsDT\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -342,7 +348,6 @@
     <Folder Include="Content\Admin\build\" />
     <Folder Include="Content\Admin\js\" />
     <Folder Include="Content\Admin\plugins\" />
-    <Folder Include="Content\Client\css\" />
     <Folder Include="Content\Client\images\" />
     <Folder Include="Content\Client\js\controller\" />
     <Folder Include="Content\Client\webfonts\" />

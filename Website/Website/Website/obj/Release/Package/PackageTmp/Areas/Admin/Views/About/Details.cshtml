@@ -1,0 +1,192 @@
+﻿@model DBModel.ET.About
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+            Chi tiết danh mục
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionBackButtonText, "Index", null, new { @class = "btn btn-primary" })
+            </li>
+        </ol>
+    </section>
+}
+<section class="content">
+    <div>
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetaTite)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaTite)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Video)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Video)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Phone)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Facebook)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Facebook)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Twitter)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Twitter)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Googleplus)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Googleplus)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Image)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Image)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Detail)
+                </dt>
+
+                <dd>
+                    @Html.Raw( Html.DisplayFor(model => model.Detail))
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreateBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreateBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreateDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreateDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetakeyWords)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetakeyWords)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetaDescription)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaDescription)
+                </dd>
+
+           
+               
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionEditButtonText, "Edit", new { id = Model.AboutID }, new { @class = "btn btn-primary" })
+            @Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionBackButtonText, "Index", null, new { @class = "btn btn-primary" })
+        </p>
+
+    </div>
+    <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>
+

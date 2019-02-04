@@ -4,9 +4,25 @@
     ViewBag.MetaKeywords = ViewBag.Cate.MetakeyWords;
     ViewBag.MetaDescription = ViewBag.Cate.MetaDescription;
     Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
+    TempData["CategoryID"] = ViewBag.Cate.CategoryID;
+    TempData["tag"] = null;
     var col = 0;
 }
-
+<script type="text/javascript">
+    function getCommentNumber(surl) {
+        var url = 'https://graph.facebook.com/' + surl;
+        //alert(url);
+            $.ajax({
+                url: url,
+                dataType: 'jsonp',
+                success: function (data) {
+                  //  alert("comments: " + data.share.comment_count);
+                    return data.share.comment_count;
+                }
+            });
+            return 0;
+        }
+</script>   
 <!-- breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -29,7 +45,8 @@
             <div class="col-lg-8 blog_section">
     @foreach (var n in Model)
     {
-        var url = "/chi-tiet/" + @n.MetaTite +"-"+ @n.NewsID.ToString() +"-"+ ViewBag.Cate.CategoryID;
+        var url = "/chi-tiet/" + @n.MetaTite +"-"+ @n.NewsID.ToString();
+        var url1 = @HttpContext.Current.Request.Url+"/chi-tiet/" + @n.MetaTite + "-" + @n.NewsID.ToString();
 
        <div class="card@(col==0?"":" my-4")">
     <img class="card-img-top" src="@n.Image" alt="">
@@ -48,7 +65,10 @@
             <li>
                 <a href="#">
                     <i class="far fa-comments mr-1"></i>
-                    18
+                    <script>
+                        document.write(getCommentNumber('@url1'));
+                    </script>
+
                 </a>
             </li>
         </ul>
@@ -112,8 +132,8 @@
                     <div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
                         <div class="event-right1">
                             <div class="search1">
-                                <form class="form-inline" action="#" method="post">
-                                    <input class="form-control rounded-0 mr-sm-2" type="search" placeholder="Search Here" aria-label="Search" required>
+                                <form class="form-inline" action="/tim-kiem" method="get">
+                                    <input class="form-control rounded-0 mr-sm-2" type="search" id="txtKeyword" name="keyword" placeholder="Gõ từ khoá" aria-label="Search" required>
                                     <button class="btn bg-dark text-white rounded-0 mt-3" type="submit">Tìm kiếm</button>
                                 </form>
                             </div>
@@ -127,3 +147,4 @@
             </div>
 </div>
 <!-- //blog -->
+
