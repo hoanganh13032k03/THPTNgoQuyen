@@ -129,6 +129,9 @@
   <data name="AboutImages" xml:space="preserve">
     <value>Ảnh bìa</value>
   </data>
+  <data name="Active" xml:space="preserve">
+    <value>Kích hoạt</value>
+  </data>
   <data name="Address" xml:space="preserve">
     <value>Địa chỉ</value>
   </data>
@@ -480,6 +483,12 @@
   <data name="CreatedDate" xml:space="preserve">
     <value>Ngày tạo</value>
   </data>
+  <data name="Date_End" xml:space="preserve">
+    <value>Thời gian kết thúc</value>
+  </data>
+  <data name="Date_Start" xml:space="preserve">
+    <value>Thời gian bắt đầu</value>
+  </data>
   <data name="Description" xml:space="preserve">
     <value>Mô tả</value>
   </data>
@@ -533,6 +542,9 @@
   </data>
   <data name="FeedbackTitle" xml:space="preserve">
     <value>Tiêu đề</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>File đính kèm</value>
   </data>
   <data name="FooterContent" xml:space="preserve">
     <value>Nội dung</value>
@@ -758,6 +770,9 @@
   </data>
   <data name="NotPermissionMessage" xml:space="preserve">
     <value>Bạn không có sự cho phép cần thiết để thực hiện hành động này</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Tùy chọn</value>
   </data>
   <data name="Order" xml:space="preserve">
     <value>Số thứ tự</value>

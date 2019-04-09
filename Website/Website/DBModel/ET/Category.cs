@@ -6,7 +6,7 @@ namespace DBModel.ET
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
     using Resources;
-
+    using System.ComponentModel;
     [Table("Category")]
     public partial class Category
     {

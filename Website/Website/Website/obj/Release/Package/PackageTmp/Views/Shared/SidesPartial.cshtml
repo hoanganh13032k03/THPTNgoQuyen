@@ -1,0 +1,53 @@
+﻿@model List<DBModel.ET.Side>
+    @{
+        var total = Model.Count();
+    }
+
+<ul class="slider">
+    @for (int i = 0; i < total; i++)
+    {
+        var cl = "";
+        if (i == 0)
+        {
+            cl="class='active'";
+        }
+        if (i == total-1)
+        {
+            cl = "class='prev'";
+        }
+        var name = @Model[i].Name;
+        var fname = "";
+        int id = name.IndexOf("-");
+        if (id > 0)
+            fname = @name.Substring(0, id);
+        if (id > 0)
+            name = name.Substring(id, name.Length - fname.Length);
+        if (id > 0)
+            name= name.Remove(0, 1);
+        <li @cl>
+            <div  style="background:url(@Model[i].Image) no-repeat center;  background-size: cover;" class="banner-w3ls-1" >
+                <div class="banner-text-posi-w3ls">
+                    <div class="banner-text-whtree">
+                        <h3 class="text-capitalize text-white p-4">
+                          @fname
+                            <b>@name</b>
+                        </h3>
+                        <p class="px-4 py-3 text-dark">@Model[i].Description</p>
+                        <a href="@Model[i].Link"  target="@Model[i].Target"  class="button-agiles text-capitalize text-white mt-sm-5 mt-4">Xem tiếp</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    }
+</ul>
+<ul class="pager">
+    @for (var i = 0; i < total; i++)
+    {
+        var cl1 = "";
+        if (i == 0)
+        {
+            cl1 = "class='active'";
+        }
+        <li data-index="@i" @cl1></li>
+    }
+</ul>

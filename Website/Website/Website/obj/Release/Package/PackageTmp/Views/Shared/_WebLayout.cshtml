@@ -44,6 +44,7 @@
           rel="stylesheet">
     <link href="~/Content/Client/css/font.css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <!-- //Web-Fonts -->
+    <script src="~/Content/Client/js/jquery-2.2.3.min.js"></script>
     @RenderSection("HeaderScript", false)
 </head>
 
@@ -57,46 +58,7 @@
     <!-- //header -->
      <!-- banner -->
 <div class="banner-agile">
-    <ul class="slider">
-        <li class="active">
-            <div class="banner-w3ls-1">
-            </div>
-        </li>
-        <li>
-            <div class="banner-w3ls-2">
-            </div>
-        </li>
-        <li>
-            <div class="banner-w3ls-3">
-            </div>
-        </li>
-        <li>
-            <div class="banner-w3ls-4">
-            </div>
-        </li>
-        <li class="prev">
-            <div class="banner-w3ls-5">
-            </div>
-        </li>
-    </ul>
-    <ul class="pager">
-        <li data-index="0" class="active"></li>
-        <li data-index="1"></li>
-        <li data-index="2"></li>
-        <li data-index="3"></li>
-        <li data-index="4"></li>
-    </ul>
-    <div class="banner-text-posi-w3ls">
-        <div class="banner-text-whtree">
-            <h3 class="text-capitalize text-white p-4">
-                Bonnal
-                <b>100 tuổi</b>
-            </h3>
-            <p class="px-4 py-3 text-dark">Trở thành chuyên gia hàng đầu sau khi tốt nghiệp</p>
-            <a href="about.html" class="button-agiles text-capitalize text-white mt-sm-5 mt-4">Xem tiếp</a>
-        </div>
-    </div>
-
+    @{ Html.RenderAction("SidesPartial", "Home");}
     <!-- navigation -->
     <div class="navigation-w3ls">
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-nav">
@@ -193,7 +155,6 @@
     <script src="~/Content/Client/js/easing.js"></script>
     <!--  necessary snippets for few javascript files -->
     <script src="~/Content/Client/js/edulearn.js"></script>
-
     <!-- //Js files -->
     @RenderSection("FooterScript", false)
 </body>

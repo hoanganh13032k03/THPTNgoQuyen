@@ -97,6 +97,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kích hoạt.
+        /// </summary>
+        public static string Active {
+            get {
+                return ResourceManager.GetString("Active", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Địa chỉ.
         /// </summary>
         public static string Address {
@@ -1150,6 +1159,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Thời gian kết thúc.
+        /// </summary>
+        public static string Date_End {
+            get {
+                return ResourceManager.GetString("Date_End", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Thời gian bắt đầu.
+        /// </summary>
+        public static string Date_Start {
+            get {
+                return ResourceManager.GetString("Date_Start", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Mô tả.
         /// </summary>
         public static string Description {
@@ -1308,6 +1335,15 @@ namespace Resources {
         public static string FeedbackTitle {
             get {
                 return ResourceManager.GetString("FeedbackTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File đính kèm.
+        /// </summary>
+        public static string File {
+            get {
+                return ResourceManager.GetString("File", resourceCulture);
             }
         }
         
@@ -1983,6 +2019,15 @@ namespace Resources {
         public static string NotPermissionMessage {
             get {
                 return ResourceManager.GetString("NotPermissionMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tùy chọn.
+        /// </summary>
+        public static string Options {
+            get {
+                return ResourceManager.GetString("Options", resourceCulture);
             }
         }
         

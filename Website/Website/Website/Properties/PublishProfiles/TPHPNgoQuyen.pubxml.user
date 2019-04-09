@@ -37,16 +37,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/25/2019 06:29:44</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Category/Create.cshtml">
-      <publishTime>01/26/2019 13:31:27</publishTime>
+      <publishTime>01/30/2019 15:53:06</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Category/Details.cshtml">
       <publishTime>01/16/2019 10:41:18</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Category/Edit.cshtml">
-      <publishTime>01/26/2019 13:31:24</publishTime>
+      <publishTime>01/30/2019 15:51:29</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Category/Index.cshtml">
-      <publishTime>01/16/2019 10:13:45</publishTime>
+      <publishTime>01/30/2019 15:42:44</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Footer/Create.cshtml">
       <publishTime>01/25/2019 10:10:21</publishTime>
@@ -73,7 +73,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/26/2019 09:08:52</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
-      <publishTime>01/22/2019 09:59:40</publishTime>
+      <publishTime>02/04/2019 06:48:46</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_Navigation.cshtml">
       <publishTime>12/28/2018 23:50:20</publishTime>
@@ -121,7 +121,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2019 03:44:08</publishTime>
     </File>
     <File Include="bin/DBModel.dll">
-      <publishTime>01/28/2019 03:44:10</publishTime>
+      <publishTime>02/10/2019 22:47:48</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -268,10 +268,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 17:28:38</publishTime>
     </File>
     <File Include="bin/Website.dll">
-      <publishTime>01/28/2019 03:44:15</publishTime>
+      <publishTime>02/10/2019 22:47:54</publishTime>
     </File>
     <File Include="Content/Admin/dist/img/logo.png">
       <publishTime>01/07/2019 10:52:03</publishTime>
+    </File>
+    <File Include="Content/Client/css/jquery-ui.css">
+      <publishTime>02/04/2019 06:17:11</publishTime>
     </File>
     <File Include="Content/PagedList.css">
       <publishTime>01/23/2019 08:55:59</publishTime>
@@ -355,19 +358,22 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/28/2018 09:02:17</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>01/27/2019 16:18:00</publishTime>
+      <publishTime>02/04/2019 06:49:38</publishTime>
     </File>
     <File Include="Views/NewsDT/Category.cshtml">
-      <publishTime>01/27/2019 21:44:16</publishTime>
+      <publishTime>02/04/2019 07:19:06</publishTime>
     </File>
     <File Include="Views/NewsDT/Detail.cshtml">
-      <publishTime>01/28/2019 00:25:25</publishTime>
+      <publishTime>02/04/2019 07:20:26</publishTime>
     </File>
     <File Include="Views/NewsDT/DetailTag.cshtml">
-      <publishTime>01/28/2019 02:43:07</publishTime>
+      <publishTime>02/04/2019 05:55:47</publishTime>
+    </File>
+    <File Include="Views/NewsDT/Search.cshtml">
+      <publishTime>02/04/2019 07:14:47</publishTime>
     </File>
     <File Include="Views/NewsDT/Tag.cshtml">
-      <publishTime>01/28/2019 02:43:24</publishTime>
+      <publishTime>02/04/2019 07:19:55</publishTime>
     </File>
     <File Include="Views/Shared/CategoryPartial.cshtml">
       <publishTime>01/27/2019 09:57:52</publishTime>
@@ -384,14 +390,17 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Shared/MenuPartial.cshtml">
       <publishTime>01/26/2019 21:34:37</publishTime>
     </File>
+    <File Include="Views/Shared/SidesPartial.cshtml">
+      <publishTime>01/31/2019 08:25:54</publishTime>
+    </File>
     <File Include="Views/Shared/TagsPartial.cshtml">
       <publishTime>01/27/2019 04:57:40</publishTime>
     </File>
     <File Include="Views/Shared/_WebLayout.cshtml">
-      <publishTime>01/27/2019 04:19:26</publishTime>
+      <publishTime>01/31/2019 01:04:59</publishTime>
     </File>
     <File Include="Views/Shared/_WebNewsLayout.cshtml">
-      <publishTime>01/27/2019 23:50:59</publishTime>
+      <publishTime>02/04/2019 06:17:37</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>01/28/2019 03:33:12</publishTime>

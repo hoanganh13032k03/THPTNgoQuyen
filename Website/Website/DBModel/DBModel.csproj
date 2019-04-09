@@ -59,9 +59,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\GroupCalendarDao.cs" />
     <Compile Include="DAO\NewsDao.cs" />
     <Compile Include="DAO\AboutDao.cs" />
     <Compile Include="DAO\AdvertiseDao.cs" />
+    <Compile Include="DAO\CalenderDao.cs" />
     <Compile Include="DAO\TeacherDao.cs" />
     <Compile Include="DAO\StatsInfoDao.cs" />
     <Compile Include="DAO\SideDao.cs" />

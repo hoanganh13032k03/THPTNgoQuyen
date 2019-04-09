@@ -206,6 +206,8 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Areas\Admin\Controllers\CalenderController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GroupCalendarController.cs" />
     <Compile Include="Areas\Admin\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
@@ -295,6 +297,12 @@
     <Content Include="Areas\Admin\Views\News\Create.cshtml" />
     <Content Include="Areas\Admin\Views\News\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\News\Publicer.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupCalendar\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupCalendar\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupCalendar\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupCalendar\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Calender\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Calender\Create.cshtml" />
     <None Include="Properties\PublishProfiles\TPHPNgoQuyen.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -337,6 +345,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Business\" />
+    <Folder Include="Areas\Admin\Views\Calendar\" />
     <Folder Include="Areas\Admin\Views\GrantPermission\" />
     <Folder Include="Areas\Admin\Views\Group\" />
     <Folder Include="Areas\Admin\Views\Login\" />

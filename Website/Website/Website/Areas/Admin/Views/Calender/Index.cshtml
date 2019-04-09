@@ -1,0 +1,181 @@
+﻿@model IEnumerable<DBModel.ET.Calender>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section ClienCSS{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/admin/plugins/iCheck/all.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
+    <script src="~/Content/admin/js/plugins/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript">
+        function BrowseServer(field) {
+            editedField = field;
+            var finder = new CKFinder();
+            //finder.basePath = '../';
+            finder.lang = 'vi'
+            finder.selectActionFunction = SetFileField;
+            finder.popup();
+        }
+        function SetFileField(fileUrl) {
+            document.getElementById(editedField).value = fileUrl;
+        }
+    </script>
+}
+
+@section FooterClienScript{
+
+    <!-- Select2 -->
+    <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="~/Content/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="~/Content/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="~/Content/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="~/Content/admin/plugins/iCheck/icheck.min.js"></script>
+    <!-- DataTables -->
+    <script src="~/Content/admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/admin/bower_components/fastclick/lib/fastclick.js"></script>
+
+
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+
+        })
+        $('.select2').select2()
+    </script>
+}
+
+
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+            Danh mục nhóm lịch
+        </h1>
+        <ol class="breadcrumb">
+            <li>@Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionCreateButtonText, "Create", null, new { @class = "btn btn-primary" })</li>
+        </ol>
+    </section>
+}
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+            <table id="example1" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                     
+                        <th>
+                            @Html.DisplayNameFor(model => model.Tite)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Date_Start)
+                        </th>
+                        
+                        <th>
+                            @Html.DisplayNameFor(model => model.Date_End)
+                        </th>
+                       
+                        <th>
+                            @Html.DisplayNameFor(model => model.Status_End)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Detail)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Place)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Organization)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Prepared)
+                        </th>
+                        
+                        <th>
+                            @Html.DisplayNameFor(model => model.Options)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Active)
+                        </th>
+                       
+                        <th>
+                            @Html.DisplayNameFor(model => model.ShowOnHome)
+                        </th>
+                       
+                        <th></th>
+                    </tr>
+                    </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="row_@item.CalenderID">
+                           
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Tite)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date_Start)
+                            </td>
+                            
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date_End)
+                            </td>
+                           
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Status_End)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Detail)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Place)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Organization)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Prepared)
+                            </td>
+                           
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Options)
+                            </td>
+                           <td>
+                                @Html.DisplayFor(modelItem => item.Active)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.ShowOnHome)
+                            </td>
+                           
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.CalenderID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.CalenderID }) |
+                              @Ajax.ActionLink("Xoá", "Delete", new { id = item.CalenderID }, new AjaxOptions
+                         {
+                             Confirm = "Bạn có muốn xoá bản ghi này?",
+                             OnComplete = "$('#row_" + @item.CalenderID + "').remove()",
+                             HttpMethod = "Delete"
+                         })
+                            </td>
+                        </tr>
+                    }
+
+                    </tbody>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>
