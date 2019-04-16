@@ -5,6 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 
+
 /*-- Reset Code --*/
 
 body {
@@ -268,7 +269,7 @@ a.button-head-mow3 {
 /* navigation */
 
 .bg-light {
-    background: linear-gradient(to bottom, #42a5f5, #86c9ff);
+    background: linear-gradient(to bottom, #42a5f5, #0097e6);
 }
 
 li.nav-item a {
@@ -308,7 +309,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
     -webkit-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 3px 12px -2px rgba(0, 0, 0, 0.75);
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -2118,7 +2119,7 @@ li.subitem1 p {
 
 @media(max-width: 1680px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 70%;
+        width: 100%;
     }
 }
 
@@ -2126,7 +2127,7 @@ li.subitem1 p {
 
 @media(max-width: 1440px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 80%;
+        width: 100%;
     }
     .banner-agile-2 {
         min-height: 320px;
@@ -2135,13 +2136,13 @@ li.subitem1 p {
 
 @media(max-width: 1366px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 84%;
+        width: 100%;
     }
 }
 
 @media(max-width: 1280px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 88%;
+        width: 100%;
     }
     .banner-agile-2 {
         min-height: 300px;
@@ -2241,7 +2242,7 @@ li.subitem1 p {
 
 @media(max-width: 1050px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 90%;
+        width: 100%;
     }
     .proj_gallery_grid1_pos p {
         font-size: 13px;
@@ -2250,7 +2251,7 @@ li.subitem1 p {
 
 @media(max-width: 1024px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 93%;
+        width: 100%;
     }
     a.logo {
         font-size: 45px;
@@ -2265,7 +2266,7 @@ li.subitem1 p {
 
 @media(max-width: 991px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 86%;
+        width: 100%;
     }
     .navbar-light .navbar-toggler {
         border-color: #fff;
@@ -2427,7 +2428,7 @@ li.subitem1 p {
 
 @media(max-width: 800px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
-        width: 90%;
+        width: 100%;
     }
     .proj_gallery_grid1_pos h3 {
         letter-spacing: 1px;
@@ -3288,3 +3289,13 @@ li.subitem1 p {
 
 /*--//responsive--*/
 
+/*
+    Hiện full banner
+*/
+.bg-image-full {
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}

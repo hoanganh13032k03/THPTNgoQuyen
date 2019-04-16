@@ -24,6 +24,17 @@ namespace DBModel.DAO
         {
             return db.Categories.Where(x=>x.Status==true).OrderBy(x => x.DisplayOrder).ToList<Category>();
         }
+        public List<Category> ToListActivePosition(byte position)
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == position).OrderBy(x => x.DisplayOrder).ToList<Category>();
+        }
+
+
+        public List<Category> TToListActivePositionByParentID(byte position, long ID)
+        {
+            return db.Categories.Where(x => x.Status == true && x.ShowOnHome == true && x.Position == position && x.ParentID == ID).OrderBy(x => x.DisplayOrder).ToList<Category>();
+        }
+
         public List<Category> ToListActiveHome()
         {
             return db.Categories.Where(x => x.Status == true&&x.ShowOnHome==true && x.Position == 1).OrderBy(x => x.DisplayOrder).ToList<Category>();

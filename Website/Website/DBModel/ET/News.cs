@@ -31,6 +31,7 @@ namespace DBModel.ET
         public string Image { get; set; }
 
         [StringLength(500)]
+        [Display(Name = "CategoryParentID", ResourceType = typeof(Resources.ResourceAdmin))]
         public string CategoryID { get; set; }
 
         [Display(Name = "Content", ResourceType = typeof(Resources.ResourceAdmin))]

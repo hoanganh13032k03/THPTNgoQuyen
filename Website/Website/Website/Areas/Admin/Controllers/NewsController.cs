@@ -21,7 +21,7 @@ namespace Website.Areas.Admin.Controllers
         public ActionResult Index()
         {
            NewsDao bdDao = new NewsDao();
-            ViewBag.lstCate =bdDao.ToList();
+            ViewBag.lstCate = GetClientCategoryViewModel();
             //TempData["AlertMessage"] = null;
             return View(bdDao.ToList());
         }
@@ -30,7 +30,8 @@ namespace Website.Areas.Admin.Controllers
         public ActionResult Details(long id)
         {
            NewsDao dbDAO = new NewsDao();
-           News cat = null;
+            ViewBag.lstCate = GetClientCategoryViewModel();
+            News cat = null;
             try
             {
                 cat = dbDAO.FindByID(id);
@@ -46,9 +47,8 @@ namespace Website.Areas.Admin.Controllers
         [AcceptVerbs(HttpVerbs.Get)]
         public ActionResult Create()
         {
-            SetParentIDViewBag();
-          
-            // ViewBag.GroupID = new SelectList(dbContext..ToList(), "ID", "Name");
+            PopulateParentIDDropDownList(null);
+
             return View();
         }
 
@@ -59,7 +59,8 @@ namespace Website.Areas.Admin.Controllers
         {
             ViewBag.UpTopNew = data["UpTopNew"].ToString();
             ViewBag.UpTopHot = data["UpTopHot"].ToString();
-            SetParentIDViewBag(HepperString.TolistLong( data.GetValues("CategoryID")));
+         
+            PopulateParentIDDropDownList(HepperString.TolistLong(data.GetValues("CategoryID")));
             try
             {
                 News objNews = new News();
@@ -129,19 +130,10 @@ namespace Website.Areas.Admin.Controllers
         {
            NewsDao dbDAO = new NewsDao();
            News objNew = null;
-            //SetParentIDViewBag();
-            try
-            {
-                objNew = dbDAO.FindByID(id);
-                List<string> cateID = HepperString.GetListByKey(objNew.CategoryID, ",");
-                
-                SetParentIDViewBag(HepperString.TolistLong(cateID.ToArray()));
-            }
-            catch
-            {
-
-                ModelState.AddModelError("", Resources.ResourceAdmin.ErrorGetRecordMessage);
-            }
+            objNew = dbDAO.FindByID(id);
+            List<string> cateID = HepperString.GetListByKey(objNew.CategoryID, ",");
+            PopulateParentIDDropDownList(HepperString.TolistLong(cateID.ToArray()));
+           
             return View(objNew);
         }
         [AcceptVerbs(HttpVerbs.Get)]
@@ -154,8 +146,7 @@ namespace Website.Areas.Admin.Controllers
             {
                 objNew = dbDAO.FindByID(id);
                 List<string> cateID = HepperString.GetListByKey(objNew.CategoryID, ",");
-
-                SetParentIDViewBag(HepperString.TolistLong(cateID.ToArray()));
+                PopulateParentIDDropDownList(HepperString.TolistLong(cateID.ToArray()));
             }
             catch
             {
@@ -169,10 +160,8 @@ namespace Website.Areas.Admin.Controllers
         {
             NewsDao dbDAO = new NewsDao();
             var bd = dbDAO.FindByID(mode.NewsID);
-            List<string> cateID = HepperString.GetListByKey(mode.CategoryID, ",");
-
-            SetParentIDViewBag(HepperString.TolistLong(cateID.ToArray()));
-            //SetParentIDViewBag();
+            List<string> cateID = HepperString.GetListByKey(bd.CategoryID, ",");
+            PopulateParentIDDropDownList(HepperString.TolistLong(cateID.ToArray()));
             try
             {
                 UserLogin us = (UserLogin)Session[SystemConsts.USER_SESSION];
@@ -209,7 +198,9 @@ namespace Website.Areas.Admin.Controllers
         {
             ViewBag.UpTopNew = data["UpTopNew"].ToString();
             ViewBag.UpTopHot = data["UpTopHot"].ToString();
-            SetParentIDViewBag(HepperString.TolistLong(data.GetValues("CategoryID")));
+            //SetParentIDViewBag(HepperString.TolistLong(data.GetValues("CategoryID")));
+            PopulateParentIDDropDownList(HepperString.TolistLong(data.GetValues("CategoryID")));
+
             try
             {
                 NewsDao bdDao = new NewsDao();
@@ -294,19 +285,9 @@ namespace Website.Areas.Admin.Controllers
                 return View();
             }
         }
-        public void SetParentIDViewBag(long[] selectedId = null)
-        {
-            var items = GetClientCategoryViewModel();
-            //long [] marks = new long[2] { 4, 6};
-            var categories = items.Select(c => new
-            {
-                CategoryID = c.ID,
-                Text = c.Text
-            }).ToList();
-            ViewBag.CategoryID = new MultiSelectList(categories, "CategoryID", "Text", selectedId);
-        }
+       
         #region Private Method
-        private void PopulateParentIDDropDownList(object selectedParent = null)
+        private void PopulateParentIDDropDownList(long[] selectedParent = null)
         {
             var items = GetClientCategoryViewModel();
             ViewBag.Parents = new SelectList(items, "ID", "Text", selectedParent);

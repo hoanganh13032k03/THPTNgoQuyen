@@ -251,6 +251,8 @@
   <ItemGroup>
     <Content Include="Content\Admin\dist\img\logo.png" />
     <Content Include="Content\Client\css\jquery-ui.css" />
+    <Content Include="Content\Client\images\banner.jpg" />
+    <Content Include="Content\Client\images\logo.gif" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Data\images\c1.jpg" />
     <Content Include="Data\images\c2.jpg" />
@@ -303,6 +305,7 @@
     <Content Include="Areas\Admin\Views\GroupCalendar\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Calender\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Calender\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Details.cshtml" />
     <None Include="Properties\PublishProfiles\TPHPNgoQuyen.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -357,7 +360,6 @@
     <Folder Include="Content\Admin\build\" />
     <Folder Include="Content\Admin\js\" />
     <Folder Include="Content\Admin\plugins\" />
-    <Folder Include="Content\Client\images\" />
     <Folder Include="Content\Client\js\controller\" />
     <Folder Include="Content\Client\webfonts\" />
   </ItemGroup>

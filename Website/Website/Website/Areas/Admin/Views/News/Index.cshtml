@@ -1,8 +1,10 @@
-﻿@model IEnumerable<DBModel.ET.News>
+﻿@using Website.Areas.Models;
+@model IEnumerable<DBModel.ET.News>
 
 @{
     ViewBag.Title = "Tin tức";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    List<ClientCategoryViewModel> lst = (List<ClientCategoryViewModel>)ViewBag.lstCate;
 }
 @section ClienCSS{
     <!-- DataTables -->
@@ -89,12 +91,7 @@
                         <th>
                             @Html.DisplayNameFor(model => model.Status)
                         </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.UpTopHot)
-                        </th>
-                        <th>
-                            @Html.DisplayNameFor(model => model.UpTopNew)
-                        </th>
+                        
                         <th>
                             @Html.DisplayNameFor(model => model.ViewCount)
                         </th>
@@ -114,7 +111,15 @@
                                 @Html.DisplayFor(modelItem => item.Name)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.CategoryID)
+                                @{
+                                    var sName = "";
+                                    if (item.CategoryID != null)
+                                    {
+                                        long cateID = Convert.ToInt64(item.CategoryID);
+                                        sName = lst.Find(x => x.ID == cateID).Text;
+                                    }
+                                }
+                                @sName
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.ModifiedBy)
@@ -141,22 +146,7 @@
                                 }
                                 @sStatus
                             </td>
-                            <td>
-                                @{ 
-                                    var UpTopHot = "";
-                                    UpTopHot = item.UpTopHot.ToString("dd/MM/yyyy");
-
-                            }
-                                @UpTopHot
-                            </td>
-                            <td>
-                                @{
-                                    var UpTopNew = "";
-                                    UpTopNew = item.UpTopNew.ToString("dd/MM/yyyy");
-
-                                }
-                                @UpTopNew
-                            </td>
+                           
                             <td>
                                 @Html.DisplayFor(modelItem => item.ViewCount)
                             </td>

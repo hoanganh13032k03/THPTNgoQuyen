@@ -21,11 +21,16 @@ namespace Website.Controllers
        
         public ActionResult Index()
         {
+            CategoryDao cateDB = new CategoryDao();
+            ViewBag.HocTieuBieu = cateDB.TToListActivePositionByParentID(3,26).SingleOrDefault();
+
+
             AboutDao dbCat = new AboutDao();
             ViewBag.About = dbCat.ToActive();
 
             StatsInfoDao stiDB = new StatsInfoDao();
             ViewBag.StatsInfo = stiDB.ToListActive();
+
             return View();
         }
         [ChildActionOnly]
