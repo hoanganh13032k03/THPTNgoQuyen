@@ -1,0 +1,316 @@
+﻿@using Website.Areas.Models;
+@model DBModel.ET.News
+@{
+    ViewBag.Title = "Chi tiết";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    List<ClientCategoryViewModel> lst = (List<ClientCategoryViewModel>)ViewBag.lstCate;
+}
+
+
+@section ClienCSS{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/admin/plugins/iCheck/all.css">
+    <link rel="stylesheet" href="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
+    <script src="~/Content/admin/js/plugins/ckfinder/ckfinder.js"></script>
+    <script src="~/Content/admin/js/plugins/ckeditor/ckeditor.js"></script>
+
+    <script type="text/javascript">
+        function BrowseServer(field) {
+            editedField = field;
+            var finder = new CKFinder();
+            //finder.basePath = '../';
+            finder.lang = 'vi'
+            finder.selectActionFunction = SetFileField;
+            finder.popup();
+        }
+        function SetFileField(fileUrl) {
+            document.getElementById(editedField).value = fileUrl;
+            document.getElementById('imgIcon').src = fileUrl;
+        }
+
+
+    </script>
+}
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+          Chi tiết tin
+        </h1>
+        <ol class="breadcrumb">
+            <li>
+                @Html.ActionLink(@Resources.ResourceAdmin.AdminFunctionBackButtonText, "Index", null, new { @class = "btn btn-primary" })
+            </li>
+        </ol>
+    </section>
+}
+@section FooterClienScript{
+
+    <!-- Select2 -->
+    <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="~/Content/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="~/Content/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="~/Content/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="~/Content/admin/plugins/iCheck/icheck.min.js"></script>
+    <!-- DataTables -->
+    <script src="~/Content/admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/admin/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function () {
+
+
+
+            //Date picker
+            $('#UpTopHot').datepicker({
+                autoclose: true
+                //format:'dd/mm/yyyy'
+            })
+            $('#UpTopNew').datepicker({
+                autoclose: true
+            })
+            $('#LockedDate').datepicker({
+                autoclose: true
+            })
+            $('.select2').select2()
+
+        })
+        CKEDITOR.replace('ContentHtml');
+        $('#frmAbout').on('submit', function () {
+            for (instance in CKEDITOR.instances) {
+                CKEDITOR.instances[instance].updateElement();
+            }
+        });
+
+    </script>
+
+}
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Name)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Title)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Title)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetaTite)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaTite)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Description)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tags)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tags)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Image)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Image)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CategoryID)
+                </dt>
+
+                <dd>
+                    @{
+                        var sName = "";
+                        if (Model.CategoryID != null)
+                        {
+                            long cateID = Convert.ToInt64(Model.CategoryID);
+                            sName = lst.Find(x => x.ID == cateID).Text;
+                        }
+                    }
+                    @sName
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ContentHtml)
+                </dt>
+
+                <dd>
+                    @Html.Raw(Model.ContentHtml)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreateDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreateDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.CreateBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.CreateBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedBy)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedBy)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ModifiedDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetakeyWords)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetakeyWords)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.MetaDescription)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.MetaDescription)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Status)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Status)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.UpTopHot)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpTopHot)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.UpTopNew)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UpTopNew)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ViewCount)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ViewCount)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Source)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Source)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ShowConment)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ShowConment)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.LanguageID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.LanguageID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.ShowShare)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.ShowShare)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.PublishedDate)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.PublishedDate)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.RelatedNewses)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.RelatedNewses)
+                </dd>
+
+            </dl>
+        </div>
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.NewsID }) |
+            @Html.ActionLink("Back to List", "Index")
+        </p>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>
+
+      
+

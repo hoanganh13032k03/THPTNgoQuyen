@@ -91,9 +91,11 @@
     <Compile Include="ET\GrantPermission.cs" />
     <Compile Include="ET\Group.cs" />
     <Compile Include="ET\GroupCalendar.cs" />
+    <Compile Include="ET\GroupMath.cs" />
     <Compile Include="ET\GroupsSide.cs" />
     <Compile Include="ET\GroupUser.cs" />
     <Compile Include="ET\Language.cs" />
+    <Compile Include="ET\MathStudent.cs" />
     <Compile Include="ET\Menu.cs" />
     <Compile Include="ET\MenuType.cs" />
     <Compile Include="ET\News.cs" />
@@ -110,6 +112,7 @@
     <Compile Include="ET\Tag.cs" />
     <Compile Include="ET\Teacher.cs" />
     <Compile Include="ET\User.cs" />
+    <Compile Include="ET\Video.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

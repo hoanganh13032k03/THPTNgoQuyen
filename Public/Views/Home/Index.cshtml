@@ -6,6 +6,7 @@
     ViewBag.MetaDescription= "";
     Layout = "~/Views/Shared/_WebLayout.cshtml";
     List<StatsInfo> lstSIF = (List<StatsInfo>)ViewBag.StatsInfo;
+    Category CateHS = (Category)ViewBag.HocTieuBieu;
 }
 <!-- video and events -->
 <div class="video-choose-agile py-5">
@@ -125,7 +126,7 @@
                     <div class="col-9 agile-why-text-2">
                         <h4 class="text-white font-weight-bold mb-3">Giáo viên</h4>
                         <p>Thông tin dành cho giáo viên...</p>
-                        <a class="btn mt-3 service-button p-0" href="~/Tin-Tuc/Giao-vien" role="button">
+                        <a class="btn mt-3 service-button p-0" href="~/Tin-Tuc/Giao-vien-29" role="button">
                             Xem tiếp
                             <i class="fas fa-long-arrow-alt-right ml-1"></i>
                         </a>
@@ -142,7 +143,7 @@
                     <div class="col-9 agile-why-text-2">
                         <h4 class="text-white font-weight-bold mb-3">Học sinh</h4>
                         <p>Thông tin dành cho học sinh...</p>
-                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                        <a class="btn mt-3 service-button p-0" href="~/Tin-Tuc/Hoc-sinh-28" role="button">
                             Xem tiếp
                             <i class="fas fa-long-arrow-alt-right ml-1"></i>
                         </a>
@@ -159,7 +160,7 @@
                     <div class="col-9 agile-why-text-2">
                         <h4 class="text-white font-weight-bold mb-3">Cựu học sinh</h4>
                         <p>Thông tin dành cho cựu học sinh...</p>
-                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                        <a class="btn mt-3 service-button p-0" href="~/Tin-Tuc/Cuu-hoc-sinh-33" role="button">
                             Xem tiếp
                             <i class="fas fa-long-arrow-alt-right ml-1"></i>
                         </a>
@@ -178,7 +179,7 @@
                     <div class="col-9 agile-why-text-2">
                         <h4 class="text-white font-weight-bold mb-3">Sự kiện lớn</h4>
                         <p>Hàng năm, nhà trường tổ chức các chương trình, các chuyên đề, sự kiện.....</p>
-                        <a class="btn mt-3 service-button p-0" href="about.html" role="button">
+                        <a class="btn mt-3 service-button p-0" href="~/Tin-Tuc/Su-kien-lon-30" role="button">
                             Xem tiếp
                             <i class="fas fa-long-arrow-alt-right ml-1"></i>
                         </a>
@@ -195,7 +196,7 @@
                     <div class="col-9 agile-why-text-2">
                         <h4 class="text-white font-weight-bold mb-3">Các khóa học</h4>
                         <p>Nhà trường thường xuyên tổ chức các khóa học, các buổi hội thảo nhằm nâng cao.....</p>
-                        <a class="btn mt-3 service-button p-0" href="~/Tin-tuc/Cac-khoa-hoc" role="button">
+                        <a class="btn mt-3 service-button p-0" href="~/Tin-tuc/Cac-khoa-hoc-44" role="button">
                             Xem tiếp
                             <i class="fas fa-long-arrow-alt-right ml-1"></i>
                         </a>
@@ -212,7 +213,7 @@
                     <div class="col-9 agile-why-text-2">
                         <h4 class="text-white font-weight-bold mb-3">Câu lạc bộ</h4>
                         <p>Nhà trường cập nhật liên tục các thắc mắc của các em học sinh, cựu học sinh về ......</p>
-                        <a class="btn mt-3 service-button p-0" href="~/Cau-lac-bo" role="button">
+                        <a class="btn mt-3 service-button p-0" href="~/Tin-tuc/Cau-lac-bo-42" role="button">
                             Xem tiếp
                             <i class="fas fa-long-arrow-alt-right ml-1"></i>
                         </a>
@@ -227,8 +228,9 @@
 <div class="news-section py-5">
     <div class="container py-xl-5 py-lg-3">
         <h3 class="title font-weight-light text-dark text-center mb-5">
-            Học sinh ưu tú
-            <span class="font-weight-bold">năm 2018</span>
+            @CateHS.Name.Remove(@CateHS.Name.Length-13, 13)
+           
+            <span class="font-weight-bold">@CateHS.Name.Remove(0,@CateHS.Name.Length - 13)</span>
         </h3>
         <div class="row news-grids-w3l pt-md-4">
             <div class="col-md-4 news-grid">

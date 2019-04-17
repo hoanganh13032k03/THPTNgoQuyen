@@ -121,7 +121,7 @@
 </section>
 
 @section FooterClienScript{
-    <script src="~/Content/js/controller/admin/userController.js"></script>
+                      <script src="~/Content/Admin/js/controller/userController.js"></script>
     <!-- Select2 -->
     <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
     <script src="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
@@ -180,7 +180,6 @@
 
                     <input hidden id="hidUserID" />
                     @Html.DropDownList("drlGroup", (MultiSelectList)ViewBag.Group, new { @class = "form-control  select2 size = 20", @multiple = "multiple" })
-
 
                 </div>
 

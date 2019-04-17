@@ -12,6 +12,8 @@ namespace DBModel.ET
         [Display(Name = "CategoryID", ResourceType = typeof(Resources.ResourceAdmin))]
         public long NewsID { get; set; }
 
+        [Required(ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "NameRequired")]
+        [Display(Name = "CategoryName", ResourceType = typeof(Resources.ResourceAdmin))]
         [StringLength(250, ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "TitleLong")]
         public string Name { get; set; }
 

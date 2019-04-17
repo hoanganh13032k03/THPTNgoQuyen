@@ -28,8 +28,10 @@ namespace DBModel.ET
         public virtual DbSet<Group> Groups { get; set; }
         public virtual DbSet<GroupCalendar> GroupCalendars { get; set; }
         public virtual DbSet<GroupsSide> GroupsSides { get; set; }
+        public virtual DbSet<GroupMath> GroupMaths { get; set; }
         public virtual DbSet<GroupUser> GroupUsers { get; set; }
         public virtual DbSet<Language> Languages { get; set; }
+        public virtual DbSet<MathStudent> MathStudents { get; set; }
         public virtual DbSet<Menu> Menus { get; set; }
         public virtual DbSet<MenuType> MenuTypes { get; set; }
         public virtual DbSet<News> News { get; set; }
@@ -46,6 +48,8 @@ namespace DBModel.ET
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<Video> Videos { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -160,7 +164,17 @@ namespace DBModel.ET
             modelBuilder.Entity<GroupCalendar>()
                 .Property(e => e.CreatedBy)
                 .IsUnicode(false);
+            modelBuilder.Entity<GroupMath>()
+               .Property(e => e.CreateBy)
+               .IsUnicode(false);
 
+            modelBuilder.Entity<GroupMath>()
+                .Property(e => e.ModifiedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<GroupMath>()
+                .Property(e => e.LanguageID)
+                .IsUnicode(false);
             modelBuilder.Entity<GroupsSide>()
                 .Property(e => e.ID)
                 .IsUnicode(false);
@@ -183,6 +197,18 @@ namespace DBModel.ET
 
             modelBuilder.Entity<Language>()
                 .Property(e => e.ModifiedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MathStudent>()
+               .Property(e => e.CreateBy)
+               .IsUnicode(false);
+
+            modelBuilder.Entity<MathStudent>()
+                .Property(e => e.ModifiedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<MathStudent>()
+                .Property(e => e.LanguageID)
                 .IsUnicode(false);
 
             modelBuilder.Entity<Menu>()
@@ -343,6 +369,21 @@ namespace DBModel.ET
 
             modelBuilder.Entity<User>()
                 .Property(e => e.CreatedBy)
+                .IsUnicode(false);
+            modelBuilder.Entity<Video>()
+                .Property(e => e.Target)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Video>()
+                .Property(e => e.CreateBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Video>()
+                .Property(e => e.ModifiedBy)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Video>()
+                .Property(e => e.LanguageID)
                 .IsUnicode(false);
         }
     }
