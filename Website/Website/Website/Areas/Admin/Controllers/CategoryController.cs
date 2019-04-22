@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
 using Common;
 using Resources;
 using DBModel.DAO;
@@ -14,6 +13,7 @@ using Models;
 
 namespace Website.Areas.Admin.Controllers
 {
+    [AuthorizeBusiness]
     public class CategoryController : BaseController
     {
         // GET: Admin/Category

@@ -7,8 +7,8 @@ namespace DBModel.ET
     using System.Data.Entity.Spatial;
     using Resources;
 
-    [Table("Video")]
-    public partial class Video
+    [Table("Videos")]
+    public partial class Videos
     {
         [Key]
         [Display(Name = "CategoryID", ResourceType = typeof(Resources.ResourceAdmin))]
@@ -39,7 +39,8 @@ namespace DBModel.ET
 
         [Display(Name = "CreatedDate", ResourceType = typeof(Resources.ResourceAdmin))]
         public DateTime? CreateDate { get; set; }
-
+        [Display(Name = "ShowOnHome", ResourceType = typeof(Resources.ResourceAdmin))]
+        public bool ShowOnHome { get; set; }
 
         [StringLength(100)]
         [Display(Name = "CreatedBy", ResourceType = typeof(Resources.ResourceAdmin))]

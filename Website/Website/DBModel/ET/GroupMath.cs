@@ -24,12 +24,6 @@ namespace DBModel.ET
         [StringLength(250, ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "CategoryNameLong")]
         public string MetaTite { get; set; }
 
-        [Display(Name = "CategoryParentID", ResourceType = typeof(Resources.ResourceAdmin))]
-        public long? ParentID { get; set; }
-
-        [StringLength(250)]
-        [Display(Name = "Images", ResourceType = typeof(Resources.ResourceAdmin))]
-        public string Image { get; set; }
 
         [Display(Name = "Description", ResourceType = typeof(Resources.ResourceAdmin))]
         [StringLength(250, ErrorMessageResourceType = typeof(ResourceAdmin), ErrorMessageResourceName = "CategoryNameLong")]
@@ -68,8 +62,7 @@ namespace DBModel.ET
         [Display(Name = "ShowOnHome", ResourceType = typeof(Resources.ResourceAdmin))]
         public bool ShowOnHome { get; set; }
 
-        [Display(Name = "Position", ResourceType = typeof(Resources.ResourceAdmin))]
-        public byte Position { get; set; }
+       
 
         [StringLength(5)]
         [Display(Name = "LanguageCode", ResourceType = typeof(Resources.ResourceAdmin))]

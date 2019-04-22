@@ -50,6 +50,10 @@
     <Reference Include="CKFinder">
       <HintPath>..\..\..\THPTNgoQuyen\Vnailmarket\bin\CKFinder.dll</HintPath>
     </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Common\bin\Release\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
       <Private>True</Private>
@@ -206,8 +210,11 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="Areas\Admin\Controllers\MathStudentController.cs" />
     <Compile Include="Areas\Admin\Controllers\CalenderController.cs" />
     <Compile Include="Areas\Admin\Controllers\GroupCalendarController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GroupMathController.cs" />
+    <Compile Include="Areas\Admin\Controllers\VideosController.cs" />
     <Compile Include="Areas\Admin\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AboutController.cs" />
@@ -249,6 +256,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\js\npm.js" />
     <Content Include="Content\Admin\dist\img\logo.png" />
     <Content Include="Content\Client\css\jquery-ui.css" />
     <Content Include="Content\Client\images\banner.jpg" />
@@ -306,6 +320,21 @@
     <Content Include="Areas\Admin\Views\Calender\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Calender\Create.cshtml" />
     <Content Include="Areas\Admin\Views\News\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Videos\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Videos\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Videos\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Videos\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupMath\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupMath\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupMath\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\GroupMath\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\MathStudent\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\MathStudent\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\MathStudent\Edit.cshtml" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="Content\Admin\bower_components\bootstrap\dist\css\bootstrap.min.css.map" />
     <None Include="Properties\PublishProfiles\TPHPNgoQuyen.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -347,8 +376,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Views\Business\" />
-    <Folder Include="Areas\Admin\Views\Calendar\" />
+    <Folder Include="Areas\Admin\Views\Advertise\Business\" />
     <Folder Include="Areas\Admin\Views\GrantPermission\" />
     <Folder Include="Areas\Admin\Views\Group\" />
     <Folder Include="Areas\Admin\Views\Login\" />
@@ -356,7 +384,6 @@
     <Folder Include="Areas\Admin\Views\Menu\" />
     <Folder Include="Areas\Admin\Views\Permission\" />
     <Folder Include="Areas\Admin\Views\User\" />
-    <Folder Include="Content\Admin\bower_components\" />
     <Folder Include="Content\Admin\build\" />
     <Folder Include="Content\Admin\js\" />
     <Folder Include="Content\Admin\plugins\" />

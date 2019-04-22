@@ -7,3 +7,13 @@ E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\PagedList.Mvc.
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Release\Common.dll
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Release\Common.pdb
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\Common.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\Common.pdb
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\PagedList.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\PagedList.Mvc.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\DocumentFormat.OpenXml.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\PagedList.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Release\PagedList.Mvc.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Release\Common.csprojResolveAssemblyReference.cache
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Release\Common.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Release\Common.pdb

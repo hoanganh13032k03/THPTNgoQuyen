@@ -304,7 +304,7 @@ namespace DBModel.DAO
                 bd.MetaTite = mode.MetaTite;
             }
 
-            bd.NewsID = mode.NewsID;
+            //bd.NewsID = mode.NewsID;
             //bd.CreateBy = mode.CreateBy;
             //bd.CreateDate = mode.CreateDate;
 

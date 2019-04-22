@@ -48,7 +48,7 @@ namespace DBModel.ET
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<Teacher> Teachers { get; set; }
         public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Video> Videos { get; set; }
+        public virtual DbSet<Videos> Videos { get; set; }
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -370,19 +370,19 @@ namespace DBModel.ET
             modelBuilder.Entity<User>()
                 .Property(e => e.CreatedBy)
                 .IsUnicode(false);
-            modelBuilder.Entity<Video>()
+            modelBuilder.Entity<Videos>()
                 .Property(e => e.Target)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Video>()
+            modelBuilder.Entity<Videos>()
                 .Property(e => e.CreateBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Video>()
+            modelBuilder.Entity<Videos>()
                 .Property(e => e.ModifiedBy)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<Video>()
+            modelBuilder.Entity<Videos>()
                 .Property(e => e.LanguageID)
                 .IsUnicode(false);
         }

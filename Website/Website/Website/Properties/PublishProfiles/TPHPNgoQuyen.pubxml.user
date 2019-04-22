@@ -6,7 +6,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <_PublishTargetUrl>E:\STUDY\WinForms\THPTNgoQuyen\Public</_PublishTargetUrl>
+    <_PublishTargetUrl>F:\STUDY\WinForms\THPTNgoQuyen\Public</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <File Include="ApplicationInsights.config">
@@ -25,7 +25,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2019 14:57:58</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Advertise/Create.cshtml">
-      <publishTime>01/25/2019 06:44:51</publishTime>
+      <publishTime>04/17/2019 14:55:37</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Advertise/Details.cshtml">
       <publishTime>01/25/2019 06:31:05</publishTime>
@@ -34,16 +34,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/25/2019 06:45:26</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Advertise/Index.cshtml">
-      <publishTime>01/25/2019 06:29:44</publishTime>
+      <publishTime>04/17/2019 14:35:20</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Calender/Create.cshtml">
       <publishTime>04/09/2019 12:11:56</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Calender/Index.cshtml">
-      <publishTime>04/10/2019 06:44:12</publishTime>
+      <publishTime>04/17/2019 15:17:28</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Category/Create.cshtml">
-      <publishTime>04/16/2019 15:31:40</publishTime>
+      <publishTime>04/18/2019 16:00:11</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Category/Details.cshtml">
       <publishTime>01/16/2019 10:41:18</publishTime>
@@ -75,29 +75,50 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Areas/Admin/Views/GroupCalendar/Index.cshtml">
       <publishTime>02/14/2019 09:16:59</publishTime>
     </File>
+    <File Include="Areas/Admin/Views/GroupMath/Create.cshtml">
+      <publishTime>04/18/2019 14:54:31</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GroupMath/Details.cshtml">
+      <publishTime>04/18/2019 15:01:09</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GroupMath/Edit.cshtml">
+      <publishTime>04/22/2019 22:36:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GroupMath/Index.cshtml">
+      <publishTime>04/18/2019 14:54:25</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/Home/NotiAuthorize.cshtml">
       <publishTime>01/04/2019 10:52:34</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/MathStudent/Create.cshtml">
+      <publishTime>04/19/2019 09:13:12</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/MathStudent/Edit.cshtml">
+      <publishTime>04/19/2019 10:30:55</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/MathStudent/Index.cshtml">
+      <publishTime>04/19/2019 08:46:22</publishTime>
     </File>
     <File Include="Areas/Admin/Views/News/Create.cshtml">
       <publishTime>04/16/2019 16:03:11</publishTime>
     </File>
     <File Include="Areas/Admin/Views/News/Details.cshtml">
-      <publishTime>04/16/2019 21:02:26</publishTime>
+      <publishTime>04/17/2019 16:03:44</publishTime>
     </File>
     <File Include="Areas/Admin/Views/News/Edit.cshtml">
-      <publishTime>04/16/2019 21:02:18</publishTime>
+      <publishTime>04/17/2019 16:04:53</publishTime>
     </File>
     <File Include="Areas/Admin/Views/News/Index.cshtml">
-      <publishTime>04/16/2019 20:51:22</publishTime>
+      <publishTime>04/17/2019 15:53:34</publishTime>
     </File>
     <File Include="Areas/Admin/Views/News/Publicer.cshtml">
-      <publishTime>04/16/2019 20:39:08</publishTime>
+      <publishTime>04/22/2019 23:52:30</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
       <publishTime>02/04/2019 06:48:46</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Shared/_Navigation.cshtml">
-      <publishTime>04/17/2019 09:16:50</publishTime>
+      <publishTime>04/18/2019 14:23:17</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Side/Create.cshtml">
       <publishTime>01/25/2019 05:59:02</publishTime>
@@ -106,7 +127,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/23/2019 16:34:39</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Side/Edit.cshtml">
-      <publishTime>01/24/2019 00:59:53</publishTime>
+      <publishTime>04/17/2019 16:05:26</publishTime>
     </File>
     <File Include="Areas/Admin/Views/Side/Index.cshtml">
       <publishTime>01/25/2019 23:52:17</publishTime>
@@ -122,6 +143,18 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Areas/Admin/Views/StatsInfo/Index.cshtml">
       <publishTime>01/25/2019 05:51:39</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Videos/Create.cshtml">
+      <publishTime>04/17/2019 15:34:41</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Videos/Details.cshtml">
+      <publishTime>04/17/2019 16:04:20</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Videos/Edit.cshtml">
+      <publishTime>04/17/2019 15:46:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Videos/Index.cshtml">
+      <publishTime>04/17/2019 15:32:10</publishTime>
     </File>
     <File Include="Areas/Admin/Views/web.config">
       <publishTime>12/28/2018 09:26:07</publishTime>
@@ -139,10 +172,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/31/2017 14:57:26</publishTime>
     </File>
     <File Include="bin/Common.dll">
-      <publishTime>04/13/2019 08:57:28</publishTime>
+      <publishTime>04/22/2019 22:45:59</publishTime>
     </File>
     <File Include="bin/DBModel.dll">
-      <publishTime>04/17/2019 09:32:15</publishTime>
+      <publishTime>04/23/2019 00:14:32</publishTime>
+    </File>
+    <File Include="bin/DocumentFormat.OpenXml.dll">
+      <publishTime>02/22/2010 15:33:08</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>03/02/2015 09:32:26</publishTime>
@@ -226,7 +262,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/30/2013 18:15:20</publishTime>
     </File>
     <File Include="bin/Resources.dll">
-      <publishTime>04/13/2019 08:57:28</publishTime>
+      <publishTime>04/22/2019 22:45:59</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>06/18/2015 20:19:46</publishTime>
@@ -289,7 +325,40 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>09/10/2013 17:28:38</publishTime>
     </File>
     <File Include="bin/Website.dll">
-      <publishTime>04/17/2019 09:32:21</publishTime>
+      <publishTime>04/23/2019 00:14:35</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap-theme.css">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap-theme.css.map">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap-theme.min.css.map">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap.css">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap.css.map">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css.map">
+      <publishTime>04/19/2019 09:04:22</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/js/bootstrap.js">
+      <publishTime>04/19/2019 09:04:42</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js">
+      <publishTime>04/19/2019 09:04:42</publishTime>
+    </File>
+    <File Include="Content/Admin/bower_components/bootstrap/dist/js/npm.js">
+      <publishTime>04/19/2019 09:04:42</publishTime>
     </File>
     <File Include="Content/Admin/dist/img/logo.png">
       <publishTime>01/07/2019 10:52:03</publishTime>
@@ -382,10 +451,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>12/28/2018 09:02:18</publishTime>
     </File>
     <File Include="Scripts/_references.js">
-      <publishTime>12/28/2018 09:02:17</publishTime>
+      <publishTime>04/19/2019 09:04:42</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>04/15/2019 17:32:50</publishTime>
+      <publishTime>04/17/2019 14:41:27</publishTime>
     </File>
     <File Include="Views/NewsDT/Category.cshtml">
       <publishTime>02/04/2019 07:19:06</publishTime>
@@ -433,7 +502,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>01/28/2019 03:33:12</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/17/2019 09:32:23</publishTime>
+      <publishTime>04/22/2019 22:46:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

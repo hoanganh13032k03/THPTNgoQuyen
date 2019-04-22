@@ -146,7 +146,7 @@
                 </dt>
 
                 <dd>
-                    @Html.DisplayFor(model => model.Image)
+                    <img width="30" src="@(Convert.ToString(Model.Image))" id="imgIcon" class="img-circle" alt="User Image">
                 </dd>
 
                 <dt>
@@ -226,7 +226,19 @@
                 </dt>
 
                 <dd>
-                    @Html.DisplayFor(model => model.Status)
+                    @{
+                        var sStatus = "";
+                        int iStus = Convert.ToInt32(Model.Status);
+                        switch (iStus)
+                        {
+
+                            case 0: sStatus = "Chưa duyệt"; break;
+                            case 1: sStatus = "Đã duyệt"; break;
+                            default: break;
+                        }
+                    }
+                    @sStatus
+                    
                 </dd>
 
                 <dt>
@@ -266,7 +278,19 @@
                 </dt>
 
                 <dd>
-                    @Html.DisplayFor(model => model.ShowConment)
+                    @{
+                        var sShowConment = "";
+                        int iShowConments = Convert.ToInt32(Model.ShowConment);
+                        switch (iStus)
+                        {
+
+                            case 0: sShowConment = "Cho phép bình luận"; break;
+                            case 1: sShowConment = "Không cho phép"; break;
+                            default: break;
+                        }
+                    }
+                    @sShowConment
+
                 </dd>
 
                 <dt>

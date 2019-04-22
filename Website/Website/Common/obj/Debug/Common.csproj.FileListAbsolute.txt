@@ -7,3 +7,16 @@ E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.Mvc.dl
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.xml
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.Mvc.xml
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\DocumentFormat.OpenXml.dll
+E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\DocumentFormat.OpenXml.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\Common.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\Common.pdb
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\DocumentFormat.OpenXml.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.Mvc.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\DocumentFormat.OpenXml.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\bin\Debug\PagedList.Mvc.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Common\obj\Debug\Common.pdb

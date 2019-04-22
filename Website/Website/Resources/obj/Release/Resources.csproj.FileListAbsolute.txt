@@ -9,3 +9,14 @@ E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.R
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.csproj.GenerateResource.Cache
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.dll
 E:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.pdb
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Release\Resources.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Release\Resources.pdb
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Release\PagedList.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Release\PagedList.Mvc.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Release\PagedList.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Release\PagedList.Mvc.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.csprojResolveAssemblyReference.cache
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.ResourceAdmin.resources
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.csproj.GenerateResource.Cache
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.dll
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Release\Resources.pdb

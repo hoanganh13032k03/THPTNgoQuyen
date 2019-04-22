@@ -156,22 +156,26 @@ namespace Website.Areas.Admin.Controllers
             return View(objNew);
         }
         [HttpPost]
-        public ActionResult Publicer(News mode)
+        [ValidateInput(false)]
+        public ActionResult Publicer(FormCollection data)
         {
-            NewsDao dbDAO = new NewsDao();
-            var bd = dbDAO.FindByID(mode.NewsID);
-            List<string> cateID = HepperString.GetListByKey(bd.CategoryID, ",");
-            PopulateParentIDDropDownList(HepperString.TolistLong(cateID.ToArray()));
+            
             try
             {
+                NewsDao bdDao = new NewsDao();
+                News bd = bdDao.FindByID(Convert.ToInt64(data["NewsID"].ToString()));
+
+
                 UserLogin us = (UserLogin)Session[SystemConsts.USER_SESSION];
+                
                 bd.ModifiedBy = us.UserName;
 
                 bd.ModifiedDate = Hepper.GetDateServer();
                 bd.PublishedDate = Hepper.GetDateServer();
-                bd.Name = mode.Name;
-                bd.Status = mode.Status;
-                if (dbDAO.Update(bd) > 0)
+                int Status = Convert.ToInt32(data["Status"]);
+                bd.Status = Status;
+                bd.ContentHtml = data["ContentHtml"].ToString();
+                if (bdDao.Update(bd) > 0)
                 {
                     SetAlert(@Resources.ResourceAdmin.AdminEditRecordSucess, "success");
                     return RedirectToAction("Index");
