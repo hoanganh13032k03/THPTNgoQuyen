@@ -94,11 +94,11 @@ namespace Website.Controllers
         }
         public ActionResult Detail(long ID)
         {
-            ViewBag.Tags = TempData["tag"];
+            ViewBag.Tags = Session["tag"];
             ViewBag.Cate = null;
-            if (TempData["tag"] == null)
+            if (Session["tag"] == null)
             {
-                var catID = Convert.ToInt64(TempData["CategoryID"]);
+                var catID = Convert.ToInt64(Session["CategoryID"]);
 
                 CategoryDao ctDao = new CategoryDao();
                 ViewBag.Cate = ctDao.FindByID(catID);
@@ -107,7 +107,7 @@ namespace Website.Controllers
             }
             else
             {
-                ViewBag.Tags = TempData["tag"];
+                ViewBag.Tags = Session["tag"];
             }
 
 
