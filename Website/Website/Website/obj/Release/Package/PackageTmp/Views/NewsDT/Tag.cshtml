@@ -2,7 +2,7 @@
 @{
     ViewBag.Title = "Tìm kiếm theo tag";
     Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
-    TempData["tag"] = ViewBag.Tags;
+    Session["tag"] = ViewBag.Tags;
     var col = 0;
 }
 

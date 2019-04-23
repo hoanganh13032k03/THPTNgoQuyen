@@ -18,7 +18,11 @@ namespace Website.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-       
+        public ActionResult Message()
+        {
+            return View();
+        }
+
         public ActionResult Index()
         {
             CategoryDao cateDB = new CategoryDao();

@@ -4,8 +4,8 @@
     ViewBag.MetaKeywords = ViewBag.Cate.MetakeyWords;
     ViewBag.MetaDescription = ViewBag.Cate.MetaDescription;
     Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
-    TempData["CategoryID"] = ViewBag.Cate.CategoryID;
-    TempData["tag"] = null;
+    Session["CategoryID"] = ViewBag.Cate.CategoryID;
+    Session["tag"] = null;
     var col = 0;
 }
 <script type="text/javascript">

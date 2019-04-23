@@ -373,6 +373,7 @@
     <Content Include="Views\NewsDT\DetailTag.cshtml" />
     <Content Include="Views\Shared\SidesPartial.cshtml" />
     <Content Include="Views\NewsDT\Search.cshtml" />
+    <Content Include="Views\Home\Message.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

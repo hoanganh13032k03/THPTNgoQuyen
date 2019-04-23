@@ -4,7 +4,7 @@
     ViewBag.MetaKeywords = ViewBag.keyword;
     ViewBag.MetaDescription = ViewBag.keyword;
     Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
-    TempData["tag"] = ViewBag.keyword;
+    Session["tag"] = ViewBag.keyword;
     var col = 0;
 }
 <script type="text/javascript">

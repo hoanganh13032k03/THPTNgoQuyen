@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Message";
+    Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
+}
+<div id="fb-root"></div>
+<!-- breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="/Home/Index">Trang chủ</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Thông báo</li>
+    </ol>
+</nav>
+<!-- breadcrumb -->
+<!-- //banner -->
+<!-- blog -->
+<div class="blog-w3l py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <div class="row blog-content pt-md-4">
+            <!-- left side -->
+            <div class="col-lg-8 blog_section">
+                <div class="single-left1">
+                    Hệ thống đang hoàn thành..!
+                </div>
+                    <!-- //left side -->
+                </div>
+            <!-- right side -->
+            <div class="col-lg-4 event-right mt-lg-0 mt-sm-5 mt-4">
+                <div class="event-right1">
+                    <div class="search1">
+                        <form class="form-inline" action="/tim-kiem" method="get">
+                            <input class="form-control rounded-0 mr-sm-2" type="search" id="txtKeyword" name="keyword" placeholder="Gõ từ khoá" aria-label="Search" required>
+                            <button class="btn bg-dark text-white rounded-0 mt-3" type="submit">Tìm kiếm</button>
+                        </form>
+                    </div>
+                    @{ Html.RenderAction("CategoryPartial", "Home");}
+                    @{ Html.RenderAction("EventsPartial", "Home");}
+                    @{ Html.RenderAction("TagsPartial", "Home");}
+                </div>
+            </div>
+            <!-- //right side -->
+        </div>
+    </div>
+</div>
+<!-- //blog -->

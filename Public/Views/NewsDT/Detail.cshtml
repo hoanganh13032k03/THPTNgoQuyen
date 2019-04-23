@@ -1,7 +1,7 @@
 ﻿@model DBModel.ET.News
 @{
 
-    ViewBag.Title =Model.Title;
+    ViewBag.Title = Model.Title;
     ViewBag.MetaKeywords = Model.MetakeyWords;
     ViewBag.MetaDescription = Model.MetakeyWords;
     Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
@@ -20,7 +20,7 @@
     }
     else
     {
-        text = TempData["tag"].ToString();
+        text = Session["tag"].ToString();
     }
 
 
@@ -56,7 +56,9 @@
             <!-- left side -->
             <div class="col-lg-8 blog_section">
                 <div class="single-left1">
+                    @{ if (Model.Image.Length > 0) { }
                     <img src="@Model.Image" alt="@Model.Title" class="img-fluid" />
+                        }
                     <h6 class="blog-first text-dark text-center my-4">
                         <i class="far fa-user mr-2"></i>@Model.Source
                     </h6>
