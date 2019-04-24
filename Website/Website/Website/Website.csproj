@@ -267,6 +267,7 @@
     <Content Include="Content\Client\css\jquery-ui.css" />
     <Content Include="Content\Client\images\banner.jpg" />
     <Content Include="Content\Client\images\logo.gif" />
+    <Content Include="Content\Client\images\logo.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Data\images\c1.jpg" />
     <Content Include="Data\images\c2.jpg" />
@@ -389,6 +390,7 @@
     <Folder Include="Content\Admin\js\" />
     <Folder Include="Content\Admin\plugins\" />
     <Folder Include="Content\Client\js\controller\" />
+    <Folder Include="Content\Client\nivo-slider\" />
     <Folder Include="Content\Client\webfonts\" />
   </ItemGroup>
   <ItemGroup>
