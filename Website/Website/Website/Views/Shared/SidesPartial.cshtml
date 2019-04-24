@@ -7,11 +7,11 @@
 
         @for (int i = 0; i < total; i++)
         {
-            var name = Model[i].Name;
+            var name = Model[i].Description;
             if (name.Length > 0)
             {
                 var c = "#htmlcaption" + @i;
-                <a href="@Model[i].Link" target="@Model[i].Target"><img src="@Model[i].Image" data-thumb="@Model[i].Image" alt="" title="@c" /></a>
+                <a href="@Model[i].Link" target="@Model[i].Target"><img src="@Model[i].Image" data-thumb="@Model[i].Image" alt="" title="@name" /></a>
             }
             else
             {
@@ -20,13 +20,5 @@
 
         }
     </div>
-    @for (int i = 0; i < total; i++)
-    {
-        var name = Model[i].Name;
-        if (name.Length > 0)
-        {
-            var c = "#htmlcaption" + @i;
-            <div id="@c" class="nivo-html-caption"> <strong>@name</strong></div>
-        }
-    }
+  
     </div>
