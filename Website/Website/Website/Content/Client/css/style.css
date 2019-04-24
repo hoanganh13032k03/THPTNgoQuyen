@@ -335,7 +335,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
 .banner-w3ls-4,
 .banner-w3ls-5,
 .banner-agile {
-    min-height: 700px;
+    min-height: 450px;
 }
  .banner-w3ls {
     background: url(../images/banner1.jpg) no-repeat center;
@@ -2154,7 +2154,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        min-height: 600px;
+        min-height: 450px;
     }
     .banner-text-whtree h3 {
         font-size: 52px;

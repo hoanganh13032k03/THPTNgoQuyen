@@ -268,6 +268,16 @@
     <Content Include="Content\Client\images\banner.jpg" />
     <Content Include="Content\Client\images\logo.gif" />
     <Content Include="Content\Client\images\logo.png" />
+    <Content Include="Content\Client\images\nemo.jpg" />
+    <Content Include="Content\Client\images\toystory.jpg" />
+    <Content Include="Content\Client\images\up.jpg" />
+    <Content Include="Content\Client\images\walle.jpg" />
+    <Content Include="Content\Client\nivo-slider\jquery.min.js" />
+    <Content Include="Content\Client\nivo-slider\jquery.nivo.slider.js" />
+    <Content Include="Content\Client\nivo-slider\jquery.nivo.slider.pack.js" />
+    <Content Include="Content\Client\nivo-slider\jquerysctipttop.css" />
+    <Content Include="Content\Client\nivo-slider\nivo-slider.css" />
+    <Content Include="Content\Client\nivo-slider\themes\default\bullets.png" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Data\images\c1.jpg" />
     <Content Include="Data\images\c2.jpg" />
@@ -390,7 +400,6 @@
     <Folder Include="Content\Admin\js\" />
     <Folder Include="Content\Admin\plugins\" />
     <Folder Include="Content\Client\js\controller\" />
-    <Folder Include="Content\Client\nivo-slider\" />
     <Folder Include="Content\Client\webfonts\" />
   </ItemGroup>
   <ItemGroup>
