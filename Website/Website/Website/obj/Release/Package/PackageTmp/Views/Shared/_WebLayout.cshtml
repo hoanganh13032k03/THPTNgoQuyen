@@ -44,7 +44,15 @@
           rel="stylesheet">
     <link href="~/Content/Client/css/font.css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <!-- //Web-Fonts -->
-    <script src="~/Content/Client/js/jquery-2.2.3.min.js"></script>
+
+    <link href="~/Content/Client/nivo-slider/jquerysctipttop.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Client/nivo-slider/themes/default/default.css" rel="stylesheet" media="screen" />
+    <link href="~/Content/Client/nivo-slider/themes/light/light.css" rel="stylesheet" media="screen" />
+    <link href="~/Content/Client/nivo-slider/themes/dark/dark.css" rel="stylesheet" media="screen" />
+    <link href="~/Content/Client/nivo-slider/themes/bar/bar.css" rel="stylesheet" media="screen" />
+    <link href="~/Content/Client/nivo-slider/nivo-slider.css" rel="stylesheet" media="screen" />
+
+    <script src="~/Content/Client/nivo-slider/jquery.min.js"></script>
     @RenderSection("HeaderScript", false)
 </head>
 
@@ -58,7 +66,6 @@
     <!-- //header -->
      <!-- banner -->
 <div class="banner-agile">
-    @{ Html.RenderAction("SidesPartial", "Home");}
     <!-- navigation -->
     <div class="navigation-w3ls">
         <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-nav">
@@ -72,6 +79,8 @@
         </nav>
     </div>
     <!-- //navigation -->
+    @{ Html.RenderAction("SidesPartial", "Home");}
+   
 </div>
 <!-- //banner -->
 
@@ -82,13 +91,39 @@
     @{ Html.RenderAction("FooterPartial", "Home");}
     <!-- //footer -->
     <!-- Js files -->
-    <!-- JavaScript -->
-    <script src="~/Content/Client/js/jquery-2.2.3.min.js"></script>
+   
     <!-- Default-JavaScript-File -->
     <script src="~/Content/Client/js/bootstrap.js"></script>
     <!-- Necessary-JavaScript-File-For-Bootstrap -->
     <!-- banner slider -->
     <script src="~/Content/Client/js/slider.js"></script>
+    <script src="~/Content/Client/nivo-slider/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+$(window).load(function() {
+$('#slider').nivoSlider({
+    effect: 'random',
+    slices: 15,
+    boxCols: 8,
+    boxRows: 4,
+    animSpeed: 500,
+    pauseTime: 3000,
+    startSlide: 0,
+    directionNav: true,
+    controlNav: true,
+    controlNavThumbs: false,
+    pauseOnHover: true,
+    manualAdvance: false,
+    prevText: 'Prev',
+    nextText: 'Next',
+    randomStart: false,
+    beforeChange: function(){},
+    afterChange: function(){},
+    slideshowEnd: function(){},
+    lastSlide: function(){},
+    afterLoad: function(){}
+    });
+});
+    </script>
     <!-- //banner slider -->
     <!-- testimonial-plugin -->
     <script src="~/Content/Client/js/mislider.js"></script>

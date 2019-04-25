@@ -75,7 +75,7 @@ p {
     font-size: 15px;
     letter-spacing: 1px;
     line-height: 1.9;
-    color: #999;
+    color: #000;
 }
 
 ul,
@@ -2403,7 +2403,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        min-height: 550px;
+       height: 450px;
     }
     .banner-text-whtree {
         padding-top: 8em;
@@ -2447,7 +2447,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        min-height: 500px;
+        height: 450px;
     }
     .banner-text-whtree h3 {
         font-size: 44px;
@@ -2473,7 +2473,7 @@ li.subitem1 p {
         font-size: 39px;
     }
     .banner-agile-2 {
-        min-height: 220px;
+        height: 220px;
     }
     h3.title {
         font-size: 42px;
@@ -2562,7 +2562,7 @@ li.subitem1 p {
 
 @media(max-width: 640px) {
     .banner-agile-2 {
-        min-height: 200px;
+        height: 200px;
     }
     h4.contact-title,
     h2.contact-title {
@@ -2644,7 +2644,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        min-height: 460px;
+        height: 460px;
     }
 }
 
@@ -2758,7 +2758,7 @@ li.subitem1 p {
         font-size: 14px;
     }
     .banner-agile-2 {
-        min-height: 160px;
+        height: 160px;
     }
     .brands-w3ls ul li {
         margin: 0 1em;
@@ -2831,7 +2831,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        min-height: 420px;
+        height: 420px;
     }
     .banner-text-whtree {
         padding-top: 6em;
@@ -2957,7 +2957,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        min-height: 380px;
+        height: 380px;
     }
     a.button-agiles {
         padding: 12px 28px;
@@ -3080,7 +3080,7 @@ li.subitem1 p {
         margin: 6px 0 3px;
     }
     .banner-agile-2 {
-        min-height: 120px;
+       height: 120px;
     }
     li.breadcrumb-item {
         font-size: 14px;
