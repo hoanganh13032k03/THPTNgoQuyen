@@ -93,3 +93,9 @@ Supports Thumbs: true
 	width: 120px;
 	height: auto;
 }
+@media(max-width: 480px) {
+    .theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+      font-size:1.8vw;
+}
+}

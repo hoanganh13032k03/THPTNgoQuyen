@@ -2252,6 +2252,8 @@ li.subitem1 p {
 @media(max-width: 1024px) {
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-nav {
         width: 100%;
+         
+    }
     }
     a.logo {
         font-size: 45px;
@@ -2262,6 +2264,14 @@ li.subitem1 p {
     .banner-agile-2 {
         min-height: 260px;
     }
+    .banner-w3ls-1,
+    .banner-w3ls-2,
+    .banner-w3ls-3,
+    .banner-w3ls-4,
+    .banner-w3ls-5,
+    .banner-agile {
+        min-height: 325px;
+        
 }
 
 @media(max-width: 991px) {
@@ -2403,7 +2413,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-       min-height: 168px;
+       min-height: 230px;
     }
     .banner-text-whtree {
         padding-top: 8em;
@@ -2447,7 +2457,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        min-height: 168px;
+        min-height: 230px;
     }
     .banner-text-whtree h3 {
         font-size: 44px;
@@ -2460,7 +2470,15 @@ li.subitem1 p {
     }
 }
 
-@media(max-width: 768px) {}
+@media(max-width: 768px) {
+    .banner-w3ls-1,
+    .banner-w3ls-2,
+    .banner-w3ls-3,
+    .banner-w3ls-4,
+    .banner-w3ls-5,
+    .banner-agile {
+        min-height: 230px;
+}
 
 @media(max-width: 736px) {
     .agile-addresmk p {
@@ -2731,6 +2749,13 @@ li.subitem1 p {
         width: 432px;
         height: 243px;
     }
+    .banner-w3ls-1,
+    .banner-w3ls-2,
+    .banner-w3ls-3,
+    .banner-w3ls-4,
+    .banner-w3ls-5,
+    .banner-agile {
+        min-height: 120px;
 }
 
 @media(max-width: 440px) {
@@ -2831,7 +2856,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        max-height: 168px;
+        max-height: 115px;
     }
     .banner-text-whtree {
         padding-top: 6em;
@@ -2912,7 +2937,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-       height: 168px;
+       height: 93px;
     }
 }
 
@@ -2966,7 +2991,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-       height: 168px;
+       height: 120px;
     }
     a.button-agiles {
         padding: 12px 28px;
@@ -3059,6 +3084,14 @@ li.subitem1 p {
     .video iframe {
         height: 185px;
     }
+
+    .banner-w3ls-1,
+    .banner-w3ls-2,
+    .banner-w3ls-3,
+    .banner-w3ls-4,
+    .banner-w3ls-5,
+    .banner-agile {
+        min-height: 95px;
 }
 
 @media(max-width: 320px) {
@@ -3285,7 +3318,7 @@ li.subitem1 p {
     .banner-w3ls-4,
     .banner-w3ls-5,
     .banner-agile {
-        max-height: 168px;
+        max-height: 72px;
     }
     .pager {
         left: 40%;

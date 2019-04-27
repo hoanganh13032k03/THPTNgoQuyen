@@ -4266,7 +4266,9 @@ tbody.collapse.show {
   .navbar-expand-xl .dropup .dropdown-menu {
     top: auto;
     bottom: 100%;
-  }
+   
+  } 
+ 
 }
 
 .navbar-expand {
