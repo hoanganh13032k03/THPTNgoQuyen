@@ -36,7 +36,10 @@
             <!-- left side -->
             <div class="col-lg-8 blog_section">
                 <div class="single-left1">
-                    <img src="@Model.Image" alt="@Model.Title" class="img-fluid" />
+                    @if (Model.Image.Trim().Length > 0)
+                    {
+                        <img src="@Model.Image" alt="@Model.Title" class="img-fluid" />
+                    }
                     <h6 class="blog-first text-dark text-center my-4">
                         <i class="far fa-user mr-2"></i>@Model.Source
                     </h6>
