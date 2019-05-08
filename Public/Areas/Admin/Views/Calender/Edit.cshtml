@@ -1,0 +1,247 @@
+﻿@model DBModel.ET.Calender
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+@section ClienCSS{
+    <!-- DataTables -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+    <!-- iCheck for checkboxes and radio inputs -->
+    <link rel="stylesheet" href="~/Content/admin/plugins/iCheck/all.css">
+    <link rel="stylesheet" href="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <!-- Select2 -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/select2/dist/css/select2.min.css">
+
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- daterange picker -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/bootstrap-daterangepicker/daterangepicker.css">
+    <!-- bootstrap datepicker -->
+    <link rel="stylesheet" href="~/Content/admin/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+    <script src="~/Content/admin/js/plugins/ckfinder/ckfinder.js"></script>
+    <script type="text/javascript">
+        function BrowseServer(field) {
+            editedField = field;
+            var finder = new CKFinder();
+            //finder.basePath = '../';
+            finder.lang = 'vi'
+            finder.selectActionFunction = SetFileField;
+            finder.popup();
+        }
+        function SetFileField(fileUrl) {
+            document.getElementById(editedField).value = fileUrl;
+            document.getElementById('imgIcon').src = fileUrl;
+        }
+
+        function BrowseServerFile(field) {
+            editedField = field;
+            var finder = new CKFinder();
+            //finder.basePath = '../';
+            finder.lang = 'vi'
+            finder.selectActionFunction = SetFile;
+            finder.popup();
+        }
+        function SetFile(fileUrl) {
+            document.getElementById(editedField).value = fileUrl;
+            document.getElementById('FileIcon').href = fileUrl;
+        }
+    </script>
+}
+
+
+@section FooterClienScript{
+    <!-- Select2 -->
+    <script src="~/Content/admin/bower_components/select2/dist/js/select2.full.min.js"></script>
+    <!-- date-range-picker -->
+    <script src="~/Content/admin/bower_components/moment/min/moment.min.js"></script>
+    <script src="~/Content/admin//bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- bootstrap datepicker -->
+    <script src="~/Content/admin/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+    <!-- bootstrap color picker -->
+    <script src="~/Content/admin/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+    <!-- bootstrap time picker -->
+    <script src="~/Content/admin/plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="~/Content/admin/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="~/Content/admin/plugins/iCheck/icheck.min.js"></script>
+    <!-- DataTables -->
+    <script src="~/Content/admin/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="~/Content/admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="~/Content/admin/bower_components/fastclick/lib/fastclick.js"></script>
+    <script>
+        $(function () {
+
+
+            //Date picker
+            $('#BirthDay').datepicker({
+                autoclose: true
+                //format:'dd/mm/yyyy'
+            })
+
+            $('#PublishDate').datepicker({
+                autoclose: true,
+
+                //format:'dd/mm/yyyy'
+
+            })
+
+            $('#Date_Start').daterangepicker({
+                timePicker: true, timePickerIncrement: 30, locale: {
+                    format: 'MM/DD/YYYY h:mm A'
+                }
+            })
+
+        })
+    </script>
+}
+
+
+@section ContenHeader{
+    <section class="content-header">
+        <h1>
+            Tạo lịch công tác
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="~/Admin/Calender/Index"><i class="fa fa-dashboard"></i> Quay lại</a></li>
+        </ol>
+    </section>
+}
+<section class="content">
+    <!-- Default box -->
+    <div class="box">
+        <div class="box-body">
+            @using (Html.BeginForm("Edit", "Calender", FormMethod.Post, new { @class = "form-horizontal" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.HiddenFor(model => model.CalenderID)
+                <div class="form-horizontal">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Tite, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Tite, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Tiêu đề", @required = "required" })
+                            @Html.ValidationMessageFor(model => model.Tite, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MetakeyWords, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.MetakeyWords, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "MetakeyWords" })
+                            @Html.ValidationMessageFor(model => model.MetakeyWords, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.MetaDescription, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.MetaDescription, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "MetaDescription" })
+                            @Html.ValidationMessageFor(model => model.MetaDescription, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <!-- Date and time range -->
+                    <div class="form-group">
+                        @Html.Label("Thời gian", htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+
+                            <div class="input-group">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-clock-o"></i>
+                                </div>
+                                <input type="text" class="form-control pull-right" id="Date_Start" name="Date_Start">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Prepared, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.Prepared, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Chuẩn bị", @required = "required" })
+                            @Html.ValidationMessageFor(model => model.Prepared, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Organization, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.Organization, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Thành phần", @required = "required" })
+                            @Html.ValidationMessageFor(model => model.Organization, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Place, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Place, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Địa điểm", @required = "required" })
+                            @Html.ValidationMessageFor(model => model.Place, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Detail, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextAreaFor(model => model.Detail, new { @class = "form-control", @autoforcus = "autoforcus", @placeholder = "Nội dung", @required = "required" })
+                            @Html.ValidationMessageFor(model => model.Detail, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Image, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Image, new { @class = "form-control" })
+                            <a href="#" class="btn btn-primary" onclick="BrowseServer('Image');">Chọn ảnh..</a>
+                            @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                            <img width="30" src="@(Convert.ToString(Html.DisplayFor(model => model.Image)))" id="imgIcon" class="img-circle" alt="User Image">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Files, new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.TextBoxFor(model => model.Files, new { @class = "form-control" })
+                            <a href="#" class="btn btn-primary" onclick="BrowseServerFile('Files');">Chọn File..</a>
+                            @Html.ValidationMessageFor(model => model.Files, "", new { @class = "text-danger" })
+                            <a href="@(Convert.ToString(Html.DisplayFor(model => model.Files)))" id="FileIcon" class="img-circle" alt="file"><i class="fa  fa-file-archive-o"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Options, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Options, new List<SelectListItem> { new SelectListItem { Text = "Lịch tuần - Sự kiện", Value = "0" }, new SelectListItem { Text = "Lịch tuần", Value = "1" }, new SelectListItem { Text = "Sự kiện", Value = "2" } }, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Options, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Status_End, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.DropDownListFor(model => model.Status_End, new List<SelectListItem> { new SelectListItem { Text = "Đang diễn da", Value = "0" }, new SelectListItem { Text = "Kết thúc", Value = "1" } }, new { @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.Status_End, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <!-- /.form group -->
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.ShowOnHome, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <div class="checkbox">
+                                @Html.DropDownListFor(model => model.ShowOnHome, new List<SelectListItem> { new SelectListItem { Text = "Hiện trang chủ", Value = "True" }, new SelectListItem { Text = "Không hiện", Value = "false" } }, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.ShowOnHome, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="@Resources.ResourceAdmin.AdminSaveButtonText" class="btn btn-primary" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <!-- /.box -->
+</section>

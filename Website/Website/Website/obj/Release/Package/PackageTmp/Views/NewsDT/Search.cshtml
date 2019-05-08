@@ -47,12 +47,14 @@
                     var url = "/chi-tiet/" + @n.MetaTite + "-" + @n.NewsID.ToString();
                     var url1 = @HttpContext.Current.Request.Url + "/chi-tiet/" + @n.MetaTite + "-" + @n.NewsID.ToString();
 
-                    <div class="card@(col==0?"":" my-4")">
-                        <img class="card-img-top" src="@n.Image" alt="">
-                        <div class="card-body text-center">
-                            <h6 class="blog-first text-dark">
-                                <i class="far fa-user mr-2"></i>@n.Source
-                            </h6>
+                    <div class="row posts-grid  my-4" )">
+                        <div class="col-lg-4 col-md-3 col-4 posts-grid-left pr-0">
+                            <a href="@url"> <img class="img-thumbnail" src="@n.Image" alt=""></a>
+                        </div>
+                        <div class="col-lg-8 col-md-7 col-8 posts-grid-right mt-lg-0 mt-md-5 mt-sm-4">
+                            <h5 class="card-title">
+                                <a href="@url" class="text-dark">@n.Name</a>
+                            </h5>
                             <ul class="blog_list my-3">
                                 <li>@n.PublishedDate.ToString("MMM")  @n.PublishedDate.Day, @n.PublishedDate.Year</li>
                                 <li class="mx-3">
@@ -65,20 +67,18 @@
                                     <a href="#">
                                         <i class="far fa-comments mr-1"></i>
                                         <script>
-                        document.write(getCommentNumber('@url1'));
+                               document.write(getCommentNumber('@url1'));
                                         </script>
 
                                     </a>
                                 </li>
                             </ul>
-                            <h5 class="card-title">
-                                <a href="@url" class="text-dark">@n.Name</a>
-                            </h5>
+
                             <p class="card-text">
                                 @n.Description
                             </p>
-                            <a href="@url" class="btn btn-primary blog-button mt-3">Chi tiết</a>
                         </div>
+
                     </div>
                     col += 1;
                 }

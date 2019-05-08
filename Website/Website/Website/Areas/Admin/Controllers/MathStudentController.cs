@@ -102,7 +102,7 @@ namespace Website.Areas.Admin.Controllers
                 collection.ModifiedDate = Hepper.GetDateServer();
                // ConvertExcelToXml convertXML = new ConvertExcelToXml();
                 //string xml = convertXML.GetXML(collection.Sources);
-                int i = 0;
+              //  int i = 0;
                 if (bdDao.Update(collection))
                 {
                     SetAlert(@Resources.ResourceAdmin.AdminEditRecordSucess, "success");

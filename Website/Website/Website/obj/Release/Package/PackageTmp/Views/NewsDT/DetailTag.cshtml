@@ -36,7 +36,6 @@
             <!-- left side -->
             <div class="col-lg-8 blog_section">
                 <div class="single-left1">
-                    <img src="@Model.Image" alt="@Model.Title" class="img-fluid" />
                     <h6 class="blog-first text-dark text-center my-4">
                         <i class="far fa-user mr-2"></i>@Model.Source
                     </h6>
@@ -58,9 +57,9 @@
                     <h5 class="card-title">
                         <a href="single.html" class="text-dark">@Model.Name</a>
                     </h5>
-                    <p>
+                   
                         @Html.Raw(Model.ContentHtml)
-                    </p>
+                    
 
 
                     @if (Model.ShowShare == true)

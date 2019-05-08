@@ -99,7 +99,7 @@ namespace Website.Areas.Admin.Controllers
                 ViewBag.ParentID = new SelectList(items, "ID", "Text", menu.ParentID);
                 ViewBag.GroupID = new SelectList(dbMenuType.ToList(), "ID", "Name");
             }
-            catch (Exception ex)
+            catch 
             {
                 ModelState.AddModelError("", Resources.ResourceAdmin.ErrorGetRecordMessage);
             }

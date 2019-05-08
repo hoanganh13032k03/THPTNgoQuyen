@@ -75,15 +75,16 @@ namespace DBModel.DAO
 
         {
             string scatID = catID.ToString();
-            List<News> lstActive = db.News.Where(x => x.Status == 1).OrderByDescending(x => x.PublishedDate).ToList<News>();
-            List<News> lstReust =  new List<News>();
-            foreach(var n in lstActive)
-            {
-                if (HepperString.GetListByKey(n.CategoryID, ";").Contains(scatID))
-                {
-                    lstReust.Add(n);
-                }
-            }
+            //List<News> lstActive = db.News.Where(x => x.Status == 1).OrderByDescending(x => x.PublishedDate).ToList<News>();
+            //List<News> lstReust =  new List<News>();
+            //foreach(var n in lstActive)
+            //{
+            //    if (HepperString.GetListByKey(n.CategoryID, ";").Contains(scatID))
+            //    {
+            //        lstReust.Add(n);
+            //    }
+            //}
+            List<News> lstReust = db.News.Where(x => x.Status == 1 && x.CategoryID == scatID).OrderByDescending(x => x.PublishedDate).ToList<News>();
             return lstReust;
         }
         public int ListAllByTagCount(string tag)

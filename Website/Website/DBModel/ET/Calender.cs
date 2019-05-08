@@ -12,7 +12,7 @@
     public partial class Calender
     {
 
-        [Display(Name = "ID", ResourceType = typeof(Resources.ResourceAdmin))]
+     
         public long CalenderID { get; set; }
 
         [Display(Name = "CategoryParentID", ResourceType = typeof(Resources.ResourceAdmin))]

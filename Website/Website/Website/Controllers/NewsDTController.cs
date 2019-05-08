@@ -30,7 +30,7 @@ namespace Website.Controllers
             int maxPage = 5;
             int totalPage = 0;
 
-            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));
+            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize))+1;
             ViewBag.TotalPage = totalPage;
             ViewBag.MaxPage = maxPage;
             ViewBag.First = 1;
@@ -56,7 +56,7 @@ namespace Website.Controllers
             int maxPage = 5;
             int totalPage = 0;
 
-            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));
+            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize))+1;
             ViewBag.TotalPage = totalPage;
             ViewBag.MaxPage = maxPage;
             ViewBag.First = 1;
@@ -83,7 +83,7 @@ namespace Website.Controllers
             int maxPage = 5;
             int totalPage = 0;
 
-            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize));
+            totalPage = (int)Math.Ceiling((double)(totalRecord / pageSize))+1;
             ViewBag.TotalPage = totalPage;
             ViewBag.MaxPage = maxPage;
             ViewBag.First = 1;
