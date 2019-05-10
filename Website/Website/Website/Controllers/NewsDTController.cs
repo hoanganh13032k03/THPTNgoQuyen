@@ -44,6 +44,7 @@ namespace Website.Controllers
             CategoryDao ctDao = new CategoryDao();
          
             ViewBag.Cate = ctDao.FindByID(cateId);
+           
             var items = GetClientCategoryViewModel();
             ViewBag.CatePare = items.Find(x => x.ID == cateId);
 

@@ -35,6 +35,17 @@
   js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=230002147943453&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<script src="~/Content/Client/js/controller/baseFuntion.js"></script>
+@if (ViewBag.Cate != null)
+{
+<script type="text/javascript">
+   
+        changBg('@ViewBag.Cate.Image');
+   
+   
+</script>
+}
+
 <!-- breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">

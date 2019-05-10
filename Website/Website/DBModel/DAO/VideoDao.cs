@@ -5,12 +5,39 @@ using System.Text;
 using System.Threading.Tasks;
 using DBModel.ET;
 using Common;
+using PagedList;
 namespace DBModel.DAO
 {
     public class VideosDao
     {
         DBContext db = null;
+       
 
+
+        /// <summary>
+        /// List all content for client
+        /// </summary>
+        /// <param name="page"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public List<Videos> ListAllPaging(ref int totallPage,int page=1, int pageSize=5)
+        {
+            totallPage = ToList().Count();
+            List<Videos> model = ToList().ToPagedList(page, pageSize).ToList();
+            return model;
+        }
+        /// <summary>
+        /// List all content for client
+        /// </summary>
+        /// <param name="page"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public List<Videos> ListActivePaging(ref int totallPage, int page=1, int pageSize=5)
+        {
+            totallPage = ToListActive().Count();
+            List<Videos> model = ToListActive().ToPagedList(page, pageSize).ToList();
+            return model;
+        }
         public VideosDao()
         {
 

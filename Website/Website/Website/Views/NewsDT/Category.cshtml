@@ -8,21 +8,13 @@
     Session["tag"] = null;
     var col = 0;
 }
+<script src="~/Content/Client/js/controller/baseFuntion.js"></script>
 <script type="text/javascript">
-    function getCommentNumber(surl) {
-        var url = 'https://graph.facebook.com/' + surl;
-        //alert(url);
-            $.ajax({
-                url: url,
-                dataType: 'jsonp',
-                success: function (data) {
-                  //  alert("comments: " + data.share.comment_count);
-                    return data.share.comment_count;
-                }
-            });
-            return 0;
-        }
-</script>   
+   
+    changBg('@ViewBag.Cate.Image');
+</script>
+
+    
 <!-- breadcrumb -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -35,6 +27,7 @@
 <!-- breadcrumb -->
 <!-- //banner -->
 <!-- blog -->
+
 <div class="blog-w3l py-5">
     <div class="container py-xl-5 py-lg-3">
         <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">

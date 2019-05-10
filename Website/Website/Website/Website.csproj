@@ -269,6 +269,7 @@
     <Content Include="Content\Admin\bower_components\bootstrap\dist\js\npm.js" />
     <Content Include="Content\Admin\dist\img\logo.png" />
     <Content Include="Content\Client\css\jquery-ui.css" />
+    <Content Include="Content\Client\css\videos.css" />
     <Content Include="Content\Client\images\banner.jpg" />
     <Content Include="Content\Client\images\logo.gif" />
     <Content Include="Content\Client\images\logo.png" />
@@ -276,6 +277,7 @@
     <Content Include="Content\Client\images\toystory.jpg" />
     <Content Include="Content\Client\images\up.jpg" />
     <Content Include="Content\Client\images\walle.jpg" />
+    <Content Include="Content\Client\js\controller\baseFuntion.js" />
     <Content Include="Content\Client\nivo-slider\jquery.min.js" />
     <Content Include="Content\Client\nivo-slider\jquery.nivo.slider.js" />
     <Content Include="Content\Client\nivo-slider\jquery.nivo.slider.pack.js" />
@@ -392,6 +394,7 @@
     <Content Include="Views\Shared\SidesPartial.cshtml" />
     <Content Include="Views\NewsDT\Search.cshtml" />
     <Content Include="Views\Home\Message.cshtml" />
+    <Content Include="Views\Videos\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -406,9 +409,7 @@
     <Folder Include="Content\Admin\build\" />
     <Folder Include="Content\Admin\js\" />
     <Folder Include="Content\Admin\plugins\" />
-    <Folder Include="Content\Client\js\controller\" />
     <Folder Include="Content\Client\webfonts\" />
-    <Folder Include="Views\Videos\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

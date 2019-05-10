@@ -1,0 +1,83 @@
+﻿@model IEnumerable<DBModel.ET.Videos>
+@using System.Xml;
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_WebNewsLayout.cshtml";
+}
+
+
+@section HeaderScript{
+   
+<link href="~/Content/Client/css/videos.css" rel="stylesheet" />
+}
+<!-- breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="~/Home/Index">Home</a>
+        </li>
+        <li class="breadcrumb-item active" aria-current="page">Trang chủ</li>
+    </ol>
+</nav>
+<!-- breadcrumb -->
+<!-- gallery -->
+<section class="gallery py-5">
+    <div class="container py-xl-5 py-lg-3">
+        <h3 class="title text-capitalize font-weight-light text-dark text-center mb-5">
+            our
+            <span class="font-weight-bold">videos</span>
+        </h3>
+        <div class="container">
+
+            <!-- THE YOUTUBE PLAYER -->
+            <div class="vid-container">
+                <iframe id="vid_frame" src="https://www.youtube.com/embed/PyH-36xO6i4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- THE PLAYLIST -->
+            <div class="vid-list-container">
+                <div class="vid-list">
+@foreach (var n in Model)
+{
+    var surl = @n.Link;
+    var img = surl.Substring(surl.LastIndexOf('/') + 1);
+    img = "http://img.youtube.com/vi/" + img + "/0.jpg";
+   <div class="vid-item" onClick="document.getElementById('vid_frame').src='@surl?autoplay=1&rel=0&showinfo=0&autohide=1'">
+        <div class="thumb"><img src="@img"></div>
+        <div class="desc">@n.Name</div>
+    </div>
+
+}
+ </div>
+                </div>
+            <!-- LEFT AND RIGHT ARROWS -->
+            <div class="arrows">
+                <div class="arrow-left"><i class="fa fa-chevron-left fa-lg"></i></div>
+                <div class="arrow-right"><i class="fa fa-chevron-right fa-lg"></i></div>
+            </div>
+
+            </div>
+            
+        </div>
+     
+</section>
+<!-- JS FOR SCROLLING THE ROW OF THUMBNAILS -->
+<script type="text/javascript">
+  		$(document).ready(function () {
+		    $(".arrow-right").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "+=336"
+		        }, 750);
+		    });
+		    $(".arrow-left").bind("click", function (event) {
+		        event.preventDefault();
+		        $(".vid-list-container").stop().animate({
+		            scrollLeft: "-=336"
+		        }, 750);
+		    });
+		});
+</script>
+
+
+<!--//gallery-->

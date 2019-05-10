@@ -15,8 +15,8 @@ F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Debug\PagedList.dll
 F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Debug\PagedList.Mvc.dll
 F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Debug\PagedList.xml
 F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\bin\Debug\PagedList.Mvc.xml
+F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
 F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Debug\Resources.ResourceAdmin.resources
 F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Debug\Resources.csproj.GenerateResource.Cache
 F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Debug\Resources.dll
 F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Debug\Resources.pdb
-F:\STUDY\WinForms\THPTNgoQuyen\Website\Website\Resources\obj\Debug\Resources.csprojResolveAssemblyReference.cache
